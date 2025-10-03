@@ -1,3 +1,4 @@
+## 2021
 - [x] The Witcher - 8.0/10
 - [x] Godzilla vs Kong - 7.4/10
 - [x] Justice League: Snyder Cut 8.9/10
@@ -42,6 +43,7 @@
 - [x] The King's Man - 7.8/10
 - [ ] The Princess Bride
 - [x] Don't Look Up - 8.6/10
+## 2022
 - [x] Spiderman: Into the Spiderverse - 8.8/10
 - [x] Uncharted - 5.7/10
 - [x] The Batman - 9.2/10
@@ -77,6 +79,7 @@
 - [x] Avatar - 8.6/10
 - [x] Avatar: The Way of Water - 9.1/10
 - [x] Glass Onion: A Knives Out Mystery - 8.6/10
+## 2023
 - [ ] Scarface
 - [x] Antman and the Wasp: Quantumania - 7.2/10
 - [x] Everything Everywhere All At Once - 9.6/10
@@ -115,6 +118,7 @@
 - [ ] The 6th Sense - 
 - [ ] Rainman - 
 - [x] Saltburn - 4.0/10
+## 2024
 - [x] The Wonderful Story of Henry Sugar - 8.8/10
 - [x] The Menu - 8.5/10
 - [x] No Hard Feelings - 8.1/10
