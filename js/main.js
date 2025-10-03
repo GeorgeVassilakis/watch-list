@@ -121,7 +121,7 @@ function parseMovies(text) {
   // Render sections with dividers; newest sections/items first.
   // Inserts a top "CURRENT" marker, then after each year's items
   // inserts a divider with that year to mark the boundary.
-  function renderAllSections(sections, containerId) {
+  function renderAllSections(sections, containerId, includeCurrent = true) {
     const container = document.getElementById(containerId);
     const ul = document.createElement('ul');
     ul.className = 'movie-list';
@@ -148,14 +148,16 @@ function parseMovies(text) {
     };
 
     // Add top "CURRENT" marker to indicate up-to-date boundary
-    const currentMarker = document.createElement('li');
-    currentMarker.className = 'year-divider current';
-    currentMarker.innerHTML = `
-      <span class="line"></span>
-      <span class="label">CURRENT</span>
-      <span class="line"></span>
-    `;
-    ul.appendChild(currentMarker);
+    if (includeCurrent) {
+      const currentMarker = document.createElement('li');
+      currentMarker.className = 'year-divider current';
+      currentMarker.innerHTML = `
+        <span class="line"></span>
+        <span class="label">CURRENT</span>
+        <span class="line"></span>
+      `;
+      ul.appendChild(currentMarker);
+    }
 
     groups.forEach((section, idx) => {
       // reverse items so bottom-of-file entries are first
@@ -269,14 +271,16 @@ function parseMovies(text) {
     const sections = parseSections(text);
     
     // Render All with year dividers, newest first
-    renderAllSections(sections, 'all-movies');
+    renderAllSections(sections, 'all-movies', true);
     
     const watched = movies.filter(m => m.watched && m.rating !== null);
     const rankedMovies = [...watched].sort((a, b) => b.rating - a.rating);
     renderMovieList(rankedMovies, 'ranked-movies');
     
-    const unwatched = movies.filter(m => !m.watched);
-    renderMovieList(unwatched, 'watchlist-movies');
+    const watchlistSections = sections
+      .map(s => ({ year: s.year, items: s.items.filter(m => !m.watched) }))
+      .filter(s => s.items.length > 0);
+    renderAllSections(watchlistSections, 'watchlist-movies', true);
     
     renderStats(movies);
     

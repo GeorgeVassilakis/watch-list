@@ -142,6 +142,14 @@ nav {
     background-image: radial-gradient(rgba(44, 36, 22, 0.04) 1px, transparent 1px);
     background-size: 14px 14px;
   }
+
+  .tab-desc {
+    font-size: 0.78rem;
+    color: var(--warm-gray);
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    text-align: center;
+  }
   
   .tab-content.active {
     display: block;
