@@ -106,7 +106,7 @@ function parseMovies(text) {
       
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
-        rating.className = movie.rating >= 9 ? 'rating high' : 'rating';
+        rating.className = `rating ${ratingClass(movie.rating)}`;
         rating.textContent = `${movie.rating}/10`;
         li.appendChild(rating);
       }
@@ -140,7 +140,7 @@ function parseMovies(text) {
       li.appendChild(title);
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
-        rating.className = movie.rating >= 9 ? 'rating high' : 'rating';
+        rating.className = `rating ${ratingClass(movie.rating)}`;
         rating.textContent = `${movie.rating}/10`;
         li.appendChild(rating);
       }
@@ -242,6 +242,17 @@ function parseMovies(text) {
     }
     
     container.innerHTML = html;
+  }
+  
+  // Map numeric rating to a color band class
+  function ratingClass(value) {
+    if (value == null) return '';
+    if (value >= 9.7) return 'rating-10';
+    if (value >= 9.0) return 'rating-9';
+    if (value >= 8.0) return 'rating-8';
+    if (value >= 7.0) return 'rating-7';
+    if (value >= 6.0) return 'rating-6';
+    return 'rating-lt6';
   }
   
   // Tab switching
