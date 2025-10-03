@@ -107,7 +107,7 @@ function parseMovies(text) {
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(movie.rating)}`;
-        rating.textContent = `${movie.rating}/10`;
+        rating.textContent = `${formatRating(movie.rating)}/10`;
         li.appendChild(rating);
       }
       
@@ -141,7 +141,7 @@ function parseMovies(text) {
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(movie.rating)}`;
-        rating.textContent = `${movie.rating}/10`;
+        rating.textContent = `${formatRating(movie.rating)}/10`;
         li.appendChild(rating);
       }
       ul.appendChild(li);
@@ -253,6 +253,12 @@ function parseMovies(text) {
     if (value >= 7.0) return 'rating-7';
     if (value >= 6.0) return 'rating-6';
     return 'rating-lt6';
+  }
+
+  function formatRating(value) {
+    const n = Number(value);
+    if (Number.isNaN(n)) return '';
+    return n.toFixed(1);
   }
   
   // Tab switching
