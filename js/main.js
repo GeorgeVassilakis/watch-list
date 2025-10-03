@@ -10,6 +10,38 @@ async function loadMovies() {
     }
   }
   
+  // Load raw text for advanced parsing (sections)
+  async function loadText() {
+    try {
+      const response = await fetch('data/movies.txt');
+      return await response.text();
+    } catch (error) {
+      console.error('Error loading movies:', error);
+      return '';
+    }
+  }
+  
+function parseMovieFromLine(line) {
+    const match = line.match(/^- \[(x| )\] (.+)$/i);
+    if (!match) return null;
+
+    const watched = match[1].toLowerCase() === 'x';
+    let title = match[2].trim();
+    let rating = null;
+
+    const ratingMatch = title.match(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/);
+    if (ratingMatch) {
+      rating = parseFloat(ratingMatch[1]);
+      title = title
+        .replace(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/, '')
+        .trim();
+    } else {
+      title = title.replace(/\s*[-\u2013\u2014:]\s*$/, '').trim();
+    }
+
+    return { title, rating, watched };
+  }
+  
 function parseMovies(text) {
     const lines = text
       .split(/\r?\n/)
@@ -17,30 +49,39 @@ function parseMovies(text) {
       .filter(Boolean);
 
     return lines.reduce((movies, line) => {
-      const match = line.match(/^- \[(x| )\] (.+)$/i);
-      if (!match) return movies;
-
-      const watched = match[1].toLowerCase() === 'x';
-      let title = match[2].trim();
-      let rating = null;
-
-      const ratingMatch = title.match(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/);
-      if (ratingMatch) {
-        rating = parseFloat(ratingMatch[1]);
-        title = title
-          .replace(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/, '')
-          .trim();
-      } else {
-        title = title.replace(/\s*[-\u2013\u2014:]\s*$/, '').trim();
-      }
-
-      movies.push({
-        title,
-        rating,
-        watched
-      });
+      const movie = parseMovieFromLine(line);
+      if (movie) movies.push(movie);
       return movies;
     }, []);
+  }
+  
+  // Sections separated by year markers like: "## 2025"
+  function parseSections(text) {
+    const lines = text
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    const sections = [];
+    let current = { year: null, items: [] };
+
+    const pushCurrent = () => {
+      if (current.items.length > 0 || current.year !== null) sections.push(current);
+    };
+
+    for (const line of lines) {
+      const yearMatch = line.match(/^##\s*(\d{4})\s*$/);
+      if (yearMatch) {
+        pushCurrent();
+        current = { year: yearMatch[1], items: [] };
+        continue;
+      }
+      const movie = parseMovieFromLine(line);
+      if (movie) current.items.push(movie);
+    }
+
+    pushCurrent();
+    return sections;
   }
   
   // Render movie list
@@ -73,6 +114,66 @@ function parseMovies(text) {
       ul.appendChild(li);
     });
     
+    container.innerHTML = '';
+    container.appendChild(ul);
+  }
+  
+  // Render sections with dividers; newest sections/items first.
+  // Inserts a top "CURRENT" marker, then after each year's items
+  // inserts a divider with that year to mark the boundary.
+  function renderAllSections(sections, containerId) {
+    const container = document.getElementById(containerId);
+    const ul = document.createElement('ul');
+    ul.className = 'movie-list';
+
+    const groups = [...sections].reverse();
+
+    const appendMovie = (movie) => {
+      const li = document.createElement('li');
+      li.className = 'movie-item';
+      const checkbox = document.createElement('div');
+      checkbox.className = movie.watched ? 'checkbox watched' : 'checkbox';
+      const title = document.createElement('span');
+      title.className = 'movie-title';
+      title.textContent = movie.title;
+      li.appendChild(checkbox);
+      li.appendChild(title);
+      if (movie.watched && movie.rating !== null) {
+        const rating = document.createElement('span');
+        rating.className = movie.rating >= 9 ? 'rating high' : 'rating';
+        rating.textContent = `${movie.rating}/10`;
+        li.appendChild(rating);
+      }
+      ul.appendChild(li);
+    };
+
+    // Add top "CURRENT" marker to indicate up-to-date boundary
+    const currentMarker = document.createElement('li');
+    currentMarker.className = 'year-divider current';
+    currentMarker.innerHTML = `
+      <span class="line"></span>
+      <span class="label">CURRENT</span>
+      <span class="line"></span>
+    `;
+    ul.appendChild(currentMarker);
+
+    groups.forEach((section, idx) => {
+      // reverse items so bottom-of-file entries are first
+      [...section.items].reverse().forEach(appendMovie);
+
+      // Insert boundary label for this section after its items
+      if (section.year) {
+        const divider = document.createElement('li');
+        divider.className = 'year-divider';
+        divider.innerHTML = `
+          <span class="line"></span>
+          <span class="label">${section.year}</span>
+          <span class="line"></span>
+        `;
+        ul.appendChild(divider);
+      }
+    });
+
     container.innerHTML = '';
     container.appendChild(ul);
   }
@@ -163,12 +264,12 @@ function parseMovies(text) {
   
   // Initialize app
   async function init() {
-    const movies = await loadMovies();
+    const text = await loadText();
+    const movies = parseMovies(text);
+    const sections = parseSections(text);
     
-    // Render all views
-    // Show most recent first (bottom of the file at the top)
-    const recentFirst = [...movies].reverse();
-    renderMovieList(recentFirst, 'all-movies');
+    // Render All with year dividers, newest first
+    renderAllSections(sections, 'all-movies');
     
     const watched = movies.filter(m => m.watched && m.rating !== null);
     const rankedMovies = [...watched].sort((a, b) => b.rating - a.rating);

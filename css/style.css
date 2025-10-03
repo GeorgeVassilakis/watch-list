@@ -152,6 +152,36 @@ nav {
   .movie-list {
     list-style: none;
   }
+
+  /* Year divider row for All list */
+  .year-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 6px;
+    color: var(--warm-gray);
+  }
+  .year-divider .line {
+    height: 1px;
+    background: var(--line);
+    flex: 1;
+  }
+  .year-divider .label {
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--dark-brown);
+    padding: 2px 10px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: #fff;
+  }
+
+  .year-divider.current .label {
+    background: var(--burnt-orange);
+    color: #fff;
+    border-color: var(--burnt-orange);
+  }
   
 .movie-item {
     display: flex;
@@ -167,6 +197,11 @@ nav {
 
   .movie-list .movie-item:last-child {
     border-bottom: none;
+  }
+
+  /* prevent borders hugging a year divider too tightly */
+  .year-divider + .movie-item {
+    border-top: 1px solid var(--light-gray);
   }
   
 .checkbox {
