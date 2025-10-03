@@ -10,34 +10,37 @@ async function loadMovies() {
     }
   }
   
-  function parseMovies(text) {
-    const lines = text.trim().split('\n');
-    const movies = [];
-    
-    lines.forEach(line => {
-      // Match pattern: - [x] or - [ ] followed by title and optional rating
-      const watchedMatch = line.match(/^- \[x\] (.+?)(?:\s+-\s+(\d+\.?\d*)\/10)?$/i);
-      const unwatchedMatch = line.match(/^- \[ \] (.+?)(?:\s+-)?$/i);
-      
-      if (watchedMatch) {
-        const title = watchedMatch[1].trim();
-        const rating = watchedMatch[2] ? parseFloat(watchedMatch[2]) : null;
-        movies.push({
-          title,
-          rating,
-          watched: true
-        });
-      } else if (unwatchedMatch) {
-        const title = unwatchedMatch[1].trim();
-        movies.push({
-          title,
-          rating: null,
-          watched: false
-        });
+function parseMovies(text) {
+    const lines = text
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    return lines.reduce((movies, line) => {
+      const match = line.match(/^- \[(x| )\] (.+)$/i);
+      if (!match) return movies;
+
+      const watched = match[1].toLowerCase() === 'x';
+      let title = match[2].trim();
+      let rating = null;
+
+      const ratingMatch = title.match(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/);
+      if (ratingMatch) {
+        rating = parseFloat(ratingMatch[1]);
+        title = title
+          .replace(/(?:\s*[-\u2013\u2014:])?\s*(\d+(?:\.\d+)?)\/10$/, '')
+          .trim();
+      } else {
+        title = title.replace(/\s*[-\u2013\u2014:]\s*$/, '').trim();
       }
-    });
-    
-    return movies;
+
+      movies.push({
+        title,
+        rating,
+        watched
+      });
+      return movies;
+    }, []);
   }
   
   // Render movie list
