@@ -360,7 +360,8 @@ nav {
     height: 18px;
     background-color: var(--light-gray);
     border-radius: 3px;
-    overflow: hidden;
+    /* Allow tiny bars to show their count even if it overflows */
+    overflow: visible;
     position: relative;
     border: 1px solid var(--line);
   }
