@@ -95,7 +95,6 @@
 - [ ] Once Upon a Time in Hollywood
 - [x] Mamma Mia - 8.3/10
 - [x] Spiderman: Across the Spiderverse - 9.3/10
-- [ ] Dunkirk - 
 - [x] Tenet - 8.6/10
 - [ ] The Place Beyond the Pines - 
 - [ ] The Godfather I -
@@ -217,3 +216,4 @@
 - [ ] La Bête - 
 - [ ] Manchester By Sea - 
 - [ ] The Town - 
+- [x] Dunkirk - 8.8/10
