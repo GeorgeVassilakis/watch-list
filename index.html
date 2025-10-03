@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watch List</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>WATCH LIST</h1>
+      <p class="subtitle">A curated collection</p>
+    </header>
+
+    <nav>
+      <button class="tab-button active" data-tab="all-tab">All</button>
+      <button class="tab-button" data-tab="ranked-tab">Ranked</button>
+      <button class="tab-button" data-tab="watchlist-tab">Watchlist</button>
+      <button class="tab-button" data-tab="stats-tab">Stats</button>
+    </nav>
+
+    <!-- All Movies Tab -->
+    <div id="all-tab" class="tab-content active">
+      <div id="all-movies"></div>
+    </div>
+
+    <!-- Ranked Tab -->
+    <div id="ranked-tab" class="tab-content">
+      <div id="ranked-movies"></div>
+    </div>
+
+    <!-- Watchlist Tab -->
+    <div id="watchlist-tab" class="tab-content">
+      <div id="watchlist-movies"></div>
+    </div>
+
+    <!-- Stats Tab -->
+    <div id="stats-tab" class="tab-content">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="total-watched">0</div>
+          <div class="stat-label">Watched</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="total-unwatched">0</div>
+          <div class="stat-label">To Watch</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="avg-rating">0</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+
+      <div class="top-movies">
+        <h2>Top 10 Movies</h2>
+        <div id="top-10-list"></div>
+      </div>
+
+      <div class="distribution-chart">
+        <h2>Rating Distribution</h2>
+        <div id="distribution-chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
