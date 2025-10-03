@@ -166,7 +166,9 @@ function parseMovies(text) {
     const movies = await loadMovies();
     
     // Render all views
-    renderMovieList(movies, 'all-movies');
+    // Show most recent first (bottom of the file at the top)
+    const recentFirst = [...movies].reverse();
+    renderMovieList(recentFirst, 'all-movies');
     
     const watched = movies.filter(m => m.watched && m.rating !== null);
     const rankedMovies = [...watched].sort((a, b) => b.rating - a.rating);
