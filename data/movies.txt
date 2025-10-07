@@ -217,3 +217,4 @@
 - [ ] Manchester By Sea - 
 - [ ] The Town - 
 - [x] Dunkirk - 8.8/10
+- [x] One Battle After Another - 9.4/10
