@@ -64,7 +64,6 @@
 - [ ] Pineapple Express
 - [ ] Austin Powers
 - [x] The Truman Show - 9.0/10
-- [ ] Ford vs. Ferrari
 - [x] Eté '85 - 9.0/10
 - [x] The Gray Man - 8.2/10
 - [x] Fight Club - 8.6/10
@@ -166,6 +165,7 @@
 - [x] Captain America: Brave New World - 6.5/10
 - [ ] We Live In Time - 
 - [x] Black Bag - 8.3/10
+- [x] Ford vs. Ferrari - 8.7/10
 - [x] Notting Hill - 8.0/10
 - [x] The Minecraft Movie - 8.3/10
 - [x] Mickey 17 - 8.8/10
