@@ -91,7 +91,6 @@
 - [x] Men in Black - 7.9/10
 - [x] Men in Black II - 7.3/10
 - [x] Men in Black III - 8.1/10
-- [ ] Once Upon a Time in Hollywood
 - [x] Mamma Mia - 8.3/10
 - [x] Spiderman: Across the Spiderverse - 9.3/10
 - [x] Tenet - 8.6/10
@@ -220,3 +219,4 @@
 - [x] One Battle After Another - 9.4/10
 - [ ] Gone Girl - 
 - [x] Interstellar - 9.6/10
+- [x] Once Upon a Time in Hollywood - 8.5/10
