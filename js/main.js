@@ -283,6 +283,9 @@ function parseMovies(text) {
   
   // Initialize app
   async function init() {
+    // Theme first so initial paint uses correct palette
+    setupThemeToggle();
+
     const text = await loadText();
     const movies = parseMovies(text);
     const sections = parseSections(text);
@@ -306,3 +309,45 @@ function parseMovies(text) {
   
   // Run when page loads
   document.addEventListener('DOMContentLoaded', init);
+
+  // --- Theme toggle ---
+  function setupThemeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    const stored = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initial = stored ? stored : (systemPrefersDark ? 'dark' : 'light');
+    applyTheme(initial);
+    updateToggleIcon(btn, initial);
+
+    btn.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.toggle('dark');
+      const theme = isDark ? 'dark' : 'light';
+      localStorage.setItem('theme', theme);
+      updateToggleIcon(btn, theme);
+    });
+
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const storedNow = localStorage.getItem('theme');
+        if (storedNow) return; // respect explicit choice
+        const theme = e.matches ? 'dark' : 'light';
+        applyTheme(theme);
+        updateToggleIcon(btn, theme);
+      });
+    }
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }
+
+  function updateToggleIcon(button, theme) {
+    // ☀ for light, ☾ for dark target
+    button.textContent = theme === 'dark' ? '☀' : '☾';
+  }
