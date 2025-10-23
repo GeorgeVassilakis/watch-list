@@ -225,3 +225,5 @@
 - [ ] Metropolis - 
 - [ ] Cloud Atlas - 
 - [ ] The Man Who Knew Infinity - 
+- [ ] October Sky - 
+- [x] Sex, Lies, and Videotape - 7.9/10
