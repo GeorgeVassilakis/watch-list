@@ -231,3 +231,4 @@
 - [x] Is This Thing On? - 8.7/10
 - [ ] Steel Magnolias -
 - [x] Brokeback Mountain - 8.6/10
+- [x] Synecdoche, New York - 1.7/10
