@@ -233,5 +233,5 @@
 - [x] Brokeback Mountain - 8.6/10
 - [x] Synecdoche, New York - 1.7/10
 - [x] Dog Day Afternoon - 8.8/10
-- [x] Heat - 
+- [ ] Heat - 
 - [x] Sunshine - 8.2/10
