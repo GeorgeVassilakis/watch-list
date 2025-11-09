@@ -234,3 +234,4 @@
 - [x] Synecdoche, New York - 1.7/10
 - [x] Dog Day Afternoon - 8.8/10
 - [x] Heat - 
+- [x] Sunshine - 8.2/10
