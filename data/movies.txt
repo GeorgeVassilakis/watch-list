@@ -212,7 +212,6 @@
 - [ ] Cure - 
 - [ ] True Detective -
 - [ ] Boyhood - 
-- [ ] La Bête - 
 - [ ] Manchester By Sea - 
 - [ ] The Town - 
 - [x] Dunkirk - 8.8/10
@@ -236,3 +235,4 @@
 - [ ] Heat - 
 - [x] Sunshine - 8.2/10
 - [x] Jerry Maguire - 8.1/10
+- [x] La Bête - 9.2/10
