@@ -236,3 +236,4 @@
 - [x] Sunshine - 8.2/10
 - [x] Jerry Maguire - 8.1/10
 - [x] La Bête - 9.2/10
+- [x] Manhunter - 9.0/10
