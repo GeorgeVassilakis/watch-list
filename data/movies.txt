@@ -237,3 +237,4 @@
 - [x] Jerry Maguire - 8.1/10
 - [x] La Bête - 9.2/10
 - [x] Manhunter - 9.0/10
+- [x] No Country for Old Men - 8.3/10
