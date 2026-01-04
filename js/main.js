@@ -408,15 +408,16 @@ function parseBooks(text) {
   }
 
   function renderBookStats(books) {
-    const rated = books.filter(b => b.rating !== null);
-    const unrated = books.filter(b => b.rating === null);
+    const read = books.filter(b => b.read);
+    const unread = books.filter(b => !b.read);
+    const rated = read.filter(b => b.rating !== null);
 
     const avgRating = rated.length > 0
       ? (rated.reduce((sum, b) => sum + b.rating, 0) / rated.length).toFixed(1)
       : 0;
 
-    document.getElementById('books-total-read').textContent = rated.length;
-    document.getElementById('books-total-unread').textContent = unrated.length;
+    document.getElementById('books-total-read').textContent = read.length;
+    document.getElementById('books-total-unread').textContent = unread.length;
     document.getElementById('books-avg-rating').textContent = avgRating;
 
     const topBooks = [...rated]
@@ -565,14 +566,14 @@ function parseBooks(text) {
     renderBookSections(bookSections, 'all-books', true);
 
     const rankedBooks = [...books]
-      .filter(book => book.rating !== null)
+      .filter(book => book.read && book.rating !== null)
       .sort((a, b) => b.rating - a.rating);
     renderBookList(rankedBooks, 'ranked-books');
 
     const toReadSections = bookSections
       .map(section => ({
         year: section.year,
-        items: section.items.filter(book => book.rating === null)
+        items: section.items.filter(book => !book.read)
       }))
       .filter(section => section.items.length > 0);
     renderBookSections(toReadSections, 'watchlist-books', true);
