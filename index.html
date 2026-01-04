@@ -7,7 +7,15 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
+  <!-- Theme toggle button -->
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
+
+  <div class="mode-toggle" role="group" aria-label="Content mode">
+    <button class="mode-button active" data-mode="movies" aria-pressed="true" type="button">Movies</button>
+    <button class="mode-button" data-mode="books" aria-pressed="false" type="button">Books</button>
+  </div>
+
+  <div class="container movies-view" id="movies-view">
     <header>
       <h1>WATCH LIST</h1>
       <p class="subtitle">A curated collection by George Vassilakis</p>
@@ -17,8 +25,6 @@
         <span class="circle c3"></span>
       </div>
     </header>
-    <!-- Theme toggle button -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" title="Toggle theme">☾</button>
 
     <nav>
       <button class="tab-button active" data-tab="all-tab">All</button>
@@ -71,6 +77,68 @@
       <div class="distribution-chart">
         <h2>Rating Distribution</h2>
         <div id="distribution-chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container books-view" id="books-view" hidden>
+    <header>
+      <h1>READING LIST</h1>
+      <p class="subtitle">A curated reading list by George Vassilakis</p>
+      <div class="motif" aria-hidden="true">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+      </div>
+    </header>
+
+    <nav>
+      <button class="tab-button active" data-tab="books-all-tab">All</button>
+      <button class="tab-button" data-tab="books-ranked-tab">Ranked</button>
+      <button class="tab-button" data-tab="books-watchlist-tab">To Read</button>
+      <button class="tab-button" data-tab="books-stats-tab">Stats</button>
+    </nav>
+
+    <div id="books-all-tab" class="tab-content active">
+      <p class="tab-desc">My chronological book list, both read and to read.</p>
+      <div id="all-books"></div>
+    </div>
+
+    <div id="books-ranked-tab" class="tab-content">
+      <p class="tab-desc">Immediate post-book rating, no hindsight.</p>
+      <div id="ranked-books"></div>
+    </div>
+
+    <div id="books-watchlist-tab" class="tab-content">
+      <p class="tab-desc">The stack I want to read next.</p>
+      <div id="watchlist-books"></div>
+    </div>
+
+    <div id="books-stats-tab" class="tab-content">
+      <p class="tab-desc">For nerds like me.</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="books-total-read">0</div>
+          <div class="stat-label">Read</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="books-total-unread">0</div>
+          <div class="stat-label">To Read</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="books-avg-rating">0</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+
+      <div class="top-movies">
+        <h2>Top 10 Books</h2>
+        <div id="books-top-10-list"></div>
+      </div>
+
+      <div class="distribution-chart">
+        <h2>Rating Distribution</h2>
+        <div id="books-distribution-chart"></div>
       </div>
     </div>
   </div>
