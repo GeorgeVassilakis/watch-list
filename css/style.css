@@ -33,6 +33,35 @@ html.dark {
   --chip-bg: #1E1A14;
 }
 
+/* Books palette overrides */
+body.books-mode {
+  --cream: #E7EEE6;
+  --paper: #F5F8F2;
+  --warm-gray: #5F6F63;
+  --dark-brown: #1F2D22;
+  --amber: #7B9B74;
+  --burnt-orange: #2E5B3D;
+  --olive: #6E8A65;
+  --light-gray: #DCE5D8;
+  --line: #C7D2C3;
+  --dot: rgba(31, 45, 34, 0.05);
+  --chip-bg: var(--paper);
+}
+
+html.dark body.books-mode {
+  --cream: #141A15;
+  --paper: #111713;
+  --warm-gray: #B6C2B7;
+  --dark-brown: #E5EFE6;
+  --amber: #7CA37A;
+  --burnt-orange: #3E6B4E;
+  --olive: #6E8F6C;
+  --light-gray: #1C241E;
+  --line: #2C372F;
+  --dot: rgba(255, 255, 255, 0.04);
+  --chip-bg: #162018;
+}
+
 body {
   /* UI in humanist/system sans, titles will override to serif */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -59,6 +88,46 @@ body::before {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 20px;
+}
+
+.mode-toggle {
+  max-width: 960px;
+  margin: 24px auto 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.mode-button {
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--warm-gray);
+  padding: 8px 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.mode-button:first-child {
+  border-radius: 999px 0 0 999px;
+}
+
+.mode-button:last-child {
+  border-radius: 0 999px 999px 0;
+  border-left: none;
+}
+
+.mode-button.active {
+  background: var(--burnt-orange);
+  color: #fff;
+  border-color: var(--burnt-orange);
+}
+
+.mode-button:focus-visible {
+  outline: 2px solid var(--burnt-orange);
+  outline-offset: 2px;
 }
 
 header {
@@ -159,6 +228,10 @@ nav {
     background-size: 14px 14px;
   }
 
+.books-view .tab-content {
+  padding: 22px 20px;
+}
+
 .tab-desc {
   font-size: 0.78rem;
   color: var(--warm-gray);
@@ -174,6 +247,10 @@ nav {
 /* subtle dot pattern applied directly via background-image */
 
 .movie-list {
+  list-style: none;
+}
+
+.book-list {
   list-style: none;
 }
 
@@ -228,6 +305,10 @@ nav {
   border-top: 1px solid var(--light-gray);
 }
 
+.year-divider + .book-item {
+  border-top: 1px solid var(--light-gray);
+}
+
 .checkbox {
   width: 16px;
   height: 16px;
@@ -258,6 +339,57 @@ nav {
   font-size: 1rem;
   color: var(--dark-brown);
   letter-spacing: 0.01em;
+}
+
+.book-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--light-gray);
+  transition: background-color 0.15s ease;
+}
+
+.book-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.book-list .book-item:last-child {
+  border-bottom: none;
+}
+
+.book-cover {
+  width: 62px;
+  height: 92px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--light-gray);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-brown);
+  letter-spacing: 0.01em;
+}
+
+.book-meta {
+  font-size: 0.82rem;
+  color: var(--warm-gray);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+.book-item .rating {
+  margin-left: auto;
 }
 
 .rating {
@@ -302,6 +434,42 @@ nav {
   color: var(--burnt-orange);
   border-color: rgba(199, 82, 42, 0.5);
   background: rgba(199, 82, 42, 0.08);
+}
+
+body.books-mode .rating.rating-lt6 {
+  color: #7D8D7B;
+  border-color: rgba(125, 141, 123, 0.5);
+  background: rgba(125, 141, 123, 0.12);
+}
+
+body.books-mode .rating.rating-6 {
+  color: #5E7B63;
+  border-color: rgba(94, 123, 99, 0.5);
+  background: rgba(94, 123, 99, 0.12);
+}
+
+body.books-mode .rating.rating-7 {
+  color: #6F8E6A;
+  border-color: rgba(111, 142, 106, 0.5);
+  background: rgba(111, 142, 106, 0.12);
+}
+
+body.books-mode .rating.rating-8 {
+  color: #5F8A6B;
+  border-color: rgba(95, 138, 107, 0.5);
+  background: rgba(95, 138, 107, 0.12);
+}
+
+body.books-mode .rating.rating-9 {
+  color: #3F6F52;
+  border-color: rgba(63, 111, 82, 0.5);
+  background: rgba(63, 111, 82, 0.12);
+}
+
+body.books-mode .rating.rating-10 {
+  color: #2E5B3D;
+  border-color: rgba(46, 91, 61, 0.5);
+  background: rgba(46, 91, 61, 0.12);
 }
 
 .stats-grid {
@@ -409,6 +577,15 @@ nav {
     padding: 20px 14px;
   }
 
+  .mode-toggle {
+    margin-top: 18px;
+  }
+
+  .mode-button {
+    padding: 8px 12px;
+    font-size: 0.68rem;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -424,6 +601,19 @@ nav {
 
   .movie-title {
     font-size: 0.96rem;
+  }
+
+  .book-cover {
+    width: 52px;
+    height: 78px;
+  }
+
+  .book-title {
+    font-size: 0.96rem;
+  }
+
+  .book-meta {
+    font-size: 0.76rem;
   }
 
   .rating {

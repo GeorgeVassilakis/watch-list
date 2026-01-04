@@ -1,0 +1,3 @@
+## 2026
+- [x] The Sirens of Titan | Kurt Vonnegut | 1959 | file: sirensoftitan.jpg | 9.0/10
+- [ ] Le Tour du monde en 80 jours | Jules Verne | 1872 | file: letourdumonde.jpg
