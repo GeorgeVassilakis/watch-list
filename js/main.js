@@ -75,6 +75,40 @@ function parseBookFromLine(line) {
       read
     };
   }
+
+function parseAlbumFromLine(line) {
+    const match = line.match(/^- \[(x| )\] (.+)$/i);
+    if (!match) return null;
+
+    const listened = match[1].toLowerCase() === 'x';
+    const parts = match[2]
+      .split('|')
+      .map(part => part.trim())
+      .filter(Boolean);
+
+    let rating = null;
+    const lastPart = parts[parts.length - 1];
+    const ratingMatch = lastPart && lastPart.match(/^(\d+(?:\.\d+)?)\/10$/);
+    if (ratingMatch) {
+      rating = parseFloat(ratingMatch[1]);
+      parts.pop();
+    }
+
+    const title = parts[0] || '';
+    const artist = parts[1] || '';
+    const year = parts[2] || '';
+    const filePart = parts.find(part => /^file:/i.test(part));
+    const cover = filePart ? filePart.replace(/^file:\s*/i, '').trim() : '';
+
+    return {
+      title,
+      artist,
+      year,
+      cover,
+      rating,
+      listened
+    };
+  }
   
 function parseMovies(text) {
     const lines = text
@@ -99,6 +133,19 @@ function parseBooks(text) {
       const book = parseBookFromLine(line);
       if (book) books.push(book);
       return books;
+    }, []);
+  }
+
+function parseAlbums(text) {
+    const lines = text
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    return lines.reduce((albums, line) => {
+      const album = parseAlbumFromLine(line);
+      if (album) albums.push(album);
+      return albums;
     }, []);
   }
   
@@ -153,6 +200,34 @@ function parseBooks(text) {
       }
       const book = parseBookFromLine(line);
       if (book) current.items.push(book);
+    }
+
+    pushCurrent();
+    return sections;
+  }
+
+  function parseAlbumSections(text) {
+    const lines = text
+      .split(/\r?\n/)
+      .map(line => line.trim())
+      .filter(Boolean);
+
+    const sections = [];
+    let current = { year: null, items: [] };
+
+    const pushCurrent = () => {
+      if (current.items.length > 0 || current.year !== null) sections.push(current);
+    };
+
+    for (const line of lines) {
+      const yearMatch = line.match(/^##\s*(\d{4})\s*$/);
+      if (yearMatch) {
+        pushCurrent();
+        current = { year: yearMatch[1], items: [] };
+        continue;
+      }
+      const album = parseAlbumFromLine(line);
+      if (album) current.items.push(album);
     }
 
     pushCurrent();
@@ -232,6 +307,55 @@ function parseBooks(text) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(book.rating)}`;
         rating.textContent = `${formatRating(book.rating)}/10`;
+        li.appendChild(rating);
+      }
+
+      ul.appendChild(li);
+    });
+
+    container.innerHTML = '';
+    container.appendChild(ul);
+  }
+
+  function renderAlbumList(albums, containerId) {
+    const container = document.getElementById(containerId);
+    const ul = document.createElement('ul');
+    ul.className = 'album-list';
+
+    albums.forEach(album => {
+      const li = document.createElement('li');
+      li.className = 'album-item';
+
+      const cover = document.createElement('img');
+      cover.className = 'album-cover';
+      if (album.cover) {
+        cover.src = `data/albums/${album.cover}`;
+      }
+      cover.alt = album.title ? `${album.title} cover` : 'Album cover';
+      cover.loading = 'lazy';
+      cover.decoding = 'async';
+
+      const info = document.createElement('div');
+      info.className = 'album-info';
+
+      const title = document.createElement('div');
+      title.className = 'album-title';
+      title.textContent = album.title;
+      info.appendChild(title);
+
+      const meta = document.createElement('div');
+      meta.className = 'album-meta';
+      const metaParts = [album.artist, album.year].filter(Boolean);
+      meta.textContent = metaParts.join(' / ');
+      if (metaParts.length > 0) info.appendChild(meta);
+
+      li.appendChild(cover);
+      li.appendChild(info);
+
+      if (album.rating !== null) {
+        const rating = document.createElement('span');
+        rating.className = `rating ${ratingClass(album.rating)}`;
+        rating.textContent = `${formatRating(album.rating)}/10`;
         li.appendChild(rating);
       }
 
@@ -380,6 +504,83 @@ function parseBooks(text) {
     container.innerHTML = '';
     container.appendChild(ul);
   }
+
+  function renderAlbumSections(sections, containerId, includeCurrent = true) {
+    const container = document.getElementById(containerId);
+    const ul = document.createElement('ul');
+    ul.className = 'album-list';
+
+    const groups = [...sections].reverse();
+
+    const appendAlbum = (album) => {
+      const li = document.createElement('li');
+      li.className = 'album-item';
+
+      const cover = document.createElement('img');
+      cover.className = 'album-cover';
+      if (album.cover) {
+        cover.src = `data/albums/${album.cover}`;
+      }
+      cover.alt = album.title ? `${album.title} cover` : 'Album cover';
+      cover.loading = 'lazy';
+      cover.decoding = 'async';
+
+      const info = document.createElement('div');
+      info.className = 'album-info';
+
+      const title = document.createElement('div');
+      title.className = 'album-title';
+      title.textContent = album.title;
+      info.appendChild(title);
+
+      const meta = document.createElement('div');
+      meta.className = 'album-meta';
+      const metaParts = [album.artist, album.year].filter(Boolean);
+      meta.textContent = metaParts.join(' / ');
+      if (metaParts.length > 0) info.appendChild(meta);
+
+      li.appendChild(cover);
+      li.appendChild(info);
+
+      if (album.rating !== null) {
+        const rating = document.createElement('span');
+        rating.className = `rating ${ratingClass(album.rating)}`;
+        rating.textContent = `${formatRating(album.rating)}/10`;
+        li.appendChild(rating);
+      }
+
+      ul.appendChild(li);
+    };
+
+    if (includeCurrent) {
+      const currentMarker = document.createElement('li');
+      currentMarker.className = 'year-divider current';
+      currentMarker.innerHTML = `
+        <span class="line"></span>
+        <span class="label">CURRENT</span>
+        <span class="line"></span>
+      `;
+      ul.appendChild(currentMarker);
+    }
+
+    groups.forEach((section) => {
+      [...section.items].reverse().forEach(appendAlbum);
+
+      if (section.year) {
+        const divider = document.createElement('li');
+        divider.className = 'year-divider';
+        divider.innerHTML = `
+          <span class="line"></span>
+          <span class="label">${section.year}</span>
+          <span class="line"></span>
+        `;
+        ul.appendChild(divider);
+      }
+    });
+
+    container.innerHTML = '';
+    container.appendChild(ul);
+  }
   
   // Calculate and render statistics
   function renderStats(movies) {
@@ -427,6 +628,28 @@ function parseBooks(text) {
     renderBookList(topBooks, 'books-top-10-list');
 
     renderDistribution(rated, 'books-distribution-chart');
+  }
+
+  function renderAlbumStats(albums) {
+    const listened = albums.filter(a => a.listened);
+    const unlistened = albums.filter(a => !a.listened);
+    const rated = listened.filter(a => a.rating !== null);
+
+    const avgRating = rated.length > 0
+      ? (rated.reduce((sum, a) => sum + a.rating, 0) / rated.length).toFixed(1)
+      : 0;
+
+    document.getElementById('music-total-listened').textContent = listened.length;
+    document.getElementById('music-total-unlistened').textContent = unlistened.length;
+    document.getElementById('music-avg-rating').textContent = avgRating;
+
+    const topAlbums = [...rated]
+      .sort((a, b) => b.rating - a.rating)
+      .slice(0, 10);
+
+    renderAlbumList(topAlbums, 'music-top-10-list');
+
+    renderDistribution(rated, 'music-distribution-chart');
   }
 
   function renderDistribution(movies, containerId = 'distribution-chart') {
@@ -509,18 +732,23 @@ function parseBooks(text) {
   }
 
   function setupModeToggle() {
-    const moviesView = document.getElementById('movies-view');
-    const booksView = document.getElementById('books-view');
+    const views = {
+      movies: document.getElementById('movies-view'),
+      books: document.getElementById('books-view'),
+      music: document.getElementById('music-view')
+    };
     const buttons = document.querySelectorAll('.mode-button');
-    if (!moviesView || !booksView || buttons.length === 0) return;
+    if (!views.movies || !views.books || !views.music || buttons.length === 0) return;
 
     const setMode = (mode) => {
-      const isBooks = mode === 'books';
-      document.body.classList.toggle('books-mode', isBooks);
-      moviesView.hidden = isBooks;
-      booksView.hidden = !isBooks;
+      const selected = views[mode] ? mode : 'movies';
+      Object.entries(views).forEach(([key, view]) => {
+        view.hidden = key !== selected;
+      });
+      document.body.classList.toggle('books-mode', selected === 'books');
+      document.body.classList.toggle('music-mode', selected === 'music');
       buttons.forEach(button => {
-        const isActive = button.dataset.mode === mode;
+        const isActive = button.dataset.mode === selected;
         button.classList.toggle('active', isActive);
         button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
       });
@@ -579,9 +807,31 @@ function parseBooks(text) {
     renderBookSections(toReadSections, 'watchlist-books', true);
 
     renderBookStats(books);
+
+    const albumsText = await loadText('data/albums.txt');
+    const albums = parseAlbums(albumsText);
+    const albumSections = parseAlbumSections(albumsText);
+
+    renderAlbumSections(albumSections, 'all-albums', true);
+
+    const rankedAlbums = [...albums]
+      .filter(album => album.listened && album.rating !== null)
+      .sort((a, b) => b.rating - a.rating);
+    renderAlbumList(rankedAlbums, 'ranked-albums');
+
+    const toListenSections = albumSections
+      .map(section => ({
+        year: section.year,
+        items: section.items.filter(album => !album.listened)
+      }))
+      .filter(section => section.items.length > 0);
+    renderAlbumSections(toListenSections, 'watchlist-albums', true);
+
+    renderAlbumStats(albums);
     
     setupTabs(document.getElementById('movies-view'));
     setupTabs(document.getElementById('books-view'));
+    setupTabs(document.getElementById('music-view'));
   }
   
   // Run when page loads

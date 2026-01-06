@@ -13,6 +13,7 @@
   <div class="mode-toggle" role="group" aria-label="Content mode">
     <button class="mode-button active" data-mode="movies" aria-pressed="true" type="button">Movies</button>
     <button class="mode-button" data-mode="books" aria-pressed="false" type="button">Books</button>
+    <button class="mode-button" data-mode="music" aria-pressed="false" type="button">Music</button>
   </div>
 
   <div class="container movies-view" id="movies-view">
@@ -139,6 +140,68 @@
       <div class="distribution-chart">
         <h2>Rating Distribution</h2>
         <div id="books-distribution-chart"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container music-view" id="music-view" hidden>
+    <header>
+      <h1>ALBUM REVIEWS</h1>
+      <p class="subtitle">A curated listening list by George Vassilakis</p>
+      <div class="motif" aria-hidden="true">
+        <span class="circle c1"></span>
+        <span class="circle c2"></span>
+        <span class="circle c3"></span>
+      </div>
+    </header>
+
+    <nav>
+      <button class="tab-button active" data-tab="music-all-tab">All</button>
+      <button class="tab-button" data-tab="music-ranked-tab">Ranked</button>
+      <button class="tab-button" data-tab="music-watchlist-tab">To Listen</button>
+      <button class="tab-button" data-tab="music-stats-tab">Stats</button>
+    </nav>
+
+    <div id="music-all-tab" class="tab-content active">
+      <p class="tab-desc">My chronological album list, both reviewed and to listen.</p>
+      <div id="all-albums"></div>
+    </div>
+
+    <div id="music-ranked-tab" class="tab-content">
+      <p class="tab-desc">Immediate post-album rating, no hindsight.</p>
+      <div id="ranked-albums"></div>
+    </div>
+
+    <div id="music-watchlist-tab" class="tab-content">
+      <p class="tab-desc">The albums I want to review next.</p>
+      <div id="watchlist-albums"></div>
+    </div>
+
+    <div id="music-stats-tab" class="tab-content">
+      <p class="tab-desc">For nerds like me.</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="music-total-listened">0</div>
+          <div class="stat-label">Listened</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="music-total-unlistened">0</div>
+          <div class="stat-label">To Listen</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="music-avg-rating">0</div>
+          <div class="stat-label">Average Rating</div>
+        </div>
+      </div>
+
+      <div class="top-movies">
+        <h2>Top 10 Albums</h2>
+        <div id="music-top-10-list"></div>
+      </div>
+
+      <div class="distribution-chart">
+        <h2>Rating Distribution</h2>
+        <div id="music-distribution-chart"></div>
       </div>
     </div>
   </div>
