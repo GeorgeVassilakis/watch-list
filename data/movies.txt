@@ -223,7 +223,7 @@
 - [ ] The Prestige - 
 - [ ] Metropolis - 
 - [ ] Cloud Atlas - 
-- [ ] The Man Who Knew Infinity - 
+- [x] The Man Who Knew Infinity - 6.5/10
 - [ ] October Sky - 
 - [x] Sex, Lies, and Videotape - 7.9/10
 - [x] Bugonia - 8.1/10
