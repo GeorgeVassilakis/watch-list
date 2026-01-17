@@ -253,3 +253,6 @@
 - [x] Cloud (クラウド) - 8.4/10
 - [x] Possessor - 7.5/10
 - [x] Eternity - 7.3/10
+- [x] Tron - 8.2/10
+- [x] Tron: Legacy - 8.4/10
+- [x] Tron: Ares - 7.0/10
