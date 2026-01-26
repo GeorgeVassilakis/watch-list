@@ -62,6 +62,35 @@ html.dark body.books-mode {
   --chip-bg: #162018;
 }
 
+/* Music palette overrides */
+body.music-mode {
+  --cream: #F8E0DB;
+  --paper: #FDEBE7;
+  --warm-gray: #6E4F4B;
+  --dark-brown: #2A1716;
+  --amber: #D3342E; /* apple red */
+  --burnt-orange: #8C1D18; /* firetruck */
+  --olive: #B32B25; /* cherry red */
+  --light-gray: #F0CDC7;
+  --line: #DEB6B1;
+  --dot: rgba(42, 23, 22, 0.065);
+  --chip-bg: var(--paper);
+}
+
+html.dark body.music-mode {
+  --cream: #160D0C;
+  --paper: #1A1010;
+  --warm-gray: #D7B8B4;
+  --dark-brown: #F6E1DE;
+  --amber: #C72E29;
+  --burnt-orange: #8A1C17;
+  --olive: #A82420;
+  --light-gray: #241514;
+  --line: #351F1D;
+  --dot: rgba(255, 255, 255, 0.04);
+  --chip-bg: #1E1414;
+}
+
 body {
   /* UI in humanist/system sans, titles will override to serif */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
@@ -114,9 +143,12 @@ body::before {
   border-radius: 999px 0 0 999px;
 }
 
+.mode-button + .mode-button {
+  border-left: none;
+}
+
 .mode-button:last-child {
   border-radius: 0 999px 999px 0;
-  border-left: none;
 }
 
 .mode-button.active {
@@ -232,6 +264,10 @@ nav {
   padding: 22px 20px;
 }
 
+.music-view .tab-content {
+  padding: 22px 20px;
+}
+
 .tab-desc {
   font-size: 0.78rem;
   color: var(--warm-gray);
@@ -251,6 +287,10 @@ nav {
 }
 
 .book-list {
+  list-style: none;
+}
+
+.album-list {
   list-style: none;
 }
 
@@ -306,6 +346,10 @@ nav {
 }
 
 .year-divider + .book-item {
+  border-top: 1px solid var(--light-gray);
+}
+
+.year-divider + .album-item {
   border-top: 1px solid var(--light-gray);
 }
 
@@ -392,6 +436,57 @@ nav {
   margin-left: auto;
 }
 
+.album-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 2px;
+  border-bottom: 1px solid var(--light-gray);
+  transition: background-color 0.15s ease;
+}
+
+.album-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.album-list .album-item:last-child {
+  border-bottom: none;
+}
+
+.album-cover {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: var(--light-gray);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+.album-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.album-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-brown);
+  letter-spacing: 0.01em;
+}
+
+.album-meta {
+  font-size: 0.82rem;
+  color: var(--warm-gray);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+}
+
+.album-item .rating {
+  margin-left: auto;
+}
+
 .rating {
     font-weight: 600;
     color: var(--warm-gray);
@@ -470,6 +565,42 @@ body.books-mode .rating.rating-10 {
   color: #2E5B3D;
   border-color: rgba(46, 91, 61, 0.5);
   background: rgba(46, 91, 61, 0.12);
+}
+
+body.music-mode .rating.rating-lt6 {
+  color: #B67D7A;
+  border-color: rgba(182, 125, 122, 0.5);
+  background: rgba(182, 125, 122, 0.16);
+}
+
+body.music-mode .rating.rating-6 {
+  color: #B14A44;
+  border-color: rgba(177, 74, 68, 0.5);
+  background: rgba(177, 74, 68, 0.16);
+}
+
+body.music-mode .rating.rating-7 {
+  color: #C13B35;
+  border-color: rgba(193, 59, 53, 0.5);
+  background: rgba(193, 59, 53, 0.16);
+}
+
+body.music-mode .rating.rating-8 {
+  color: #D3342E;
+  border-color: rgba(211, 52, 46, 0.5);
+  background: rgba(211, 52, 46, 0.16);
+}
+
+body.music-mode .rating.rating-9 {
+  color: #B12620;
+  border-color: rgba(177, 38, 32, 0.5);
+  background: rgba(177, 38, 32, 0.16);
+}
+
+body.music-mode .rating.rating-10 {
+  color: #8C1D18;
+  border-color: rgba(140, 29, 24, 0.5);
+  background: rgba(140, 29, 24, 0.16);
 }
 
 .stats-grid {
@@ -613,6 +744,19 @@ body.books-mode .rating.rating-10 {
   }
 
   .book-meta {
+    font-size: 0.76rem;
+  }
+
+  .album-cover {
+    width: 60px;
+    height: 60px;
+  }
+
+  .album-title {
+    font-size: 0.96rem;
+  }
+
+  .album-meta {
     font-size: 0.76rem;
   }
 
