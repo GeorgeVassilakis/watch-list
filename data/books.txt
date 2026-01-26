@@ -1,3 +1,7 @@
 ## 2026
 - [x] The Sirens of Titan | Kurt Vonnegut | 1959 | file: sirensoftitan.jpg | 9.0/10
 - [ ] Le Tour du monde en 80 jours | Jules Verne | 1872 | file: letourdumonde.jpg
+- [ ] Slaughterhouse-Five | Kurt Vonnegut | 1969 | file: slaughterhouse-five.jpg
+- [ ] The Metamorphosis | Franz Kafka | 1915 | file: themetamorphosis.jpg
+- [ ] The Ending of Time | Jiddu Krishnamurti & David Bohm | 1985 | file: theendingoftime.jpg
+- [ ] Stephen Hawking | Leonard Mlodinow | 2020 | file: stephenhawking.jpg
