@@ -812,7 +812,13 @@ function parseAlbums(text) {
     const albums = parseAlbums(albumsText);
     const albumSections = parseAlbumSections(albumsText);
 
-    renderAlbumSections(albumSections, 'all-albums', true);
+    const ratedAlbumSections = albumSections
+      .map(section => ({
+        year: section.year,
+        items: section.items.filter(album => album.listened)
+      }))
+      .filter(section => section.items.length > 0);
+    renderAlbumSections(ratedAlbumSections, 'all-albums', true);
 
     const rankedAlbums = [...albums]
       .filter(album => album.listened && album.rating !== null)
