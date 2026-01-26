@@ -791,7 +791,13 @@ function parseAlbums(text) {
     const books = parseBooks(booksText);
     const bookSections = parseBookSections(booksText);
 
-    renderBookSections(bookSections, 'all-books', true);
+    const ratedBookSections = bookSections
+      .map(section => ({
+        year: section.year,
+        items: section.items.filter(book => book.read && book.rating !== null)
+      }))
+      .filter(section => section.items.length > 0);
+    renderBookSections(ratedBookSections, 'all-books', true);
 
     const rankedBooks = [...books]
       .filter(book => book.read && book.rating !== null)
