@@ -137,7 +137,6 @@
 - [x] Dune: Part Two - 9.4/10
 - [ ] The Tourist - 
 - [ ] Three Body Problem - 
-- [ ] The Green Book - 
 - [ ] This is Where I Leave You - 
 - [x] The Grand Budapest Hotel - 9.4/10
 - [x] Challengers - 8.2/10
@@ -260,3 +259,4 @@
 - [x] The Rip - 6.0/10
 - [ ] Judas and the Black Messiah - 
 - [x] No Other Choice (어쩔수가없다) - 9.1/10
+- [x] The Green Book - 8.7/10
