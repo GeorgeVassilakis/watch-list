@@ -2,12 +2,13 @@
   {
     "title": "Son of Spergy",
     "artist": "Daniel Caesar",
-    "summary": "Add your 3-sentence review here.",
+    "summary": "This album represents a repenting and reflecting attitude that I absolutely love from him. Its angelic choruses and gospel are extremely prevalent and beautiful throughout. Plus, his NPR Tiny Desk was insane. Son of Spergy perfectly epitomizes why he's my GOAT.",
     "topSongs": [
-      "Have a Baby (With Me)",
-      "Call on Me",
-      "Moon"
+      "Who Knows",
+      "Touching God (feat. Yebba & Blood Orange)",
+      "Sign Of The Times"
     ],
+    "rating": 9.6,
     "metadata": {
       "genre": [
         "R&B",
@@ -16,17 +17,19 @@
       ],
       "releaseYear": 2025,
       "length": "51:44"
-    }
+    },
+    "updatedAt": "2026-02-08T20:30:26Z"
   },
   {
     "title": "Charm",
     "artist": "Clairo",
-    "summary": "Add your 3-sentence review here.",
+    "summary": "Clairo is indeed performative to listen to, and I was begged by my little sister to listen. I did, and it was awesome. It came at a time when I was playing more jazz than ever while also living in LA, and I think I'll be permanently addicted to drum brushes and buttery neck pickup progressions from now on. Excited to hear more of her like this in the future.",
     "topSongs": [
+      "Slow Dance",
       "Sexy to Someone",
-      "Nomad",
       "Juna"
     ],
+    "rating": 8.8,
     "metadata": {
       "genre": [
         "Pop",
@@ -34,17 +37,19 @@
       ],
       "releaseYear": 2024,
       "length": "38:02"
-    }
+    },
+    "updatedAt": "2026-02-08T20:30:26Z"
   },
   {
     "title": "Malcolm Todd",
     "artist": "Malcolm Todd",
-    "summary": "Add your 3-sentence review here.",
+    "summary": "I've been listening since he had 8,000 monthly listeners on Spotify, and at the time of writing he's at 13,484,092 (look at my boy go). His production skyrocketed in quality from the beginning EP days, and I appreciate the professional touch. This album specifically is more of the same Malcolm Todd that I've always loved, and I love (no pun intended) that he's now breaking into the mainstream.",
     "topSongs": [
-      "Chest Pain (I Love)",
-      "Bleed",
-      "Cheer Me On"
+      "I'll Come Back For You",
+      "Concrete",
+      "Zip Up My Fly"
     ],
+    "rating": 8.2,
     "metadata": {
       "genre": [
         "Alternative R&B",
@@ -52,7 +57,8 @@
       ],
       "releaseYear": 2025,
       "length": "37:33"
-    }
+    },
+    "updatedAt": "2026-02-08T20:30:26Z"
   },
   {
     "title": "Grace",

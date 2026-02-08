@@ -12,7 +12,7 @@ Top 3 songs (ranked):
 1. <song 1>
 2. <song 2>
 3. <song 3>
-Review (3 sentences): <review text>
+Review: <review text>
 ```
 
 ## 2. Find Metadata (Web)
@@ -60,7 +60,7 @@ Add/update one object matching `title` + `artist`:
 {
   "title": "Grace",
   "artist": "Jeff Buckley",
-  "summary": "Three-sentence review.",
+  "summary": "Your natural review text.",
   "topSongs": [
     "Song #1",
     "Song #2",
@@ -80,7 +80,8 @@ Add/update one object matching `title` + `artist`:
 Rules:
 
 - `topSongs` order is the ranking (`#1`, `#2`, `#3`).
-- Keep `summary` to the provided three sentences.
+- Keep `summary` as the user's natural review text (no sentence-count requirement).
+- Correct obvious spelling mistakes in the review text before saving, while preserving the original tone/voice.
 - Only reviewed albums should have entries here.
 
 ## 5. Validate
