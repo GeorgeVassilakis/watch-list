@@ -437,16 +437,24 @@ nav {
 }
 
 .album-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 2px;
+  display: block;
   border-bottom: 1px solid var(--light-gray);
   transition: background-color 0.15s ease;
 }
 
-.album-item:hover {
+.album-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 2px;
+}
+
+.album-item:hover .album-main {
   background-color: rgba(0, 0, 0, 0.03);
+}
+
+.album-item.has-review .album-main {
+  cursor: pointer;
 }
 
 .album-list .album-item:last-child {
@@ -485,6 +493,182 @@ nav {
 
 .album-item .rating {
   margin-left: auto;
+}
+
+.album-main.review-click-target:focus-visible {
+  outline: 2px solid var(--burnt-orange);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.album-review-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.album-review-modal-overlay.is-open {
+  display: flex;
+}
+
+.album-review-modal {
+  width: min(680px, 100%);
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+  padding: 14px;
+}
+
+.album-review-close {
+  margin-left: auto;
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 11px;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--chip-bg);
+  color: var(--warm-gray);
+  cursor: pointer;
+}
+
+.album-review-close:hover {
+  border-color: var(--burnt-orange);
+  color: var(--dark-brown);
+}
+
+.album-review-close:focus-visible {
+  outline: 2px solid var(--burnt-orange);
+  outline-offset: 2px;
+}
+
+.album-review-card {
+  margin-top: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px;
+  background: var(--chip-bg);
+}
+
+.album-review-card-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  column-gap: 12px;
+}
+
+.album-review-title-wrap {
+  min-width: 0;
+}
+
+.album-review-card-header .rating {
+  margin-left: 0;
+  justify-self: end;
+  align-self: start;
+}
+
+.album-review-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--dark-brown);
+}
+
+.album-review-subtitle {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: var(--warm-gray);
+  letter-spacing: 0.04em;
+}
+
+.album-review-text {
+  font-size: 0.9rem;
+  color: var(--dark-brown);
+  line-height: 1.55;
+  margin-top: 10px;
+}
+
+.album-review-heading {
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.album-top-songs-ranked {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.album-top-song-ranked {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: var(--paper);
+}
+
+.album-top-song-rank {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--burnt-orange);
+}
+
+.album-top-song-name {
+  font-size: 0.86rem;
+  color: var(--dark-brown);
+}
+
+.album-review-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.album-review-meta-pill {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  background: var(--paper);
+  display: grid;
+  gap: 3px;
+}
+
+.album-review-meta-pill span {
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.album-review-meta-pill strong {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--dark-brown);
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 .rating {
@@ -752,12 +936,36 @@ body.music-mode .rating.rating-10 {
     height: 60px;
   }
 
+  .album-main {
+    gap: 10px;
+  }
+
   .album-title {
     font-size: 0.96rem;
   }
 
   .album-meta {
     font-size: 0.76rem;
+  }
+
+  .album-review-modal {
+    padding: 10px;
+  }
+
+  .album-review-text {
+    font-size: 0.84rem;
+  }
+
+  .album-review-title {
+    font-size: 1rem;
+  }
+
+  .album-top-song-name {
+    font-size: 0.8rem;
+  }
+
+  .album-review-meta-grid {
+    grid-template-columns: 1fr;
   }
 
   .rating {

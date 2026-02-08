@@ -20,6 +20,17 @@ async function loadMovies() {
       return '';
     }
   }
+
+  async function loadJson(path, fallback = []) {
+    try {
+      const response = await fetch(path);
+      if (!response.ok) return fallback;
+      return await response.json();
+    } catch (error) {
+      console.error(`Error loading JSON from ${path}:`, error);
+      return fallback;
+    }
+  }
   
 function parseMovieFromLine(line) {
     const match = line.match(/^- \[(x| )\] (.+)$/i);
@@ -233,6 +244,296 @@ function parseAlbums(text) {
     pushCurrent();
     return sections;
   }
+
+  function normalizeAlbumKey(title = '', artist = '') {
+    const normalize = (value) => value.toLowerCase().replace(/\s+/g, ' ').trim();
+    return `${normalize(title)}::${normalize(artist)}`;
+  }
+
+  function mapAlbumReviews(entries) {
+    const reviewMap = new Map();
+    if (!Array.isArray(entries)) return reviewMap;
+
+    entries.forEach(entry => {
+      const key = normalizeAlbumKey(entry.title, entry.artist);
+      if (key !== '::') reviewMap.set(key, entry);
+    });
+
+    return reviewMap;
+  }
+
+  function formatMetadataValue(value) {
+    if (Array.isArray(value)) return value.filter(Boolean).join(', ');
+    if (value === null || value === undefined) return '';
+    return String(value).trim();
+  }
+
+  function titleCaseLabel(value = '') {
+    return value
+      .replace(/([A-Z])/g, ' $1')
+      .replace(/[_-]+/g, ' ')
+      .trim()
+      .replace(/\b\w/g, char => char.toUpperCase());
+  }
+
+  function getAlbumReview(album, reviewMap) {
+    if (!reviewMap || !album.listened) return null;
+    return reviewMap.get(normalizeAlbumKey(album.title, album.artist)) || null;
+  }
+
+  function buildAlbumMetadataRows(album, review) {
+    const metadata = review.metadata && typeof review.metadata === 'object'
+      ? { ...review.metadata }
+      : {};
+
+    const metadataRows = [
+      ['Genre', metadata.genre || review.genre],
+      ['Year', metadata.releaseYear || metadata.year || review.releaseYear || album.year],
+      ['Length', metadata.length || review.length]
+    ];
+
+    ['genre', 'releaseYear', 'year', 'length', 'label', 'sourceUrl'].forEach(key => {
+      if (key in metadata) delete metadata[key];
+    });
+
+    Object.entries(metadata).forEach(([key, value]) => {
+      metadataRows.push([titleCaseLabel(key), value]);
+    });
+
+    return metadataRows
+      .map(([label, value]) => [label, formatMetadataValue(value)])
+      .filter(([, value]) => value);
+  }
+
+  function createAlbumReviewCard(album, review) {
+    const card = document.createElement('article');
+    card.className = 'album-review-card';
+
+    const header = document.createElement('div');
+    header.className = 'album-review-card-header';
+
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'album-review-title-wrap';
+    const title = document.createElement('h3');
+    title.className = 'album-review-title';
+    title.textContent = album.title;
+    titleWrap.appendChild(title);
+
+    const subtitle = document.createElement('p');
+    subtitle.className = 'album-review-subtitle';
+    subtitle.textContent = [album.artist, album.year].filter(Boolean).join(' / ');
+    titleWrap.appendChild(subtitle);
+
+    header.appendChild(titleWrap);
+
+    if (album.rating !== null) {
+      const rating = document.createElement('span');
+      rating.className = `rating ${ratingClass(album.rating)}`;
+      rating.textContent = `${formatRating(album.rating)}/10`;
+      header.appendChild(rating);
+    }
+
+    card.appendChild(header);
+
+    if (review.summary) {
+      const summary = document.createElement('p');
+      summary.className = 'album-review-text';
+      summary.textContent = review.summary;
+      card.appendChild(summary);
+    }
+
+    if (Array.isArray(review.topSongs) && review.topSongs.length > 0) {
+      const songsHeading = document.createElement('p');
+      songsHeading.className = 'album-review-heading';
+      songsHeading.textContent = 'Top 3 Songs';
+      card.appendChild(songsHeading);
+
+      const songsList = document.createElement('ol');
+      songsList.className = 'album-top-songs-ranked';
+
+      review.topSongs.slice(0, 3).forEach((song, index) => {
+        const li = document.createElement('li');
+        li.className = 'album-top-song-ranked';
+
+        const rank = document.createElement('span');
+        rank.className = 'album-top-song-rank';
+        rank.textContent = `${index + 1}`;
+        li.appendChild(rank);
+
+        const songName = document.createElement('span');
+        songName.className = 'album-top-song-name';
+        songName.textContent = song;
+        li.appendChild(songName);
+
+        songsList.appendChild(li);
+      });
+
+      card.appendChild(songsList);
+    }
+
+    const visibleRows = buildAlbumMetadataRows(album, review);
+    if (visibleRows.length > 0) {
+      const metaHeading = document.createElement('p');
+      metaHeading.className = 'album-review-heading';
+      metaHeading.textContent = 'Album Metadata';
+      card.appendChild(metaHeading);
+
+      const metaGrid = document.createElement('div');
+      metaGrid.className = 'album-review-meta-grid';
+
+      visibleRows.forEach(([label, value]) => {
+        const pill = document.createElement('div');
+        pill.className = 'album-review-meta-pill';
+
+        const labelNode = document.createElement('span');
+        labelNode.textContent = label;
+        pill.appendChild(labelNode);
+
+        const valueNode = document.createElement('strong');
+        valueNode.textContent = value;
+        pill.appendChild(valueNode);
+
+        metaGrid.appendChild(pill);
+      });
+
+      card.appendChild(metaGrid);
+    }
+
+    return card;
+  }
+
+  let albumReviewModal = null;
+
+  function ensureAlbumReviewModal() {
+    if (albumReviewModal) return albumReviewModal;
+
+    const overlay = document.createElement('div');
+    overlay.className = 'album-review-modal-overlay';
+
+    const modal = document.createElement('div');
+    modal.className = 'album-review-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+
+    const closeButton = document.createElement('button');
+    closeButton.className = 'album-review-close';
+    closeButton.type = 'button';
+    closeButton.textContent = 'Close';
+    closeButton.setAttribute('aria-label', 'Close review card');
+
+    const content = document.createElement('div');
+    content.className = 'album-review-modal-content';
+
+    modal.appendChild(closeButton);
+    modal.appendChild(content);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    const closeModal = () => {
+      if (!overlay.classList.contains('is-open')) return;
+      overlay.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+      if (albumReviewModal && albumReviewModal.lastTrigger) {
+        albumReviewModal.lastTrigger.focus();
+      }
+    };
+
+    closeButton.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && overlay.classList.contains('is-open')) closeModal();
+    });
+
+    albumReviewModal = {
+      overlay,
+      content,
+      closeButton,
+      closeModal,
+      lastTrigger: null
+    };
+
+    return albumReviewModal;
+  }
+
+  function openAlbumReviewModal(album, review, trigger) {
+    const modal = ensureAlbumReviewModal();
+    modal.lastTrigger = trigger || null;
+    modal.content.innerHTML = '';
+    modal.content.appendChild(createAlbumReviewCard(album, review));
+    modal.overlay.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+    modal.closeButton.focus();
+  }
+
+  function createAlbumItem(album, options = {}) {
+    const {
+      reviewMap = null,
+      enableReviewExpansion = false
+    } = options;
+
+    const li = document.createElement('li');
+    li.className = 'album-item';
+
+    const main = document.createElement('div');
+    main.className = 'album-main';
+
+    const cover = document.createElement('img');
+    cover.className = 'album-cover';
+    if (album.cover) {
+      cover.src = `data/albums/${album.cover}`;
+    }
+    cover.alt = album.title ? `${album.title} cover` : 'Album cover';
+    cover.loading = 'lazy';
+    cover.decoding = 'async';
+
+    const info = document.createElement('div');
+    info.className = 'album-info';
+
+    const title = document.createElement('div');
+    title.className = 'album-title';
+    title.textContent = album.title;
+    info.appendChild(title);
+
+    const meta = document.createElement('div');
+    meta.className = 'album-meta';
+    const metaParts = [album.artist, album.year].filter(Boolean);
+    meta.textContent = metaParts.join(' / ');
+    if (metaParts.length > 0) info.appendChild(meta);
+
+    main.appendChild(cover);
+    main.appendChild(info);
+
+    if (album.rating !== null) {
+      const rating = document.createElement('span');
+      rating.className = `rating ${ratingClass(album.rating)}`;
+      rating.textContent = `${formatRating(album.rating)}/10`;
+      main.appendChild(rating);
+    }
+
+    const review = enableReviewExpansion ? getAlbumReview(album, reviewMap) : null;
+    if (review) {
+      li.classList.add('has-review');
+      main.classList.add('review-click-target');
+      main.setAttribute('role', 'button');
+      main.setAttribute('tabindex', '0');
+      main.setAttribute('aria-label', `Open review card for ${album.title} by ${album.artist}`);
+
+      const openReviewCard = () => openAlbumReviewModal(album, review, main);
+      main.addEventListener('click', openReviewCard);
+      main.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openReviewCard();
+        }
+      });
+    }
+
+    li.appendChild(main);
+
+    return li;
+  }
   
   // Render movie list
   function renderMovieList(movies, containerId) {
@@ -317,49 +618,13 @@ function parseAlbums(text) {
     container.appendChild(ul);
   }
 
-  function renderAlbumList(albums, containerId) {
+  function renderAlbumList(albums, containerId, options = {}) {
     const container = document.getElementById(containerId);
     const ul = document.createElement('ul');
     ul.className = 'album-list';
 
     albums.forEach(album => {
-      const li = document.createElement('li');
-      li.className = 'album-item';
-
-      const cover = document.createElement('img');
-      cover.className = 'album-cover';
-      if (album.cover) {
-        cover.src = `data/albums/${album.cover}`;
-      }
-      cover.alt = album.title ? `${album.title} cover` : 'Album cover';
-      cover.loading = 'lazy';
-      cover.decoding = 'async';
-
-      const info = document.createElement('div');
-      info.className = 'album-info';
-
-      const title = document.createElement('div');
-      title.className = 'album-title';
-      title.textContent = album.title;
-      info.appendChild(title);
-
-      const meta = document.createElement('div');
-      meta.className = 'album-meta';
-      const metaParts = [album.artist, album.year].filter(Boolean);
-      meta.textContent = metaParts.join(' / ');
-      if (metaParts.length > 0) info.appendChild(meta);
-
-      li.appendChild(cover);
-      li.appendChild(info);
-
-      if (album.rating !== null) {
-        const rating = document.createElement('span');
-        rating.className = `rating ${ratingClass(album.rating)}`;
-        rating.textContent = `${formatRating(album.rating)}/10`;
-        li.appendChild(rating);
-      }
-
-      ul.appendChild(li);
+      ul.appendChild(createAlbumItem(album, options));
     });
 
     container.innerHTML = '';
@@ -505,7 +770,7 @@ function parseAlbums(text) {
     container.appendChild(ul);
   }
 
-  function renderAlbumSections(sections, containerId, includeCurrent = true) {
+  function renderAlbumSections(sections, containerId, includeCurrent = true, options = {}) {
     const container = document.getElementById(containerId);
     const ul = document.createElement('ul');
     ul.className = 'album-list';
@@ -513,43 +778,7 @@ function parseAlbums(text) {
     const groups = [...sections].reverse();
 
     const appendAlbum = (album) => {
-      const li = document.createElement('li');
-      li.className = 'album-item';
-
-      const cover = document.createElement('img');
-      cover.className = 'album-cover';
-      if (album.cover) {
-        cover.src = `data/albums/${album.cover}`;
-      }
-      cover.alt = album.title ? `${album.title} cover` : 'Album cover';
-      cover.loading = 'lazy';
-      cover.decoding = 'async';
-
-      const info = document.createElement('div');
-      info.className = 'album-info';
-
-      const title = document.createElement('div');
-      title.className = 'album-title';
-      title.textContent = album.title;
-      info.appendChild(title);
-
-      const meta = document.createElement('div');
-      meta.className = 'album-meta';
-      const metaParts = [album.artist, album.year].filter(Boolean);
-      meta.textContent = metaParts.join(' / ');
-      if (metaParts.length > 0) info.appendChild(meta);
-
-      li.appendChild(cover);
-      li.appendChild(info);
-
-      if (album.rating !== null) {
-        const rating = document.createElement('span');
-        rating.className = `rating ${ratingClass(album.rating)}`;
-        rating.textContent = `${formatRating(album.rating)}/10`;
-        li.appendChild(rating);
-      }
-
-      ul.appendChild(li);
+      ul.appendChild(createAlbumItem(album, options));
     };
 
     if (includeCurrent) {
@@ -817,6 +1046,8 @@ function parseAlbums(text) {
     const albumsText = await loadText('data/albums.txt');
     const albums = parseAlbums(albumsText);
     const albumSections = parseAlbumSections(albumsText);
+    const albumReviewEntries = await loadJson('data/album-reviews.json', []);
+    const albumReviewMap = mapAlbumReviews(albumReviewEntries);
 
     const ratedAlbumSections = albumSections
       .map(section => ({
@@ -824,12 +1055,18 @@ function parseAlbums(text) {
         items: section.items.filter(album => album.listened)
       }))
       .filter(section => section.items.length > 0);
-    renderAlbumSections(ratedAlbumSections, 'all-albums', true);
+    renderAlbumSections(ratedAlbumSections, 'all-albums', true, {
+      reviewMap: albumReviewMap,
+      enableReviewExpansion: true
+    });
 
     const rankedAlbums = [...albums]
       .filter(album => album.listened && album.rating !== null)
       .sort((a, b) => b.rating - a.rating);
-    renderAlbumList(rankedAlbums, 'ranked-albums');
+    renderAlbumList(rankedAlbums, 'ranked-albums', {
+      reviewMap: albumReviewMap,
+      enableReviewExpansion: true
+    });
 
     const toListenSections = albumSections
       .map(section => ({

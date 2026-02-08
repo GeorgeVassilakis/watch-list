@@ -4,4 +4,4 @@
 - [x] Malcolm Todd | Malcolm Todd | 2025 | file: malcolmtodd.png | 8.2/10
 - [ ] Gumbo Unplugged | PJ Morton | 2018 | file: gumbounplugged.jpg
 - [ ] Good Thing | Leon Bridges | 2018 | file: goodthing_leonbridges.png
-- [ ] Grace | Jeff Buckley | 1994 | file: grace_jeffbuckley.jpg
+- [x] Grace | Jeff Buckley | 1994 | file: grace_jeffbuckley.jpg | 9.4/10

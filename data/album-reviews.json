@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Son of Spergy",
+    "artist": "Daniel Caesar",
+    "summary": "Add your 3-sentence review here.",
+    "topSongs": [
+      "Have a Baby (With Me)",
+      "Call on Me",
+      "Moon"
+    ],
+    "metadata": {
+      "genre": [
+        "R&B",
+        "Neo Soul",
+        "Gospel"
+      ],
+      "releaseYear": 2025,
+      "length": "51:44"
+    }
+  },
+  {
+    "title": "Charm",
+    "artist": "Clairo",
+    "summary": "Add your 3-sentence review here.",
+    "topSongs": [
+      "Sexy to Someone",
+      "Nomad",
+      "Juna"
+    ],
+    "metadata": {
+      "genre": [
+        "Pop",
+        "Soft Rock"
+      ],
+      "releaseYear": 2024,
+      "length": "38:02"
+    }
+  },
+  {
+    "title": "Malcolm Todd",
+    "artist": "Malcolm Todd",
+    "summary": "Add your 3-sentence review here.",
+    "topSongs": [
+      "Chest Pain (I Love)",
+      "Bleed",
+      "Cheer Me On"
+    ],
+    "metadata": {
+      "genre": [
+        "Alternative R&B",
+        "Indie Pop"
+      ],
+      "releaseYear": 2025,
+      "length": "37:33"
+    }
+  },
+  {
+    "title": "Grace",
+    "artist": "Jeff Buckley",
+    "summary": "An album for those who yearn, like me. It's almost like you can visibly see him sing through his voice. Extremely good taste and structure, extremely pleased overall.",
+    "topSongs": [
+      "Lover, You Should've Come Over",
+      "Lilac Wine",
+      "Hallelujah"
+    ],
+    "rating": 9.4,
+    "metadata": {
+      "genre": [
+        "Alternative Rock",
+        "Folk Rock"
+      ],
+      "releaseYear": 1994,
+      "length": "51:52"
+    },
+    "updatedAt": "2026-02-08T19:55:24.303262+00:00"
+  }
+]
