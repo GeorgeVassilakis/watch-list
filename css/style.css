@@ -581,6 +581,21 @@ nav {
   column-gap: 12px;
 }
 
+.album-review-card-header.has-cover {
+  grid-template-columns: 84px minmax(0, 1fr) auto;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.album-review-cover {
+  width: 84px;
+  height: 84px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
 .album-review-title-wrap {
   min-width: 0;
 }
@@ -589,6 +604,18 @@ nav {
   margin-left: 0;
   justify-self: end;
   align-self: start;
+}
+
+.album-review-card-header.has-cover .album-review-title-wrap {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.album-review-card-header.has-cover .rating {
+  grid-column: 3;
+  align-self: center;
 }
 
 .album-review-title {
@@ -976,6 +1003,18 @@ body.music-mode .rating.rating-10 {
 
   .album-review-text {
     font-size: 0.84rem;
+  }
+
+  .album-review-card-header.has-cover {
+    grid-template-columns: 64px minmax(0, 1fr) auto;
+    column-gap: 10px;
+    align-items: center;
+  }
+
+  .album-review-cover {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
   }
 
   .album-review-title {

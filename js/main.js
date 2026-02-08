@@ -311,6 +311,17 @@ function parseAlbums(text) {
 
     const header = document.createElement('div');
     header.className = 'album-review-card-header';
+    if (album.cover) {
+      header.classList.add('has-cover');
+
+      const cover = document.createElement('img');
+      cover.className = 'album-review-cover';
+      cover.src = `data/albums/${album.cover}`;
+      cover.alt = album.title ? `${album.title} cover` : 'Album cover';
+      cover.loading = 'lazy';
+      cover.decoding = 'async';
+      header.appendChild(cover);
+    }
 
     const titleWrap = document.createElement('div');
     titleWrap.className = 'album-review-title-wrap';
