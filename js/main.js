@@ -1065,6 +1065,8 @@ function parseAlbums(text) {
   
   // Initialize app
   async function init() {
+    setupSafariSafeTopInset();
+
     // Theme first so initial paint uses correct palette
     setupThemeToggle();
     setupModeToggle();
@@ -1197,4 +1199,41 @@ function parseAlbums(text) {
   function updateToggleIcon(button, theme) {
     // ☀ for light, ☾ for dark target
     button.textContent = theme === 'dark' ? '☀' : '☾';
+  }
+
+  function setupSafariSafeTopInset() {
+    const ua = navigator.userAgent || '';
+    const isIPhone = /iPhone/i.test(ua);
+    const isSafari = /Safari/i.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS/i.test(ua);
+    if (!isIPhone || !isSafari) return;
+
+    const root = document.documentElement;
+
+    const updateInset = () => {
+      const probe = document.createElement('div');
+      probe.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        pointer-events: none;
+        padding-top: env(safe-area-inset-top);
+      `;
+      document.body.appendChild(probe);
+
+      const measuredEnv = parseFloat(window.getComputedStyle(probe).paddingTop) || 0;
+      probe.remove();
+
+      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
+      const fallbackPortraitInset = 52;
+      const effectiveInset = isLandscape ? measuredEnv : Math.max(measuredEnv, fallbackPortraitInset);
+      const visualCompensation = 48;
+      const tunedInset = Math.max(0, effectiveInset - visualCompensation);
+
+      root.style.setProperty('--safe-top', `${tunedInset}px`);
+    };
+
+    updateInset();
+    window.addEventListener('resize', updateInset, { passive: true });
+    window.addEventListener('orientationchange', updateInset);
   }
