@@ -462,6 +462,10 @@ function parseAlbums(text) {
     modal.lastTrigger = trigger || null;
     modal.content.innerHTML = '';
     modal.content.appendChild(createAlbumReviewCard(album, review));
+
+    // Prime layout so first open can transition instead of snapping in.
+    void modal.overlay.offsetWidth;
+
     modal.overlay.classList.add('is-open');
     document.body.classList.add('no-scroll');
     modal.closeButton.focus();

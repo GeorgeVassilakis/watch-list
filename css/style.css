@@ -506,14 +506,21 @@ nav {
   inset: 0;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.42s ease, visibility 0s linear 0.42s;
 }
 
 .album-review-modal-overlay.is-open {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.42s ease;
 }
 
 .album-review-modal {
@@ -525,6 +532,14 @@ nav {
   background: var(--paper);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
   padding: 14px;
+  opacity: 0;
+  transform: translateY(14px) scale(0.985);
+  transition: opacity 0.42s ease, transform 0.48s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.album-review-modal-overlay.is-open .album-review-modal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .album-review-close {
@@ -669,6 +684,13 @@ nav {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .album-review-modal-overlay,
+  .album-review-modal {
+    transition: none;
+  }
 }
 
 .rating {
