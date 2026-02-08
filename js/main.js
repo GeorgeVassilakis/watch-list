@@ -879,6 +879,56 @@ function parseAlbums(text) {
     renderAlbumList(topAlbums, 'music-top-10-list');
 
     renderDistribution(rated, 'music-distribution-chart');
+    renderDecadeDistribution(listened, 'music-decade-distribution-chart');
+  }
+
+  function renderDecadeDistribution(albums, containerId) {
+    const counts = new Map();
+    const parsedDecades = [];
+    let unknownCount = 0;
+    let olderCount = 0;
+
+    albums.forEach(album => {
+      const rawYear = String(album.year || '').trim();
+      const match = rawYear.match(/(\d{4})/);
+      if (!match) {
+        unknownCount += 1;
+        return;
+      }
+
+      const year = Number(match[1]);
+      if (Number.isNaN(year)) {
+        unknownCount += 1;
+        return;
+      }
+
+      const decade = Math.floor(year / 10) * 10;
+      if (decade <= 1950) {
+        olderCount += 1;
+        return;
+      }
+      const label = `${decade}s`;
+      parsedDecades.push(decade);
+      counts.set(label, (counts.get(label) || 0) + 1);
+    });
+
+    const distribution = {};
+    const currentDecade = Math.floor(new Date().getFullYear() / 10) * 10;
+    const highestDataDecade = parsedDecades.length > 0 ? Math.max(...parsedDecades) : currentDecade;
+    const maxDecade = Math.max(currentDecade, highestDataDecade);
+
+    for (let decade = maxDecade; decade >= 1960; decade -= 10) {
+      const label = `${decade}s`;
+      distribution[label] = counts.get(label) || 0;
+    }
+
+    distribution['1950s & earlier'] = olderCount;
+
+    if (unknownCount > 0) {
+      distribution.Unknown = unknownCount;
+    }
+
+    renderBarDistribution(distribution, containerId);
   }
 
   function renderDistribution(movies, containerId = 'distribution-chart') {
@@ -897,11 +947,17 @@ function parseAlbums(text) {
       else if (movie.rating >= 6) distribution['6.0-6.9']++;
       else distribution['<6.0']++;
     });
-    
+
+    renderBarDistribution(distribution, containerId);
+  }
+
+  function renderBarDistribution(distribution, containerId) {
     const container = document.getElementById(containerId);
     if (!container) return;
-    const maxCount = Math.max(...Object.values(distribution));
-    
+
+    const values = Object.values(distribution);
+    const maxCount = values.length > 0 ? Math.max(...values) : 0;
+
     let html = '';
     for (const [range, count] of Object.entries(distribution)) {
       const percentage = maxCount > 0 ? (count / maxCount) * 100 : 0;
@@ -916,7 +972,7 @@ function parseAlbums(text) {
         </div>
       `;
     }
-    
+
     container.innerHTML = html;
   }
   
