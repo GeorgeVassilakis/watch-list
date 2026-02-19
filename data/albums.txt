@@ -5,4 +5,5 @@
 - [ ] Gumbo Unplugged | PJ Morton | 2018 | file: gumbounplugged.jpg
 - [ ] Good Thing | Leon Bridges | 2018 | file: goodthing_leonbridges.png
 - [ ] Twin Fantasy | Car Seat Headrest | 2018 | file: carseatheadrest_twinfantasy.jpg
+- [ ] Kind of Blue | Miles Davis | 1959 | file: milesdavis_kindofblue.jpg
 - [x] Grace | Jeff Buckley | 1994 | file: grace_jeffbuckley.jpg | 9.4/10
