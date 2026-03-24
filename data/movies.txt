@@ -123,7 +123,6 @@
 - [x] Lady Bird - 8.5/10
 - [x] Beautiful Boy - 8.8/10
 - [x] Normal People - 9.6/10
-- [ ] Dead Poets Society -
 - [x] Fresh - 8.2/10
 - [x] Poor Things - 8.9/10
 - [x] Argylle - 5.0/10
@@ -239,7 +238,6 @@
 - [x] No Country for Old Men - 8.3/10
 - [x] C'mon C'mon - 9.1/10
 - [x] A Woman on the Verge of a Nervous Breakdown - 8.6/10
-- [ ] Train Dreams -
 - [ ] The Favourite - 
 - [x] Primal Fear - 8.2/10
 - [x] Sexy Beast - 9.3/10
@@ -264,4 +262,14 @@
 - [ ] Memories of Murder - 
 - [ ] Old Boy - 
 - [x] Pillion - 7.9/10
+- [x] 28 Years Later: The Bone Temple - 8.3/10
+- [x] If I Had Legs I'd Kick You - 6.9/10
+- [x] The Dreamers - 8.2/10
+- [x] The Secret Agent - 8.8/10
+- [x] Train Dreams - 7.3/10
+- [x] Les Rendez-vous d'Anna - 7.5/10
+- [ ] The Tree of Life -
+- [x] Dead Poets Society - 8.7/10
+- [x] Project Hail Mary - 8.6/10
+- [x] Retribution (叫) - 7.4/10
 - [x] La Haine - 8.8/10
