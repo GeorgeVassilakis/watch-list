@@ -274,3 +274,5 @@
 - [x] Retribution (叫) - 7.4/10
 - [x] La Haine - 8.8/10
 - [ ] Four Weddings and a Funeral - 
+- [x] The Drama - 8.5/10
+- [x] When Harry Met Sally - 8.9/10
