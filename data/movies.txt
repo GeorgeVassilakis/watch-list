@@ -276,3 +276,4 @@
 - [ ] Four Weddings and a Funeral - 
 - [x] The Drama - 8.5/10
 - [x] When Harry Met Sally - 8.9/10
+- [x] Her - 9.3/10
