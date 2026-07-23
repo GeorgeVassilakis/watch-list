@@ -298,3 +298,6 @@
 - [x] Now You See Me: Now You Don't - 4.9/10
 - [ ] Good Luck, Have Fun, Don't Die -
 - [x] L'Étranger - 8.2/10
+- [x] Avatar Aang: The Last Airbender Movie - 8.1/10
+- [x] Batman Begins - 8.3/10
+- [x] The Invite - 8.9/10
