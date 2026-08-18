@@ -1,26 +1,55 @@
 {
  "the sirens of titan::kurt vonnegut": {
   "source": "openlibrary: The Sirens of Titan",
-  "url": "https://covers.openlibrary.org/b/id/1364468-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/1364468-L.jpg",
+  "meta": {
+   "year": 1959,
+   "pages": 319,
+   "subjects": "Ciencia-ficción, Classic Literature, Fiction"
+  }
  },
  "le tour du monde en 80 jours::jules verne": {
   "source": "openlibrary: Le tour du Monde en 80 jours - Niveau 3/B1 - Lectures CLE en Français facile - Livre - 2ème édition",
-  "url": "https://covers.openlibrary.org/b/id/13974361-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/13974361-L.jpg",
+  "meta": {
+   "year": 2016,
+   "pages": 64
+  }
  },
  "slaughterhousefive::kurt vonnegut": {
   "source": "openlibrary: Slaughterhouse-Five",
-  "url": "https://covers.openlibrary.org/b/id/12727001-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/12727001-L.jpg",
+  "meta": {
+   "year": 1956,
+   "pages": 200,
+   "subjects": "American science fiction, bombing of Dresden, Open Library staff picks"
+  }
  },
  "the metamorphosis::franz kafka": {
   "source": "openlibrary: The Metamorphosis and Other Stories",
-  "url": "https://covers.openlibrary.org/b/id/6889547-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/6889547-L.jpg",
+  "meta": {
+   "year": 1996,
+   "pages": 96,
+   "subjects": "Fiction, Literature, Continental european fiction (fictional works by one author)"
+  }
  },
  "the ending of time::jiddu krishnamurti  david bohm": {
   "source": "openlibrary: The ending of time",
-  "url": "https://covers.openlibrary.org/b/id/32260-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/32260-L.jpg",
+  "meta": {
+   "year": 1985,
+   "pages": 268,
+   "subjects": "Thought and thinking, Insight, Psychological aspects of Time"
+  }
  },
  "stephen hawking::leonard mlodinow": {
   "source": "openlibrary: Stephen Hawking",
-  "url": "https://covers.openlibrary.org/b/id/10456366-L.jpg"
+  "url": "https://covers.openlibrary.org/b/id/10456366-L.jpg",
+  "meta": {
+   "year": 2020,
+   "pages": 240,
+   "subjects": "Physics"
+  }
  }
 }

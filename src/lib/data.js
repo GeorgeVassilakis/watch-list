@@ -101,7 +101,12 @@ export async function loadAll() {
     for (const item of s.items) {
       const p = posters[item.title]
       if (p && p.url) item.cover = p.url
-      if (s.year) item.subtitle = `Logged ${s.year}`
+      const meta = p?.meta ?? {}
+      item.meta = meta
+      item.subtitle =
+        [meta.year, meta.directors?.[0], meta.runtime && `${meta.runtime} min`]
+          .filter(Boolean)
+          .join(' · ') || (s.year ? `Logged ${s.year}` : '')
     }
   }
 
@@ -110,12 +115,19 @@ export async function loadAll() {
 
   // fetched art wins; a local file: entry is the manual override/fallback
   const artKey = i => `${normalize(i.title)}::${normalize(i.by)}`
-  for (const s of bookSections) {
-    for (const i of s.items) i.cover = bookArt[artKey(i)]?.url ?? i.cover
+  const apply = (sections, art) => {
+    for (const s of sections) {
+      for (const i of s.items) {
+        const a = art[artKey(i)]
+        i.cover = a?.url ?? i.cover
+        i.meta = a?.meta ?? {}
+        i.year = i.year || i.meta.year || ''
+        i.subtitle = [i.by, i.year].filter(Boolean).join(' · ')
+      }
+    }
   }
-  for (const s of albumSections) {
-    for (const i of s.items) i.cover = albumArt[artKey(i)]?.url ?? i.cover
-  }
+  apply(bookSections, bookArt)
+  apply(albumSections, albumArt)
 
   const reviewMap = new Map()
   for (const r of Array.isArray(reviews) ? reviews : []) {

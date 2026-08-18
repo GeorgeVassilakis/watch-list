@@ -11,11 +11,14 @@ function labelize(key) {
 }
 
 function metaRows(item, review) {
+  const fetched = item.meta ?? {}
   const meta = review.metadata && typeof review.metadata === 'object' ? { ...review.metadata } : {}
   const rows = [
-    ['Genre', meta.genre ?? review.genre],
+    ['Genre', meta.genre ?? review.genre ?? fetched.genre],
     ['Year', meta.releaseYear ?? meta.year ?? review.releaseYear ?? item.year],
-    ['Length', meta.length ?? review.length],
+    ['Length', meta.length ?? review.length ?? fetched.length],
+    ['Tracks', fetched.tracks],
+    ['Label', fetched.label],
   ]
   for (const k of ['genre', 'releaseYear', 'year', 'length', 'label', 'sourceUrl']) delete meta[k]
   for (const [k, v] of Object.entries(meta)) rows.push([labelize(k), v])

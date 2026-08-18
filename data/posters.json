@@ -3,1794 +3,4994 @@
   "page": "The Witcher (TV series)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/05/The_Witcher_Logo.png",
   "width": 510,
-  "height": 195
+  "height": 195,
+  "meta": {
+   "directors": [
+    "Tomasz Bagiński",
+    "Alik Sakharov"
+   ],
+   "genres": [
+    "fantasy television series",
+    "drama television series"
+   ]
+  }
  },
  "Godzilla vs Kong": {
   "page": "Godzilla vs. Kong",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png",
   "width": 260,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2021",
+   "runtime": 153,
+   "directors": [
+    "Adam Wingard"
+   ],
+   "genres": [
+    "thriller film",
+    "action film"
+   ]
+  }
  },
  "Justice League: Snyder Cut": {
   "page": "Zack Snyder's Justice League",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/60/Zack_Snyder%27s_Justice_League.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 242,
+   "directors": [
+    "Zack Snyder"
+   ],
+   "genres": [
+    "superhero film",
+    "science fiction action film"
+   ]
+  }
  },
  "Mortal Kombat": {
   "page": "Mortal Kombat (2021 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/37/Mortal_Kombat_%282021_film%29.png",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2021",
+   "runtime": 110,
+   "directors": [
+    "Simon McQuoid"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "WandaVision": {
   "page": "WandaVision",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/20/WandaVision_logo.png",
   "width": 415,
-  "height": 239
+  "height": 239,
+  "meta": {
+   "runtime": 40,
+   "directors": [
+    "Matt Shakman"
+   ],
+   "genres": [
+    "fantasy television series",
+    "superhero television program"
+   ]
+  }
  },
  "Falcon and the Winter Soldier": {
   "page": "The Falcon and the Winter Soldier",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/The_Falcon_and_the_Winter_Soldier_logo.png",
   "width": 421,
-  "height": 236
+  "height": 236,
+  "meta": {
+   "runtime": 54,
+   "directors": [
+    "Kari Skogland"
+   ],
+   "genres": [
+    "drama television series",
+    "superhero television program"
+   ]
+  }
  },
  "Loki": {
   "page": "Loki (TV series)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4e/Loki_%28TV_series%29_logo.png",
   "width": 421,
-  "height": 236
+  "height": 236,
+  "meta": {
+   "runtime": 50,
+   "directors": [
+    "Kate Herron"
+   ],
+   "genres": [
+    "fantasy television series",
+    "adventure television series"
+   ]
+  }
  },
  "The Mandalorian": {
   "page": "The Mandalorian and Grogu",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/The_Mandalorian_and_Grogu_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2026",
+   "runtime": 132,
+   "directors": [
+    "Jon Favreau"
+   ],
+   "genres": [
+    "space Western"
+   ]
+  }
  },
  "Bohemian Rhapsody": {
   "page": "Bohemian Rhapsody (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Bohemian_Rhapsody_poster.png",
   "width": 250,
-  "height": 375
+  "height": 375,
+  "meta": {
+   "year": "2018",
+   "runtime": 134,
+   "directors": [
+    "Bryan Singer"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "Wonder Woman 1984": {
   "page": "Wonder Woman 1984",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4f/Wonder_Woman_1984_poster.png",
   "width": 256,
-  "height": 379
+  "height": 379,
+  "meta": {
+   "year": "2020",
+   "runtime": 151,
+   "directors": [
+    "Patty Jenkins"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "Good Will Hunting": {
   "page": "Good Will Hunting",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/52/Good_Will_Hunting.png",
   "width": 255,
-  "height": 389
+  "height": 389,
+  "meta": {
+   "year": "1997",
+   "runtime": 126,
+   "directors": [
+    "Gus Van Sant"
+   ],
+   "genres": [
+    "romance film",
+    "coming-of-age film"
+   ]
+  }
  },
  "Ready Player One": {
   "page": "Ready Player One (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/74/Ready_Player_One_%28film%29.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2018",
+   "runtime": 140,
+   "directors": [
+    "Steven Spielberg"
+   ],
+   "genres": [
+    "science fiction film",
+    "adventure film"
+   ]
+  }
  },
  "Bladerunner: The Final Cut": {
   "page": "Versions of Blade Runner",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Blade_Runner_Five-Disc_Ultimate_Collector%27s_Edition_02.jpg/960px-Blade_Runner_Five-Disc_Ultimate_Collector%27s_Edition_02.jpg",
   "width": 640,
-  "height": 481
+  "height": 481,
+  "meta": {
+   "year": "1982"
+  }
  },
  "Bladerunner 2049": {
   "page": "Blade Runner 2049",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 164,
+   "directors": [
+    "Denis Villeneuve"
+   ],
+   "genres": [
+    "science fiction film",
+    "mystery film"
+   ]
+  }
  },
  "Anchorman 2": {
   "page": "Anchorman 2: The Legend Continues",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0c/Anchorman_2_Teaser_Poster.jpg",
   "width": 258,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2013",
+   "runtime": 119,
+   "directors": [
+    "Adam McKay"
+   ],
+   "genres": [
+    "comedy film",
+    "LGBTQ-related film"
+   ]
+  }
  },
  "Forrest Gump": {
   "page": "Forrest Gump",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg",
   "width": 248,
-  "height": 359
+  "height": 359,
+  "meta": {
+   "year": "1994",
+   "runtime": 142,
+   "directors": [
+    "Robert Zemeckis"
+   ],
+   "genres": [
+    "coming-of-age film",
+    "flashback film"
+   ]
+  }
  },
  "The Big Labowski": {
   "page": "Henry Rollins",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Henry_Rollins_-_Wacken_Open_Air_2016_02.jpg/960px-Henry_Rollins_-_Wacken_Open_Air_2016_02.jpg",
   "width": 640,
-  "height": 755
+  "height": 755,
+  "meta": {
+   "genres": [
+    "hardcore punk",
+    "heavy metal music"
+   ]
+  }
  },
  "Ocean's Eleven": {
   "page": "Ocean's Eleven",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Ocean%27s_Eleven_2001_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2001",
+   "runtime": 112,
+   "directors": [
+    "Steven Soderbergh"
+   ],
+   "genres": [
+    "heist film",
+    "comedy film"
+   ]
+  }
  },
  "Beetlejuice": {
   "page": "Beetlejuice Beetlejuice",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Beetlejuice_Beetlejuice_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2024",
+   "runtime": 104,
+   "directors": [
+    "Tim Burton"
+   ],
+   "genres": [
+    "drama film",
+    "fantasy film"
+   ]
+  }
  },
  "American Psycho": {
   "page": "American Psycho (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0c/American_Psycho.png",
   "width": 258,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2000",
+   "runtime": 102,
+   "directors": [
+    "Mary Harron"
+   ],
+   "genres": [
+    "crime film",
+    "comedy horror"
+   ]
+  }
  },
  "Inception": {
   "page": "Inception",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2010",
+   "runtime": 148,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "heist film",
+    "science fiction film"
+   ]
+  }
  },
  "Knives Out": {
   "page": "Knives Out",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Knives_Out_poster.jpeg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2019",
+   "runtime": 130,
+   "directors": [
+    "Rian Johnson"
+   ],
+   "genres": [
+    "thriller film",
+    "crime film"
+   ]
+  }
  },
  "The Breakfast Club": {
   "page": "The Breakfast Club",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d1/The_Breakfast_Club_poster.jpg",
   "width": 250,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "1985",
+   "runtime": 93,
+   "directors": [
+    "John Hughes"
+   ],
+   "genres": [
+    "teen film",
+    "comedy drama"
+   ]
+  }
  },
  "The Interview": {
   "page": "The Interview",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/27/The_Interview_2014_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2014",
+   "runtime": 112,
+   "directors": [
+    "Evan Goldberg",
+    "Seth Rogen"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "Goonies": {
   "page": "The Goonies",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c6/The_Goonies.jpg",
   "width": 253,
-  "height": 394
+  "height": 394,
+  "meta": {
+   "year": "1985",
+   "runtime": 114,
+   "directors": [
+    "Richard Donner"
+   ],
+   "genres": [
+    "adventure film",
+    "comedy film"
+   ]
+  }
  },
  "Slappy and the Stinkers": {
   "page": "Slappy and the Stinkers",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/91/Slappy_and_stinkers.jpg",
   "width": 260,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1998",
+   "runtime": 78,
+   "directors": [
+    "Barnet Kellman"
+   ],
+   "genres": [
+    "comedy film"
+   ]
+  }
  },
  "Catch Me if You Can": {
   "page": "Catch Me If You Can",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4d/Catch_Me_If_You_Can_2002_movie.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2002",
+   "runtime": 135,
+   "directors": [
+    "Steven Spielberg"
+   ],
+   "genres": [
+    "heist film",
+    "crime film"
+   ]
+  }
  },
  "Molly's Game": {
   "page": "Molly's Game",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/ce/Molly%27s_Game.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 140,
+   "directors": [
+    "Aaron Sorkin"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
  },
  "Shawshank Redemption": {
   "page": "The Shawshank Redemption",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg",
   "width": 248,
-  "height": 372
+  "height": 372,
+  "meta": {
+   "year": "1994",
+   "runtime": 142,
+   "directors": [
+    "Frank Darabont"
+   ],
+   "genres": [
+    "drama film",
+    "buddy film"
+   ]
+  }
  },
  "Shang-Chi: The Ten Rings": {
   "page": "Shang-Chi and the Legend of the Ten Rings",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/74/Shang-Chi_and_the_Legend_of_the_Ten_Rings_poster.jpeg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 132,
+   "directors": [
+    "Destin Daniel Cretton"
+   ],
+   "genres": [
+    "martial arts film",
+    "superhero film"
+   ]
+  }
  },
  "Mission Impossible: Fallout": {
   "page": "Mission: Impossible – Fallout",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/ff/MI_%E2%80%93_Fallout.jpg",
   "width": 257,
-  "height": 386
+  "height": 386,
+  "meta": {
+   "year": "2018",
+   "runtime": 147,
+   "directors": [
+    "Christopher McQuarrie"
+   ],
+   "genres": [
+    "action film",
+    "thriller film"
+   ]
+  }
  },
  "The Social Network": {
   "page": "The Social Network",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8c/The_Social_Network_film_poster.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2010",
+   "runtime": 121,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "biographical film",
+    "trial film"
+   ]
+  }
  },
  "Shanghai-Noon": {
   "page": "Shanghai Noon",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/ee/ShanghaiNoon_Poster.jpg",
   "width": 259,
-  "height": 388
+  "height": 388,
+  "meta": {
+   "year": "2000",
+   "runtime": 106,
+   "directors": [
+    "Tom Dey"
+   ],
+   "genres": [
+    "action film",
+    "buddy film"
+   ]
+  }
  },
  "Rush Hour": {
   "page": "Rush Hour (1998 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/49/Rush_Hour_poster.png",
   "width": 261,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1998",
+   "runtime": 98,
+   "directors": [
+    "Brett Ratner"
+   ],
+   "genres": [
+    "action film",
+    "buddy cop film"
+   ]
+  }
  },
  "Eternals": {
   "page": "Eternals (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/Eternals_%28film%29_poster.jpeg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2021",
+   "runtime": 156,
+   "directors": [
+    "Chloé Zhao"
+   ],
+   "genres": [
+    "superhero film",
+    "science fiction film"
+   ]
+  }
  },
  "Call Me By Your Name": {
   "page": "Call Me by Your Name (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c9/CallMeByYourName2017.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 132,
+   "directors": [
+    "Luca Guadagnino"
+   ],
+   "genres": [
+    "LGBTQ-related film",
+    "coming-of-age film"
+   ]
+  }
  },
  "House of Gucci": {
   "page": "House of Gucci",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/House.of.Gucci.film.jpeg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2021",
+   "runtime": 157,
+   "directors": [
+    "Ridley Scott"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
  },
  "Black Widow": {
   "page": "Black Widow (2021 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e9/Black_Widow_%282021_film%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 133,
+   "directors": [
+    "Cate Shortland"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "Skyfall": {
   "page": "Skyfall",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a7/Skyfall_poster.jpg",
   "width": 365,
-  "height": 273
+  "height": 273,
+  "meta": {
+   "year": "2012",
+   "runtime": 143,
+   "directors": [
+    "Sam Mendes"
+   ],
+   "genres": [
+    "action thriller",
+    "spy film"
+   ]
+  }
  },
  "Spiderman: No Way Home": {
   "page": "Spider-Man: No Way Home",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2021",
+   "runtime": 148,
+   "directors": [
+    "Jon Watts"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "The Matrix Resurrections": {
   "page": "The Matrix Resurrections",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/50/The_Matrix_Resurrections.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 148,
+   "directors": [
+    "the Wachowskis"
+   ],
+   "genres": [
+    "cyberpunk",
+    "science fiction film"
+   ]
+  }
  },
  "The King's Man": {
   "page": "The King's Man",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/67/The_King%27s_Man.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2021",
+   "runtime": 131,
+   "directors": [
+    "Matthew Vaughn"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "The Princess Bride": {
   "page": "The Princess Bride",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/db/Princess_bride.jpg",
   "width": 250,
-  "height": 369
+  "height": 369,
+  "meta": {
+   "year": "1987",
+   "runtime": 94,
+   "directors": [
+    "Rob Reiner"
+   ],
+   "genres": [
+    "romantic comedy film",
+    "fantasy film"
+   ]
+  }
  },
  "Don't Look Up": {
   "page": "Don't Look Up",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/Don%27t_Look_Up_2021_film.jpg",
   "width": 250,
-  "height": 313
+  "height": 313,
+  "meta": {
+   "year": "2021",
+   "runtime": 138,
+   "directors": [
+    "Adam McKay"
+   ],
+   "genres": [
+    "comedy film",
+    "disaster film"
+   ]
+  }
  },
  "Spiderman: Into the Spiderverse": {
   "page": "Spider-Man: Into the Spider-Verse",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2018",
+   "runtime": 116,
+   "directors": [
+    "Peter Ramsey",
+    "Rodney Rothman"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "Uncharted": {
   "page": "Uncharted (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d4/Uncharted_Official_Poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2022",
+   "runtime": 116,
+   "directors": [
+    "Ruben Fleischer"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "The Batman": {
   "page": "The Batman (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/ff/The_Batman_%28film%29_poster.jpg",
   "width": 236,
-  "height": 350
+  "height": 350,
+  "meta": {
+   "year": "2022",
+   "runtime": 176,
+   "directors": [
+    "Matt Reeves"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "Midnight in Paris": {
   "page": "Midnight in Paris",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Midnight_in_Paris_Poster.jpg",
   "width": 220,
-  "height": 325
+  "height": 325,
+  "meta": {
+   "year": "2011",
+   "runtime": 94,
+   "directors": [
+    "Woody Allen"
+   ],
+   "genres": [
+    "romantic comedy film",
+    "fantasy film"
+   ]
+  }
  },
  "Free Guy": {
   "page": "Free Guy",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/Free_Guy_2021_Poster.jpg",
   "width": 263,
-  "height": 379
+  "height": 379,
+  "meta": {
+   "year": "2021",
+   "runtime": 115,
+   "directors": [
+    "Shawn Levy"
+   ],
+   "genres": [
+    "action film",
+    "comedy film"
+   ]
+  }
  },
  "The Dark Knight": {
   "page": "The Dark Knight",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2008",
+   "runtime": 153,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "action film",
+    "neo-noir"
+   ]
+  }
  },
  "Doctor Strange: The Multiverse of Madness": {
   "page": "Doctor Strange in the Multiverse of Madness",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 126,
+   "directors": [
+    "Sam Raimi"
+   ],
+   "genres": [
+    "action film",
+    "superhero film"
+   ]
+  }
  },
  "Bullet Train": {
   "page": "Bullet Train (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/13/Bullet_Train_%28poster%29.jpeg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "2022",
+   "runtime": 126,
+   "directors": [
+    "David Leitch"
+   ],
+   "genres": [
+    "action film",
+    "thriller film"
+   ]
+  }
  },
  "Top Gun: Maverick": {
   "page": "Top Gun: Maverick",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/13/Top_Gun_Maverick_Poster.jpg",
   "width": 261,
-  "height": 381
+  "height": 381,
+  "meta": {
+   "year": "2022",
+   "runtime": 130,
+   "directors": [
+    "Joseph Kosinski"
+   ],
+   "genres": [
+    "action film",
+    "drama film"
+   ]
+  }
  },
  "Superbad": {
   "page": "Superbad",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/Superbad_Poster.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2007",
+   "runtime": 114,
+   "directors": [
+    "Greg Mottola"
+   ],
+   "genres": [
+    "comedy film",
+    "sex comedy"
+   ]
+  }
  },
  "James Bond: No Time To Die": {
   "page": "No Time to Die",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg",
   "width": 368,
-  "height": 271
+  "height": 271,
+  "meta": {
+   "year": "2019",
+   "runtime": 163,
+   "directors": [
+    "Cary Joji Fukunaga",
+    "Sam Mendes"
+   ],
+   "genres": [
+    "action film",
+    "thriller film"
+   ]
+  }
  },
  "Arrival": {
   "page": "Arrival (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg",
   "width": 220,
-  "height": 343
+  "height": 343,
+  "meta": {
+   "year": "2016",
+   "runtime": 116,
+   "directors": [
+    "Denis Villeneuve"
+   ],
+   "genres": [
+    "drama film",
+    "science fiction film"
+   ]
+  }
  },
  "The Unbearable Weight of Massive Talent": {
   "page": "The Unbearable Weight of Massive Talent",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/87/The_Unbearable_Weight_of_Massive_Talent.jpg",
   "width": 259,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2022",
+   "runtime": 107,
+   "directors": [
+    "Tom Gormican"
+   ],
+   "genres": [
+    "action film"
+   ]
+  }
  },
  "Nonstop": {
   "page": "Non-Stop (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/87/Non-Stop2014Poster.jpg",
   "width": 257,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2014",
+   "runtime": 106,
+   "directors": [
+    "Jaume Collet-Serra"
+   ],
+   "genres": [
+    "action film",
+    "disaster film"
+   ]
+  }
  },
  "Minions: The Rise of Gru": {
   "page": "Minions: The Rise of Gru",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/45/Minions_The_Rise_of_Gru_poster.jpg",
   "width": 251,
-  "height": 398
+  "height": 398,
+  "meta": {
+   "year": "2022",
+   "runtime": 90,
+   "directors": [
+    "Kyle Balda"
+   ],
+   "genres": [
+    "comedy film",
+    "family film"
+   ]
+  }
  },
  "The Matrix": {
   "page": "The Matrix",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Matrix.png",
   "width": 260,
-  "height": 376
+  "height": 376,
+  "meta": {
+   "year": "1999",
+   "runtime": 136,
+   "directors": [
+    "Lilly Wachowski"
+   ],
+   "genres": [
+    "thriller film",
+    "dystopian film"
+   ]
+  }
  },
  "Thor: Love and Thunder": {
   "page": "Thor: Love and Thunder",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/88/Thor_Love_and_Thunder_poster.jpeg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2021",
+   "runtime": 119,
+   "directors": [
+    "Taika Waititi"
+   ],
+   "genres": [
+    "action film",
+    "adventure film"
+   ]
+  }
  },
  "Pineapple Express": {
   "page": "Pineapple Express (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/ca/Pineapple_Express_Poster.jpg",
   "width": 256,
-  "height": 380
+  "height": 380,
+  "meta": {
+   "year": "2008",
+   "runtime": 112,
+   "directors": [
+    "David Gordon Green"
+   ],
+   "genres": [
+    "buddy film",
+    "stoner film"
+   ]
+  }
  },
  "Austin Powers": {
   "page": "Austin Powers: International Man of Mystery",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d7/Austin_Powers_International_Man_of_Mystery_theatrical_poster.jpg",
   "width": 220,
-  "height": 342
+  "height": 342,
+  "meta": {
+   "year": "1997",
+   "runtime": 95,
+   "directors": [
+    "Jay Roach"
+   ],
+   "genres": [
+    "spy film",
+    "parody film"
+   ]
+  }
  },
  "The Truman Show": {
   "page": "The Truman Show",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/cd/Trumanshow.jpg",
   "width": 220,
-  "height": 327
+  "height": 327,
+  "meta": {
+   "year": "1998",
+   "runtime": 99,
+   "directors": [
+    "Peter Weir"
+   ],
+   "genres": [
+    "science fiction film",
+    "comedy film"
+   ]
+  }
  },
  "Eté '85": {
   "page": "Summer of 85",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b7/Ete_85.jpg",
   "width": 270,
-  "height": 367
+  "height": 367,
+  "meta": {
+   "year": "2020",
+   "runtime": 100,
+   "directors": [
+    "François Ozon"
+   ],
+   "genres": [
+    "drama film",
+    "romance film"
+   ]
+  }
  },
  "The Gray Man": {
   "page": "The Gray Man (2022 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/59/The_Gray_Man_poster.png",
   "width": 240,
-  "height": 356
+  "height": 356,
+  "meta": {
+   "year": "2022",
+   "runtime": 129,
+   "directors": [
+    "Anthony Russo",
+    "Joe Russo"
+   ],
+   "genres": [
+    "action thriller",
+    "action film"
+   ]
+  }
  },
  "Fight Club": {
   "page": "Fight Club",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fc/Fight_Club_poster.jpg",
   "width": 220,
-  "height": 327
+  "height": 327,
+  "meta": {
+   "year": "1999",
+   "runtime": 139,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "flashback film",
+    "drama film"
+   ]
+  }
  },
  "Silence of the Lambs": {
   "page": "The Silence of the Lambs (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "1991",
+   "runtime": 118,
+   "directors": [
+    "Jonathan Demme"
+   ],
+   "genres": [
+    "thriller film",
+    "horror film"
+   ]
+  }
  },
  "Pulp Fiction": {
   "page": "Pulp Fiction",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
   "width": 261,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "1994",
+   "runtime": 154,
+   "directors": [
+    "Quentin Tarantino"
+   ],
+   "genres": [
+    "independent film",
+    "crime film"
+   ]
+  }
  },
  "Ex Machina": {
   "page": "Ex Machina (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Ex-machina-uk-poster.jpg",
   "width": 370,
-  "height": 278
+  "height": 278,
+  "meta": {
+   "year": "2014",
+   "runtime": 108,
+   "directors": [
+    "Alex Garland"
+   ],
+   "genres": [
+    "science fiction film",
+    "psychological thriller film"
+   ]
+  }
  },
  "The Curious Case of Benjamin Button": {
   "page": "The Curious Case of Benjamin Button (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/7c/The_Curious_Case_of_Benjamin_Button_%28film%29.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2008",
+   "runtime": 166,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "romance film",
+    "fantasy film"
+   ]
+  }
  },
  "Whiplash": {
   "page": "Whiplash (2014 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/01/Whiplash_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 106,
+   "directors": [
+    "Damien Chazelle"
+   ],
+   "genres": [
+    "musical film",
+    "drama film"
+   ]
+  }
  },
  "Stutz": {
   "page": "Stutz (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2a/Stutz_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "directors": [
+    "Jonah Hill"
+   ],
+   "genres": [
+    "documentary film"
+   ]
+  }
  },
  "Black Panther: Wakanda Forever": {
   "page": "Black Panther: Wakanda Forever",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/3b/Black_Panther_Wakanda_Forever_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2022",
+   "runtime": 161,
+   "directors": [
+    "Ryan Coogler"
+   ],
+   "genres": [
+    "action film",
+    "superhero film"
+   ]
+  }
  },
  "The Imitation Game": {
   "page": "The Imitation Game",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/87/The_Imitation_Game_%282014%29.png",
   "width": 220,
-  "height": 346
+  "height": 346,
+  "meta": {
+   "year": "2014",
+   "runtime": 114,
+   "directors": [
+    "Morten Tyldum"
+   ],
+   "genres": [
+    "war film",
+    "biographical film"
+   ]
+  }
  },
  "Avatar": {
   "page": "Avatar (2009 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d6/Avatar_%282009_film%29_poster.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2009",
+   "runtime": 162,
+   "directors": [
+    "James Cameron"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "Avatar: The Way of Water": {
   "page": "Avatar: The Way of Water",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/54/Avatar_The_Way_of_Water_poster.jpg",
   "width": 250,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "2022",
+   "runtime": 192,
+   "directors": [
+    "James Cameron"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "Glass Onion: A Knives Out Mystery": {
   "page": "Glass Onion: A Knives Out Mystery",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/62/Glass_Onion_poster.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2022",
+   "runtime": 140,
+   "directors": [
+    "Rian Johnson"
+   ],
+   "genres": [
+    "police film",
+    "thriller film"
+   ]
+  }
  },
  "Scarface": {
   "page": "Scarface (1983 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/71/Scarface_-_1983_film.jpg",
   "width": 256,
-  "height": 388
+  "height": 388,
+  "meta": {
+   "year": "1983",
+   "runtime": 170,
+   "directors": [
+    "Brian De Palma"
+   ],
+   "genres": [
+    "gangster film",
+    "drama film"
+   ]
+  }
  },
  "Antman and the Wasp: Quantumania": {
   "page": "Ant-Man and the Wasp: Quantumania",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/30/Ant-Man_and_the_Wasp_Quantumania_poster.jpg",
   "width": 260,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2023",
+   "runtime": 125,
+   "directors": [
+    "Peyton Reed"
+   ],
+   "genres": [
+    "action film",
+    "science fiction film"
+   ]
+  }
  },
  "Everything Everywhere All At Once": {
   "page": "Everything Everywhere All at Once",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1e/Everything_Everywhere_All_at_Once.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2022",
+   "runtime": 140,
+   "directors": [
+    "Dan Kwan",
+    "Daniel Scheinert"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Adam Project": {
   "page": "The Adam Project",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d7/The_Adam_Project_poster.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2022",
+   "runtime": 106,
+   "directors": [
+    "Shawn Levy"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Mario Movie": {
   "page": "The Super Mario Galaxy Movie",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Super_Mario_Galaxy_Movie_poster.jpeg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 98,
+   "directors": [
+    "Aaron Horvath",
+    "Michael Jelenic"
+   ],
+   "genres": [
+    "adventure film",
+    "comedy film"
+   ]
+  }
  },
  "Dungeons and Dragons": {
   "page": "Dungeons & Dragons: Honor Among Thieves",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/03/Theatrical_poster_for_Dungeons_and_Dragons%2C_Honor_Among_Thieves.jpg",
   "width": 262,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2021",
+   "runtime": 108,
+   "directors": [
+    "John Francis Daley",
+    "Jonathan Goldstein"
+   ],
+   "genres": [
+    "fantasy film",
+    "adventure film"
+   ]
+  }
  },
  "Guardians of the Galaxy Vol. 3": {
   "page": "Guardians of the Galaxy Vol. 3",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/74/Guardians_of_the_Galaxy_Vol._3_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2023",
+   "runtime": 150,
+   "directors": [
+    "James Gunn"
+   ],
+   "genres": [
+    "speculative fiction film",
+    "adventure film"
+   ]
+  }
  },
  "The Joker": {
   "page": "Joker (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2019",
+   "runtime": 122,
+   "directors": [
+    "Todd Phillips"
+   ],
+   "genres": [
+    "crime film",
+    "thriller film"
+   ]
+  }
  },
  "Django Unchained": {
   "page": "Django Unchained",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2012",
+   "runtime": 165,
+   "directors": [
+    "Quentin Tarantino"
+   ],
+   "genres": [
+    "revisionist Western",
+    "Western film"
+   ]
+  }
  },
  "Men in Black": {
   "page": "Men in Black (film series)",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Men_In_Black_%28film_franchise%29_logo.svg/960px-Men_In_Black_%28film_franchise%29_logo.svg.png",
   "width": 640,
-  "height": 301
+  "height": 301,
+  "meta": {
+   "year": "1997",
+   "directors": [
+    "Barry Sonnenfeld",
+    "F. Gary Gray"
+   ],
+   "genres": [
+    "science fiction film"
+   ]
+  }
  },
  "Men in Black II": {
   "page": "Men in Black (film series)",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Men_In_Black_%28film_franchise%29_logo.svg/960px-Men_In_Black_%28film_franchise%29_logo.svg.png",
   "width": 640,
-  "height": 301
+  "height": 301,
+  "meta": {
+   "year": "1997",
+   "directors": [
+    "Barry Sonnenfeld",
+    "F. Gary Gray"
+   ],
+   "genres": [
+    "science fiction film"
+   ]
+  }
  },
  "Men in Black III": {
   "page": "Men in Black 3",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8a/Men_In_Black_3.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2012",
+   "runtime": 106,
+   "directors": [
+    "Barry Sonnenfeld"
+   ],
+   "genres": [
+    "science fiction film",
+    "comedy film"
+   ]
+  }
  },
  "Mamma Mia": {
   "page": "Mamma Mia! (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/95/Mamma_Mia_%282008%29_US_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2008",
+   "runtime": 108,
+   "directors": [
+    "Phyllida Lloyd"
+   ],
+   "genres": [
+    "romantic comedy",
+    "musical film"
+   ]
+  }
  },
  "Spiderman: Across the Spiderverse": {
   "page": "Spider-Man: Across the Spider-Verse",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Spider-Man-_Across_the_Spider-Verse_poster.jpg",
   "width": 259,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2022",
+   "runtime": 140,
+   "directors": [
+    "Joaquim Dos Santos",
+    "Kemp Powers"
+   ],
+   "genres": [
+    "action comedy film",
+    "superhero film"
+   ]
+  }
  },
  "Tenet": {
   "page": "Tenet",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/14/Tenet_movie_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2020",
+   "runtime": 150,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "spy film",
+    "thriller film"
+   ]
+  }
  },
  "The Place Beyond the Pines": {
   "page": "The Place Beyond the Pines",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/04/The_Place_Beyond_the_Pines_Poster.jpg",
   "width": 254,
-  "height": 392
+  "height": 392,
+  "meta": {
+   "year": "2012",
+   "runtime": 140,
+   "directors": [
+    "Derek Cianfrance"
+   ],
+   "genres": [
+    "crime film",
+    "drama film"
+   ]
+  }
  },
  "The Godfather I": {
   "page": "The Godfather",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
   "width": 220,
-  "height": 330
+  "height": 330,
+  "meta": {
+   "year": "1972",
+   "runtime": 175,
+   "directors": [
+    "Francis Ford Coppola"
+   ],
+   "genres": [
+    "epic film",
+    "gangster film"
+   ]
+  }
  },
  "The Godfather II": {
   "page": "The Godfather Part II",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg",
   "width": 220,
-  "height": 331
+  "height": 331,
+  "meta": {
+   "year": "1974",
+   "runtime": 202,
+   "directors": [
+    "Francis Ford Coppola"
+   ],
+   "genres": [
+    "drama film",
+    "crime film"
+   ]
+  }
  },
  "Apocalypse Now": {
   "page": "Apocalypse Now",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c2/Apocalypse_Now_poster.jpg",
   "width": 220,
-  "height": 333
+  "height": 333,
+  "meta": {
+   "year": "1979",
+   "runtime": 147,
+   "directors": [
+    "Francis Ford Coppola"
+   ],
+   "genres": [
+    "war film",
+    "action film"
+   ]
+  }
  },
  "Barbie": {
   "page": "Barbie (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0b/Barbie_2023_poster.jpg",
   "width": 250,
-  "height": 375
+  "height": 375,
+  "meta": {
+   "year": "2023",
+   "runtime": 114,
+   "directors": [
+    "Greta Gerwig"
+   ],
+   "genres": [
+    "romantic comedy film",
+    "adventure film"
+   ]
+  }
  },
  "Oppenheimer": {
   "page": "Oppenheimer (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4a/Oppenheimer_%28film%29.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2023",
+   "runtime": 180,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "historical film",
+    "biographical film"
+   ]
+  }
  },
  "Asteroid City": {
   "page": "Asteroid City",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/78/Asteroidcity.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2023",
+   "runtime": 105,
+   "directors": [
+    "Wes Anderson"
+   ],
+   "genres": [
+    "comedy film",
+    "romance film"
+   ]
+  }
  },
  "Se7en": {
   "page": "Seven (1995 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Seven_%28movie%29_poster.jpg",
   "width": 220,
-  "height": 344
+  "height": 344,
+  "meta": {
+   "year": "1995",
+   "runtime": 127,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "crime film",
+    "mystery film"
+   ]
+  }
  },
  "Edge of Tomorrow": {
   "page": "Edge of Tomorrow",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f9/Edge_of_Tomorrow_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 113,
+   "directors": [
+    "Doug Liman"
+   ],
+   "genres": [
+    "science fiction film",
+    "military science fiction"
+   ]
+  }
  },
  "Baby Driver": {
   "page": "Baby Driver",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Baby_Driver_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 113,
+   "directors": [
+    "Edgar Wright"
+   ],
+   "genres": [
+    "crime comedy film",
+    "action comedy film"
+   ]
+  }
  },
  "La La Land": {
   "page": "La La Land",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/ab/La_La_Land_%28film%29.png",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2016",
+   "runtime": 128,
+   "directors": [
+    "Damien Chazelle"
+   ],
+   "genres": [
+    "romance film",
+    "comedy drama"
+   ]
+  }
  },
  "Pride + Prejudice + Zombies": {
   "page": "Pride and Prejudice and Zombies",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f0/PrideandPrejudiceandZombiesCover.jpg",
   "width": 254,
-  "height": 393
+  "height": 393,
+  "meta": {
+   "year": "2009",
+   "genres": [
+    "comic novel",
+    "science fiction"
+   ]
+  }
  },
  "1917": {
   "page": "1917 (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg",
   "width": 365,
-  "height": 274
+  "height": 274,
+  "meta": {
+   "year": "2019",
+   "runtime": 119,
+   "directors": [
+    "Sam Mendes"
+   ],
+   "genres": [
+    "war film",
+    "drama film"
+   ]
+  }
  },
  "42": {
   "page": "42 (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0f/42_film_poster.jpg",
   "width": 260,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2013",
+   "runtime": 128,
+   "directors": [
+    "Brian Helgeland"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "The Wolf of Wall Street": {
   "page": "The Wolf of Wall Street (1929 film)",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/The_Wolf_of_Wall_Street_%281929%29_three-sheet_poster.jpg/960px-The_Wolf_of_Wall_Street_%281929%29_three-sheet_poster.jpg",
   "width": 640,
-  "height": 1251
+  "height": 1251,
+  "meta": {
+   "year": "1929",
+   "runtime": 74,
+   "directors": [
+    "Rowland V. Lee"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "The Big Short": {
   "page": "The Big Short (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/16/The_Big_Short_%282015_film_poster%29.png",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2015",
+   "runtime": 130,
+   "directors": [
+    "Adam McKay"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "Inglorious Basterds": {
   "page": "The Inglorious Bastards",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Quel_maledetto_treno_blindato-new.jpg",
   "width": 250,
-  "height": 361
+  "height": 361,
+  "meta": {
+   "year": "1978",
+   "runtime": 100,
+   "directors": [
+    "Enzo G. Castellari"
+   ],
+   "genres": [
+    "war film",
+    "thriller film"
+   ]
+  }
  },
  "The Talented Mr. Ripley": {
   "page": "The Talented Mr. Ripley (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/22/Talented_mr_ripley.jpg",
   "width": 236,
-  "height": 350
+  "height": 350,
+  "meta": {
+   "year": "1999",
+   "runtime": 139,
+   "directors": [
+    "Anthony Minghella"
+   ],
+   "genres": [
+    "crime film",
+    "drama film"
+   ]
+  }
  },
  "The 6th Sense": {
   "page": "The Sixth Sense",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png",
   "width": 220,
-  "height": 330
+  "height": 330,
+  "meta": {
+   "year": "1999",
+   "runtime": 107,
+   "directors": [
+    "M. Night Shyamalan"
+   ],
+   "genres": [
+    "horror film",
+    "thriller film"
+   ]
+  }
  },
  "Rainman": {
   "page": "Rain Man",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b2/Rain_Man_poster.jpg",
   "width": 220,
-  "height": 346
+  "height": 346,
+  "meta": {
+   "year": "1988",
+   "runtime": 128,
+   "directors": [
+    "Barry Levinson"
+   ],
+   "genres": [
+    "drama film",
+    "comedy drama"
+   ]
+  }
  },
  "Saltburn": {
   "page": "Saltburn (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/52/Saltburn_Film_Poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2023",
+   "runtime": 131,
+   "directors": [
+    "Emerald Fennell"
+   ],
+   "genres": [
+    "black comedy film",
+    "thriller film"
+   ]
+  }
  },
  "The Wonderful Story of Henry Sugar": {
   "page": "The Wonderful Story of Henry Sugar (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5d/Henry_Sugar_poster.webp",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2023",
+   "runtime": 37,
+   "directors": [
+    "Wes Anderson"
+   ],
+   "genres": [
+    "comedy film",
+    "drama film"
+   ]
+  }
  },
  "The Menu": {
   "page": "The Menu (2022 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/db/The_Menu_%282022_film%29.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2022",
+   "runtime": 107,
+   "directors": [
+    "Mark Mylod"
+   ],
+   "genres": [
+    "thriller film",
+    "black comedy"
+   ]
+  }
  },
  "No Hard Feelings": {
   "page": "No Hard Feelings (2023 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5c/NoHardFeelingsPoster.png",
   "width": 255,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2023",
+   "runtime": 90,
+   "genres": [
+    "comedy film",
+    "romantic comedy"
+   ]
+  }
  },
  "Dune": {
   "page": "Dune (2021 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 155,
+   "directors": [
+    "Denis Villeneuve"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "Lady Bird": {
   "page": "Lady Bird (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/61/Lady_Bird_poster.jpeg",
   "width": 220,
-  "height": 325
+  "height": 325,
+  "meta": {
+   "year": "2017",
+   "runtime": 93,
+   "directors": [
+    "Greta Gerwig"
+   ],
+   "genres": [
+    "comedy drama",
+    "tragicomedy"
+   ]
+  }
  },
  "Beautiful Boy": {
   "page": "Beautiful Boy (2018 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/Beautiful_Boy_%282018%29_poster.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2018",
+   "runtime": 120,
+   "directors": [
+    "Felix van Groeningen"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
  },
  "Normal People": {
   "page": "Normal (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Normal_poster.jpeg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2025",
+   "directors": [
+    "Ben Wheatley"
+   ],
+   "genres": [
+    "crime film"
+   ]
+  }
  },
  "Fresh": {
   "page": "Fresh (2022 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b0/Fresh_%282022%29_Poster.jpeg",
   "width": 220,
-  "height": 330
+  "height": 330,
+  "meta": {
+   "year": "2022",
+   "runtime": 114,
+   "directors": [
+    "Mimi Cave"
+   ],
+   "genres": [
+    "thriller film"
+   ]
+  }
  },
  "Poor Things": {
   "page": "Poor Things (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f3/Poor_Things_poster.jpg",
   "width": 255,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2023",
+   "runtime": 141,
+   "directors": [
+    "Yorgos Lanthimos"
+   ],
+   "genres": [
+    "thriller film",
+    "fantasy film"
+   ]
+  }
  },
  "Argylle": {
   "page": "Argylle",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Argylle_poster.jpg",
   "width": 251,
-  "height": 397
+  "height": 397,
+  "meta": {
+   "year": "2024",
+   "runtime": 139,
+   "directors": [
+    "Matthew Vaughn"
+   ],
+   "genres": [
+    "action film",
+    "spy film"
+   ]
+  }
  },
  "Dazed and Confused": {
   "page": "Dazed and Confused (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/af/Dazed_and_Confused_%281993%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1993",
+   "runtime": 98,
+   "directors": [
+    "Richard Linklater"
+   ],
+   "genres": [
+    "comedy film",
+    "teen film"
+   ]
+  }
  },
  "Monty Python and the Holy Grail": {
   "page": "Monty Python and the Holy Grail",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/08/Monty-Python-1975-poster.png",
   "width": 363,
-  "height": 275
+  "height": 275,
+  "meta": {
+   "year": "1975",
+   "runtime": 91,
+   "directors": [
+    "Terry Gilliam",
+    "Terry Jones"
+   ],
+   "genres": [
+    "fantasy film",
+    "adventure film"
+   ]
+  }
  },
  "Waves": {
   "page": "Waves (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f4/Waves_2019_film_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2019",
+   "runtime": 135,
+   "directors": [
+    "Trey Edward Shults"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "The Cousin Vinne": {
   "page": "Statue of Liberty",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg",
   "width": 640,
-  "height": 981
+  "height": 981,
+  "meta": {
+   "genres": [
+    "allegorical sculpture",
+    "monumental sculpture"
+   ]
+  }
  },
  "Mrs. Doubtfire": {
   "page": "Mrs. Doubtfire",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Mrs_Doubtfire.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1993",
+   "runtime": 125,
+   "directors": [
+    "Chris Columbus"
+   ],
+   "genres": [
+    "comedy drama",
+    "screwball comedy film"
+   ]
+  }
  },
  "Jojo Rabbit": {
   "page": "Jojo Rabbit",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a2/Jojo_Rabbit_%282019%29_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2019",
+   "runtime": 108,
+   "directors": [
+    "Taika Waititi"
+   ],
+   "genres": [
+    "comedy drama",
+    "comedy film"
+   ]
+  }
  },
  "Blue Valentine": {
   "page": "Blue Valentine (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/04/Blue_Valentine_film.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2010",
+   "runtime": 112,
+   "directors": [
+    "Derek Cianfrance"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Dune: Part Two": {
   "page": "Dune: Part Two",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2023",
+   "runtime": 166,
+   "directors": [
+    "Denis Villeneuve"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Tourist": {
   "page": "The Tourist (2010 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/28/The_Tourist_Poster.jpg",
   "width": 258,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2010",
+   "runtime": 103,
+   "directors": [
+    "Florian Henckel von Donnersmarck"
+   ],
+   "genres": [
+    "crime film",
+    "drama film"
+   ]
+  }
  },
  "Three Body Problem": {
   "page": "The Three-Body Problem (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c4/The_Three-Body_Problem_%28film%29_poster.jpeg",
   "width": 266,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "2018",
+   "genres": [
+    "science fiction film"
+   ]
+  }
  },
  "This is Where I Leave You": {
   "page": "This Is Where I Leave You",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/36/This_Is_Where_I_Leave_You_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2014",
+   "runtime": 103,
+   "directors": [
+    "Shawn Levy"
+   ],
+   "genres": [
+    "comedy film",
+    "drama film"
+   ]
+  }
  },
  "The Grand Budapest Hotel": {
   "page": "The Grand Budapest Hotel",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Grand_Budapest_Hotel.png",
   "width": 220,
-  "height": 344
+  "height": 344,
+  "meta": {
+   "year": "2014",
+   "runtime": 99,
+   "directors": [
+    "Wes Anderson"
+   ],
+   "genres": [
+    "comedy film",
+    "drama film"
+   ]
+  }
  },
  "Challengers": {
   "page": "Challengers (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Challengers_2024_poster.jpeg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2024",
+   "runtime": 131,
+   "directors": [
+    "Luca Guadagnino"
+   ],
+   "genres": [
+    "comedy drama",
+    "sport film"
+   ]
+  }
  },
  "Three Billboards outside ebbing Missouri": {
   "page": "Three Billboards Outside Ebbing, Missouri",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Three_Billboards_Outside_Ebbing%2C_Missouri_poster.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 115,
+   "directors": [
+    "Martin McDonagh"
+   ],
+   "genres": [
+    "drama film",
+    "black comedy film"
+   ]
+  }
  },
  "Deadpool & Wolverine": {
   "page": "Deadpool & Wolverine",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2024",
+   "runtime": 128,
+   "directors": [
+    "Shawn Levy"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "So I Married an Axe Murderer": {
   "page": "So I Married an Axe Murderer",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/Axemurderermovieposter.jpg",
   "width": 234,
-  "height": 350
+  "height": 350,
+  "meta": {
+   "year": "1993",
+   "runtime": 90,
+   "directors": [
+    "Thomas Schlamme"
+   ],
+   "genres": [
+    "comedy horror",
+    "comedy film"
+   ]
+  }
  },
  "Fleabag": {
   "page": "Fleabag",
   "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Fleabag_titlecard.png",
   "width": 934,
-  "height": 443
+  "height": 443,
+  "meta": {
+   "genres": [
+    "comedy drama"
+   ]
+  }
  },
  "Peabody & Sherman": {
   "page": "Mr. Peabody & Sherman",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/58/Mr_Peabody_%26_Sherman_Poster.JPG",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2014",
+   "runtime": 92,
+   "directors": [
+    "Rob Minkoff"
+   ],
+   "genres": [
+    "buddy film",
+    "comedy film"
+   ]
+  }
  },
  "Big Hero 6": {
   "page": "Big Hero 6 (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4b/Big_Hero_6_%28film%29_poster.jpg",
   "width": 264,
-  "height": 377
+  "height": 377,
+  "meta": {
+   "year": "2014",
+   "runtime": 102,
+   "directors": [
+    "Chris Williams",
+    "Don Hall"
+   ],
+   "genres": [
+    "teen film",
+    "science fiction film"
+   ]
+  }
  },
  "The Prince of Egypt": {
   "page": "The Prince of Egypt",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/6c/Prince_of_egypt_ver2.jpg",
   "width": 258,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1998",
+   "runtime": 99,
+   "directors": [
+    "Simon Wells",
+    "Brenda Chapman"
+   ],
+   "genres": [
+    "musical film",
+    "coming-of-age film"
+   ]
+  }
  },
  "About Time": {
   "page": "About Time (2013 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/7c/About_Time_%282013_film%29_Poster.jpg",
   "width": 220,
-  "height": 327
+  "height": 327,
+  "meta": {
+   "year": "2013",
+   "runtime": 123,
+   "directors": [
+    "Richard Curtis"
+   ],
+   "genres": [
+    "science fiction film",
+    "romance film"
+   ]
+  }
  },
  "The Grinch": {
   "page": "The Grinch (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4f/The_Grinch%2C_final_poster.jpg",
   "width": 220,
-  "height": 348
+  "height": 348,
+  "meta": {
+   "year": "2018",
+   "runtime": 86,
+   "directors": [
+    "Yarrow Cheney",
+    "Scott Mosier"
+   ],
+   "genres": [
+    "Christmas film",
+    "comedy film"
+   ]
+  }
  },
  "Elf": {
   "page": "Elf (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/df/Elf_movie.jpg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "2003",
+   "runtime": 97,
+   "directors": [
+    "Jon Favreau"
+   ],
+   "genres": [
+    "comedy film",
+    "fantasy film"
+   ]
+  }
  },
  "Klaus": {
   "page": "Klaus (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/26/Klaus_poster.jpeg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2019",
+   "runtime": 96,
+   "directors": [
+    "Sergio Pablos"
+   ],
+   "genres": [
+    "adventure film",
+    "Christmas film"
+   ]
+  }
  },
  "Lego Movie": {
   "page": "The Lego Movie",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/10/The_Lego_Movie_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 101,
+   "directors": [
+    "Christopher Miller",
+    "Phil Lord"
+   ],
+   "genres": [
+    "comedy film",
+    "crossover fiction"
+   ]
+  }
  },
  "The Lego Batman Movie": {
   "page": "The Lego Batman Movie",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/61/The_Lego_Batman_Movie_PromotionalPoster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 105,
+   "directors": [
+    "Chris McKay"
+   ],
+   "genres": [
+    "comedy film",
+    "superhero film"
+   ]
+  }
  },
  "2001: A Space Odyssey": {
   "page": "2001: A Space Odyssey",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/11/2001_A_Space_Odyssey_%281968%29.png",
   "width": 261,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "1968",
+   "runtime": 143,
+   "directors": [
+    "Stanley Kubrick"
+   ],
+   "genres": [
+    "space adventure film",
+    "mystery film"
+   ]
+  }
  },
  "Boss Baby": {
   "page": "The Boss Baby",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0e/The_Boss_Baby_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 97,
+   "directors": [
+    "Tom McGrath"
+   ],
+   "genres": [
+    "family film",
+    "comedy film"
+   ]
+  }
  },
  "Flow": {
   "page": "Flow (2024 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/Flow_movie_poster.jpg",
   "width": 256,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2024",
+   "runtime": 80,
+   "directors": [
+    "Gints Zilbalodis"
+   ],
+   "genres": [
+    "adventure film",
+    "family film"
+   ]
+  }
  },
  "A Complete Unknown": {
   "page": "A Complete Unknown",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d5/A_Complete_Unknown_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2024",
+   "runtime": 141,
+   "directors": [
+    "James Mangold"
+   ],
+   "genres": [
+    "musical film",
+    "drama film"
+   ]
+  }
  },
  "Moneyball": {
   "page": "Moneyball (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Moneyball_Poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2011",
+   "runtime": 133,
+   "directors": [
+    "Bennett Miller"
+   ],
+   "genres": [
+    "biographical film",
+    "sport film"
+   ]
+  }
  },
  "The Ministry of Ungentlemanly Warfare": {
   "page": "The Ministry of Ungentlemanly Warfare",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/22/The_Ministry_of_Ungentlemanly_Warfare_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2024",
+   "runtime": 119,
+   "directors": [
+    "Guy Ritchie"
+   ],
+   "genres": [
+    "spy film",
+    "drama film"
+   ]
+  }
  },
  "Captain America: Brave New World": {
   "page": "Captain America: Brave New World",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a4/Captain_America_Brave_New_World_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 118,
+   "directors": [
+    "Julius Onah"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "We Live In Time": {
   "page": "We Live in Time",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/32/We_live_in_time_poster.jpg",
   "width": 255,
-  "height": 376
+  "height": 376,
+  "meta": {
+   "year": "2024",
+   "runtime": 107,
+   "directors": [
+    "John Crowley"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Black Bag": {
   "page": "Black Bag",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b9/Black_Bag_film_poster.jpg",
   "width": 255,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2025",
+   "runtime": 93,
+   "directors": [
+    "Steven Soderbergh"
+   ],
+   "genres": [
+    "thriller film",
+    "mystery film"
+   ]
+  }
  },
  "Ford vs. Ferrari": {
   "page": "Ford v Ferrari",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a4/Ford_v._Ferrari_%282019_film_poster%29.png",
   "width": 240,
-  "height": 356
+  "height": 356,
+  "meta": {
+   "year": "2019",
+   "runtime": 152,
+   "directors": [
+    "James Mangold"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "Notting Hill": {
   "page": "Notting Hill (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/38/NottingHillRobertsGrant.jpg",
   "width": 260,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "1999",
+   "runtime": 119,
+   "directors": [
+    "Roger Michell"
+   ],
+   "genres": [
+    "romantic comedy film",
+    "comedy drama"
+   ]
+  }
  },
  "The Minecraft Movie": {
   "page": "A Minecraft Movie",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/66/A_Minecraft_Movie_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 101,
+   "directors": [
+    "Peter Sollett",
+    "Jared Hess"
+   ],
+   "genres": [
+    "adventure film",
+    "family film"
+   ]
+  }
  },
  "Mickey 17": {
   "page": "Mickey 17",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/Mickey_17_film_poster.png",
   "width": 255,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2025",
+   "runtime": 137,
+   "directors": [
+    "Bong Joon-ho"
+   ],
+   "genres": [
+    "science fiction film",
+    "adventure film"
+   ]
+  }
  },
  "Thunderbolts": {
   "page": "Thunderbolts*",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/90/Thunderbolts%2A_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2025",
+   "runtime": 126,
+   "directors": [
+    "Jake Schreier"
+   ],
+   "genres": [
+    "superhero film",
+    "action film"
+   ]
+  }
  },
  "Me Before You": {
   "page": "Me Before You",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fd/Me_Before_You_%28film%29.jpg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "2016",
+   "runtime": 123,
+   "directors": [
+    "Thea Sharrock"
+   ],
+   "genres": [
+    "drama film",
+    "romance film"
+   ]
+  }
  },
  "The Gorge": {
   "page": "The Gorge (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/The_Gorge_%28film%29_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2025",
+   "runtime": 127,
+   "directors": [
+    "Scott Derrickson"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Phoenician Scheme": {
   "page": "The Phoenician Scheme",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/The_Phoenician_Scheme_theatrical_poster.jpg",
   "width": 252,
-  "height": 395
+  "height": 395,
+  "meta": {
+   "year": "2025",
+   "runtime": 120,
+   "directors": [
+    "Wes Anderson"
+   ],
+   "genres": [
+    "adventure film",
+    "spy film"
+   ]
+  }
  },
  "Wolfs": {
   "page": "Wolfs (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/48/Wolfs_%28film%29.jpg",
   "width": 256,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2024",
+   "runtime": 108,
+   "directors": [
+    "Jon Watts"
+   ],
+   "genres": [
+    "thriller film",
+    "crime film"
+   ]
+  }
  },
  "Parasite": {
   "page": "Parasite (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/53/Parasite_%282019_film%29.png",
   "width": 265,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2019",
+   "runtime": 132,
+   "directors": [
+    "Bong Joon-ho"
+   ],
+   "genres": [
+    "comedy drama",
+    "black comedy"
+   ]
+  }
  },
  "Materialists": {
   "page": "Materialists (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/7f/Materalists_Poster.jpg",
   "width": 253,
-  "height": 394
+  "height": 394,
+  "meta": {
+   "year": "2025",
+   "runtime": 116,
+   "directors": [
+    "Celine Song"
+   ],
+   "genres": [
+    "romantic comedy film"
+   ]
+  }
  },
  "Fountain of Youth": {
   "page": "Fountain of Youth (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/60/Fountain_of_Youth_%282025%29_poster.jpg",
   "width": 259,
-  "height": 388
+  "height": 388,
+  "meta": {
+   "year": "2025",
+   "runtime": 125,
+   "directors": [
+    "Guy Ritchie"
+   ],
+   "genres": [
+    "fantasy film",
+    "mystery film"
+   ]
+  }
  },
  "Sunset Boulevard": {
   "page": "Sunset Boulevard (film)",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Sunset_Boulevard_%281950_poster%29.jpg/960px-Sunset_Boulevard_%281950_poster%29.jpg",
   "width": 640,
-  "height": 961
+  "height": 961,
+  "meta": {
+   "year": "1950",
+   "runtime": 110,
+   "directors": [
+    "Billy Wilder"
+   ],
+   "genres": [
+    "drama film",
+    "flashback film"
+   ]
+  }
  },
  "Caveat": {
   "page": "Caveat (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e0/Caveat_%282020%29_poster.jpg",
   "width": 245,
-  "height": 368
+  "height": 368,
+  "meta": {
+   "year": "2020",
+   "runtime": 88,
+   "genres": [
+    "horror film"
+   ]
+  }
  },
  "Beau Travaille": {
   "page": "Beau Travail",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/73/Beau_Travail_poster.jpg",
   "width": 272,
-  "height": 367
+  "height": 367,
+  "meta": {
+   "year": "1999",
+   "runtime": 92,
+   "directors": [
+    "Claire Denis"
+   ],
+   "genres": [
+    "drama film",
+    "LGBTQ-related film"
+   ]
+  }
  },
  "Rebel Without A Cause": {
   "page": "Rebel Without a Cause",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rebel_Without_a_Cause_%281955_poster%29.jpg/960px-Rebel_Without_a_Cause_%281955_poster%29.jpg",
   "width": 640,
-  "height": 983
+  "height": 983,
+  "meta": {
+   "year": "1955",
+   "runtime": 106,
+   "directors": [
+    "Nicholas Ray"
+   ],
+   "genres": [
+    "teen film",
+    "coming-of-age film"
+   ]
+  }
  },
  "Of Miracles and Men": {
   "page": "Miracles (1989 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/73/MiraclesFilmPoster.jpg",
   "width": 252,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "1989",
+   "runtime": 122,
+   "directors": [
+    "Jackie Chan"
+   ],
+   "genres": [
+    "action film",
+    "martial arts film"
+   ]
+  }
  },
  "F1": {
   "page": "F1 (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/38/F1_%282025_film%29.png",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2025",
+   "runtime": 155,
+   "directors": [
+    "Joseph Kosinski"
+   ],
+   "genres": [
+    "action film",
+    "sport film"
+   ]
+  }
  },
  "Love and Other Drugs": {
   "page": "Love & Other Drugs",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/43/Love_%26_Other_Drugs_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2010",
+   "runtime": 112,
+   "directors": [
+    "Edward Zwick"
+   ],
+   "genres": [
+    "romantic comedy",
+    "comedy drama"
+   ]
+  }
  },
  "Crazy, Stupid, Love": {
   "page": "Crazy, Stupid, Love",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/78/CrazyStupidLovePoster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2011",
+   "runtime": 118,
+   "directors": [
+    "Glenn Ficarra",
+    "John Requa"
+   ],
+   "genres": [
+    "comedy drama",
+    "romantic comedy film"
+   ]
+  }
  },
  "The Idea of You": {
   "page": "The Idea of You",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f7/The_Idea_of_You_film_poster.jpg",
   "width": 255,
-  "height": 378
+  "height": 378,
+  "meta": {
+   "year": "2024",
+   "runtime": 115,
+   "directors": [
+    "Michael Showalter"
+   ],
+   "genres": [
+    "romantic comedy film"
+   ]
+  }
  },
  "One Day": {
   "page": "One Day (2011 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/ad/One_Day_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2011",
+   "runtime": 107,
+   "directors": [
+    "Lone Scherfig"
+   ],
+   "genres": [
+    "drama film",
+    "romance film"
+   ]
+  }
  },
  "Perks of Being a Wallflower": {
   "page": "The Perks of Being a Wallflower (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0b/The_Perks_of_Being_a_Wallflower_Poster.jpg",
   "width": 250,
-  "height": 369
+  "height": 369,
+  "meta": {
+   "year": "2012",
+   "runtime": 103,
+   "directors": [
+    "Stephen Chbosky"
+   ],
+   "genres": [
+    "romance film",
+    "teen film"
+   ]
+  }
  },
  "Fall Guy": {
   "page": "The Fall Guy (2024 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/The_Fall_Guy_%282024%29_poster.jpg",
   "width": 251,
-  "height": 397
+  "height": 397,
+  "meta": {
+   "year": "2024",
+   "runtime": 126,
+   "directors": [
+    "David Leitch"
+   ],
+   "genres": [
+    "action film",
+    "comedy film"
+   ]
+  }
  },
  "Death of a Unicorn": {
   "page": "Death of a Unicorn",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c1/Death_of_a_unicorn.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 104,
+   "directors": [
+    "Alex Scharfman"
+   ],
+   "genres": [
+    "thriller film",
+    "comedy horror film"
+   ]
+  }
  },
  "The Only Living Boy in New York": {
   "page": "The Only Living Boy in New York (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/92/The_Only_Living_Boy_in_New_York_%28film%29.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "directors": [
+    "Marc Webb"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "Superman": {
   "page": "Superman in film",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/04/Superman_actors.jpg",
   "width": 245,
-  "height": 407
+  "height": 407,
+  "meta": {
+   "directors": [
+    "Richard Donner"
+   ]
+  }
  },
  "Nope": {
   "page": "Nope (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e6/Nope_%28film%29_poster.jpg",
   "width": 251,
-  "height": 397
+  "height": 397,
+  "meta": {
+   "year": "2022",
+   "runtime": 130,
+   "directors": [
+    "Jordan Peele"
+   ],
+   "genres": [
+    "horror film",
+    "thriller film"
+   ]
+  }
  },
  "The Fantastic Four: First Steps": {
   "page": "The Fantastic Four: First Steps",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/13/The_Fantastic_Four_First_Steps_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2025",
+   "runtime": 114,
+   "directors": [
+    "Matt Shakman"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Intern": {
   "page": "The Intern (2015 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c9/The_Intern_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2015",
+   "runtime": 121,
+   "directors": [
+    "Nancy Meyers"
+   ],
+   "genres": [
+    "comedy film",
+    "melodrama"
+   ]
+  }
  },
  "Memento": {
   "page": "Memento (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c7/Memento_poster.jpg",
   "width": 260,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2000",
+   "runtime": 113,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "neo-noir",
+    "mystery film"
+   ]
+  }
  },
  "Meet Joe Black": {
   "page": "Meet Joe Black",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f5/Meet_Joe_Black-_1998.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1998",
+   "runtime": 173,
+   "directors": [
+    "Martin Brest"
+   ],
+   "genres": [
+    "romance film",
+    "fantasy film"
+   ]
+  }
  },
  "Les Intouchables": {
   "page": "The Intouchables",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/93/The_Intouchables.jpg",
   "width": 220,
-  "height": 299
+  "height": 299,
+  "meta": {
+   "year": "2011",
+   "runtime": 112,
+   "directors": [
+    "Olivier Nakache",
+    "Éric Toledano"
+   ],
+   "genres": [
+    "comedy film",
+    "biographical film"
+   ]
+  }
  },
  "Grave of The Fireflies": {
   "page": "Grave of the Fireflies",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grave_of_the_Fireflies_Japanese_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "1988",
+   "runtime": 93,
+   "directors": [
+    "Isao Takahata"
+   ],
+   "genres": [
+    "drama anime and manga",
+    "drama film"
+   ]
+  }
  },
  "A Star is Born": {
   "page": "A Star Is Born (1937 film)",
   "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/A_Star_Is_Born_%281937_film_poster%29.jpg/960px-A_Star_Is_Born_%281937_film_poster%29.jpg",
   "width": 640,
-  "height": 965
+  "height": 965,
+  "meta": {
+   "year": "1937",
+   "runtime": 111,
+   "directors": [
+    "William A. Wellman",
+    "Jack Conway"
+   ],
+   "genres": [
+    "drama film",
+    "romance film"
+   ]
+  }
  },
  "The Theory of Everything": {
   "page": "The Theory of Everything (2014 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/67/The_Theory_of_Everything_%282014%29.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 123,
+   "directors": [
+    "James Marsh"
+   ],
+   "genres": [
+    "romance film",
+    "biographical film"
+   ]
+  }
  },
  "The Tomorrow War": {
   "page": "The Tomorrow War",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/60/The_Tomorrow_War_%282021_film%29_official_theatrical_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 138,
+   "directors": [
+    "Chris McKay"
+   ],
+   "genres": [
+    "war film",
+    "science fiction film"
+   ]
+  }
  },
  "Casino Royale": {
   "page": "Casino Royale (2006 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/82/Casino_Royale_%282006_film_poster%29.jpg",
   "width": 365,
-  "height": 273
+  "height": 273,
+  "meta": {
+   "year": "2006",
+   "runtime": 144,
+   "directors": [
+    "Martin Campbell"
+   ],
+   "genres": [
+    "spy film",
+    "action film"
+   ]
+  }
  },
  "The Martian": {
   "page": "The Martian (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg",
   "width": 250,
-  "height": 375
+  "height": 375,
+  "meta": {
+   "year": "2015",
+   "runtime": 141,
+   "directors": [
+    "Ridley Scott"
+   ],
+   "genres": [
+    "science fiction film",
+    "survival film"
+   ]
+  }
  },
  "Before Sunrise": {
   "page": "Before Sunrise",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/da/Before_Sunrise_poster.jpg",
   "width": 248,
-  "height": 369
+  "height": 369,
+  "meta": {
+   "year": "1995",
+   "runtime": 97,
+   "directors": [
+    "Richard Linklater"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Before Sunset": {
   "page": "Before Sunset",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d1/Before_Sunset_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2004",
+   "runtime": 77,
+   "directors": [
+    "Richard Linklater"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Before Midnight": {
   "page": "Before Midnight",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/ad/Before_Midnight_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2013",
+   "runtime": 109,
+   "directors": [
+    "Richard Linklater"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Little Women": {
   "page": "Little Women (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Little_Women_%282019_film%29.jpeg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "2019",
+   "runtime": 134,
+   "directors": [
+    "Greta Gerwig"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "Zodiac": {
   "page": "Zodiac (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/3a/Zodiac2007Poster.jpg",
   "width": 260,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2007",
+   "runtime": 158,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "crime thriller film",
+    "docudrama"
+   ]
+  }
  },
  "A Real Pain": {
   "page": "A Real Pain",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/7e/A_Real_Pain_%282024_film%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2024",
+   "runtime": 90,
+   "directors": [
+    "Jesse Eisenberg"
+   ],
+   "genres": [
+    "comedy drama"
+   ]
+  }
  },
  "Cure": {
   "page": "Cure (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/bc/Cureposter.jpg",
   "width": 265,
-  "height": 376
+  "height": 376,
+  "meta": {
+   "year": "1997",
+   "runtime": 107,
+   "directors": [
+    "Kiyoshi Kurosawa"
+   ],
+   "genres": [
+    "horror film",
+    "psychological horror fiction"
+   ]
+  }
  },
  "True Detective": {
   "page": "True Detective season 1",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/37/True_Detective_season_1.png",
   "width": 292,
-  "height": 342
+  "height": 342,
+  "meta": {
+   "directors": [
+    "Cary Joji Fukunaga"
+   ]
+  }
  },
  "Boyhood": {
   "page": "Boyhood (2014 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Boyhood_%282014%29.png",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2014",
+   "runtime": 163,
+   "directors": [
+    "Richard Linklater"
+   ],
+   "genres": [
+    "drama film",
+    "coming-of-age film"
+   ]
+  }
  },
  "Manchester By Sea": {
   "page": "Manchester by the Sea (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/de/Manchester_by_the_Sea.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2016",
+   "runtime": 135,
+   "directors": [
+    "Kenneth Lonergan"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "The Town": {
   "page": "The Town (2010 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/da/The_Town_Poster.jpg",
   "width": 260,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2010",
+   "runtime": 124,
+   "directors": [
+    "Ben Affleck"
+   ],
+   "genres": [
+    "heist film",
+    "drama film"
+   ]
+  }
  },
  "Dunkirk": {
   "page": "Dunkirk (2017 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/15/Dunkirk_Film_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 106,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "drama film",
+    "war film"
+   ]
+  }
  },
  "One Battle After Another": {
   "page": "One Battle After Another",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5d/One_Battle_After_Another.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 161,
+   "directors": [
+    "Paul Thomas Anderson"
+   ],
+   "genres": [
+    "drama film",
+    "thriller film"
+   ]
+  }
  },
  "Gone Girl": {
   "page": "Gone Girl (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Gone_Girl_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 149,
+   "directors": [
+    "David Fincher"
+   ],
+   "genres": [
+    "crime thriller film",
+    "crime film"
+   ]
+  }
  },
  "Interstellar": {
   "page": "Interstellar (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2014",
+   "runtime": 169,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "science fiction film",
+    "adventure film"
+   ]
+  }
  },
  "Once Upon a Time in Hollywood": {
   "page": "Once Upon a Time in Hollywood",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a6/Once_Upon_a_Time_in_Hollywood_poster.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2019",
+   "runtime": 161,
+   "directors": [
+    "Quentin Tarantino"
+   ],
+   "genres": [
+    "comedy drama",
+    "black comedy film"
+   ]
+  }
  },
  "Minority Report": {
   "page": "Minority Report",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/44/Minority_Report_Poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2002",
+   "runtime": 145,
+   "directors": [
+    "Steven Spielberg"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "The Prestige": {
   "page": "The Prestige",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d2/Prestige_poster.jpg",
   "width": 258,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2006",
+   "runtime": 125,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "mystery film",
+    "thriller film"
+   ]
+  }
  },
  "Metropolis": {
   "page": "Metropolis (1927 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Metropolis_%28German_three-sheet_poster%29.jpg",
   "width": 903,
-  "height": 2000
+  "height": 2000,
+  "meta": {
+   "year": "1927",
+   "runtime": 153,
+   "directors": [
+    "Fritz Lang"
+   ],
+   "genres": [
+    "silent film",
+    "drama film"
+   ]
+  }
  },
  "Cloud Atlas": {
   "page": "Cloud Atlas (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/20/Cloud_Atlas_Poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2012",
+   "runtime": 172,
+   "directors": [
+    "Tom Tykwer"
+   ],
+   "genres": [
+    "science fiction film",
+    "fantasy film"
+   ]
+  }
  },
  "The Man Who Knew Infinity": {
   "page": "The Man Who Knew Infinity",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d8/The_Man_Who_Knew_Infinity_%28film%29.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2015",
+   "runtime": 109,
+   "directors": [
+    "Matt Brown"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
  },
  "October Sky": {
   "page": "October Sky",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/73/October_sky_poster.jpg",
   "width": 260,
-  "height": 389
+  "height": 389,
+  "meta": {
+   "year": "1999",
+   "runtime": 103,
+   "directors": [
+    "Joe Johnston"
+   ],
+   "genres": [
+    "biographical film",
+    "teen film"
+   ]
+  }
  },
  "Sex, Lies, and Videotape": {
   "page": "Sex, Lies, and Videotape",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/cd/Sex_Lies_and_Videotape.jpg",
   "width": 255,
-  "height": 398
+  "height": 398,
+  "meta": {
+   "year": "1989",
+   "runtime": 101,
+   "directors": [
+    "Steven Soderbergh"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "Bugonia": {
   "page": "Bugonia (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/27/Bugonia_film_poster.jpg",
   "width": 264,
-  "height": 377
+  "height": 377,
+  "meta": {
+   "year": "2025",
+   "runtime": 118,
+   "directors": [
+    "Yorgos Lanthimos"
+   ],
+   "genres": [
+    "science fiction film",
+    "comedy film"
+   ]
+  }
  },
  "Is This Thing On?": {
   "page": "Is This Thing On?",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0f/Is_This_Thing_On%3F_poster.jpg",
   "width": 260,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "2025",
+   "directors": [
+    "Bradley Cooper"
+   ],
+   "genres": [
+    "comedy drama"
+   ]
+  }
  },
  "Steel Magnolias": {
   "page": "Steel Magnolias",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/32/Steel_magnolias_poster.jpg",
   "width": 252,
-  "height": 396
+  "height": 396,
+  "meta": {
+   "year": "1989",
+   "runtime": 114,
+   "directors": [
+    "Herbert Ross"
+   ],
+   "genres": [
+    "female buddy film",
+    "comedy drama"
+   ]
+  }
  },
  "Brokeback Mountain": {
   "page": "Brokeback Mountain",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/Brokeback_mountain.jpg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "2005",
+   "runtime": 134,
+   "directors": [
+    "Ang Lee"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "Synecdoche, New York": {
   "page": "Synecdoche, New York",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/6a/Synecdoche%2C_New_York_poster.jpg",
   "width": 260,
-  "height": 381
+  "height": 381,
+  "meta": {
+   "year": "2008",
+   "runtime": 124,
+   "directors": [
+    "Charlie Kaufman"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "Dog Day Afternoon": {
   "page": "Dog Day Afternoon",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/44/Dog_Day_Afternoon_film_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "1975",
+   "runtime": 125,
+   "directors": [
+    "Sidney Lumet"
+   ],
+   "genres": [
+    "heist film",
+    "action film"
+   ]
+  }
  },
  "Heat": {
   "page": "The Heat (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Heat_poster.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2013",
+   "runtime": 117,
+   "directors": [
+    "Paul Feig"
+   ],
+   "genres": [
+    "action film",
+    "comedy film"
+   ]
+  }
  },
  "Sunshine": {
   "page": "Sunshine (2007 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Sunshine_poster.jpg",
   "width": 361,
-  "height": 275
+  "height": 275,
+  "meta": {
+   "year": "2006",
+   "runtime": 108,
+   "directors": [
+    "Danny Boyle"
+   ],
+   "genres": [
+    "science fiction film",
+    "adventure film"
+   ]
+  }
  },
  "Jerry Maguire": {
   "page": "Jerry Maguire",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/ea/Jerry_Maguire_movie_poster.jpg",
   "width": 250,
-  "height": 371
+  "height": 371,
+  "meta": {
+   "year": "1996",
+   "runtime": 139,
+   "directors": [
+    "Cameron Crowe"
+   ],
+   "genres": [
+    "romance film",
+    "comedy film"
+   ]
+  }
  },
  "La Bête": {
   "page": "La Bête (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/01/La_b%C3%AAte.jpg",
   "width": 273,
-  "height": 365
+  "height": 365,
+  "meta": {
+   "year": "1975",
+   "runtime": 104,
+   "directors": [
+    "Walerian Borowczyk"
+   ],
+   "genres": [
+    "fantasy film",
+    "horror film"
+   ]
+  }
  },
  "Manhunter": {
   "page": "Manhunter (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/77/Manhunter_michael_mann_film_poster.jpg",
   "width": 252,
-  "height": 394
+  "height": 394,
+  "meta": {
+   "year": "1986",
+   "runtime": 117,
+   "directors": [
+    "Michael Mann"
+   ],
+   "genres": [
+    "neo-noir",
+    "independent film"
+   ]
+  }
  },
  "No Country for Old Men": {
   "page": "No Country for Old Men",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
   "width": 220,
-  "height": 324
+  "height": 324,
+  "meta": {
+   "year": "2007",
+   "runtime": 122,
+   "directors": [
+    "Ethan Coen",
+    "Joel Coen"
+   ],
+   "genres": [
+    "thriller film",
+    "Western film"
+   ]
+  }
  },
  "C'mon C'mon": {
   "page": "C'mon C'mon (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/56/C%27mon_C%27mon.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2021",
+   "runtime": 108,
+   "directors": [
+    "Mike Mills"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "A Woman on the Verge of a Nervous Breakdown": {
   "page": "Women on the Verge of a Nervous Breakdown (musical)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4d/Women_on_the_Verge_of_a_Nervous_Breakdown_musical.jpg",
   "width": 257,
-  "height": 400
+  "height": 400,
+  "meta": {}
  },
  "The Favourite": {
   "page": "The Favourite (2018 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/cc/The_Favourite.png",
   "width": 360,
-  "height": 270
+  "height": 270,
+  "meta": {
+   "year": "2018",
+   "runtime": 120,
+   "directors": [
+    "Yorgos Lanthimos"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "Primal Fear": {
   "page": "Primal Fear (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fc/Primal_Fear_%281996_film%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1996",
+   "runtime": 129,
+   "directors": [
+    "Gregory Hoblit"
+   ],
+   "genres": [
+    "crime film",
+    "neo-noir"
+   ]
+  }
  },
  "Sexy Beast": {
   "page": "Sexy Beast",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/90/Sexy_beast_ver1.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2000",
+   "runtime": 85,
+   "directors": [
+    "Jonathan Glazer"
+   ],
+   "genres": [
+    "crime film",
+    "heist film"
+   ]
+  }
  },
  "Avatar: Fire and Ash": {
   "page": "Avatar: Fire and Ash",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/95/Avatar_Fire_and_Ash_poster.jpeg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2025",
+   "runtime": 197,
+   "directors": [
+    "James Cameron"
+   ],
+   "genres": [
+    "action film",
+    "science fiction film"
+   ]
+  }
  },
  "Wake Up Dead Man: A Knives Out Mystery": {
   "page": "Wake Up Dead Man",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d9/WakeUpDeadMan_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 144,
+   "directors": [
+    "Rian Johnson"
+   ],
+   "genres": [
+    "mystery film",
+    "detective fiction"
+   ]
+  }
  },
  "Sinners": {
   "page": "Sinners (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5f/Sinners_%282025_film%29_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 137,
+   "directors": [
+    "Ryan Coogler"
+   ],
+   "genres": [
+    "vampire film",
+    "drama film"
+   ]
+  }
  },
  "Marty Supreme": {
   "page": "Marty Supreme",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Marty_Supreme_poster.jpg",
   "width": 255,
-  "height": 400
+  "height": 400,
+  "meta": {
+   "year": "2025",
+   "runtime": 150,
+   "directors": [
+    "Josh Safdie"
+   ],
+   "genres": [
+    "drama film"
+   ]
+  }
  },
  "The Man From U.N.C.L.E.": {
   "page": "The Man from U.N.C.L.E. (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e5/The_Man_from_U.N.C.L.E._poster.jpg",
   "width": 260,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2015",
+   "runtime": 116,
+   "directors": [
+    "Guy Ritchie"
+   ],
+   "genres": [
+    "action film",
+    "spy film"
+   ]
+  }
  },
  "Cloud (クラウド)": {
   "page": "Cloud (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/42/Cloud_%28film%29_Japanese_theatrical_release_poster.png",
   "width": 265,
-  "height": 376
+  "height": 376,
+  "meta": {
+   "year": "2024",
+   "directors": [
+    "Kiyoshi Kurosawa"
+   ]
+  }
  },
  "Possessor": {
   "page": "Possessor (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/ee/Possessor_%28film%29_poster.jpg",
   "width": 250,
-  "height": 362
+  "height": 362,
+  "meta": {
+   "year": "2020",
+   "runtime": 104,
+   "directors": [
+    "Brandon Cronenberg"
+   ],
+   "genres": [
+    "thriller film",
+    "cyberpunk"
+   ]
+  }
  },
  "Eternity": {
   "page": "Eternity (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/6b/Eternity_film_poster.jpg",
   "width": 252,
-  "height": 395
+  "height": 395,
+  "meta": {
+   "year": "2025",
+   "runtime": 114,
+   "directors": [
+    "David Freyne"
+   ],
+   "genres": [
+    "LGBTQ-related film",
+    "romantic comedy film"
+   ]
+  }
  },
  "Tron": {
   "page": "Tron",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/17/Tron_poster.jpg",
   "width": 256,
-  "height": 390
+  "height": 390,
+  "meta": {
+   "year": "1982",
+   "runtime": 96,
+   "directors": [
+    "Steven Lisberger"
+   ],
+   "genres": [
+    "action film",
+    "science fiction film"
+   ]
+  }
  },
  "Tron: Legacy": {
   "page": "Tron: Legacy",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c2/Tron_Legacy_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2010",
+   "runtime": 127,
+   "directors": [
+    "Joseph Kosinski"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  },
  "Tron: Ares": {
   "page": "Tron: Ares",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/06/Tron_Ares_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2025",
+   "directors": [
+    "Joachim Rønning"
+   ],
+   "genres": [
+    "science fiction film"
+   ]
+  }
  },
  "Hidden Figures": {
   "page": "Hidden Figures",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4f/The_official_poster_for_the_film_Hidden_Figures%2C_2016.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2016",
+   "runtime": 127,
+   "directors": [
+    "Theodore Melfi"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  },
  "The Rip": {
   "page": "The Rip (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a8/The_Rip_poster.jpg",
   "width": 259,
-  "height": 383
+  "height": 383,
+  "meta": {
+   "year": "2026",
+   "runtime": 113,
+   "directors": [
+    "Joe Carnahan"
+   ],
+   "genres": [
+    "crime film",
+    "thriller film"
+   ]
+  }
  },
  "Judas and the Black Messiah": {
   "page": "Judas and the Black Messiah",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/55/Judas_and_the_Black_Messiah_poster.png",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2021",
+   "runtime": 126,
+   "directors": [
+    "Shaka King"
+   ],
+   "genres": [
+    "biographical film",
+    "political drama"
+   ]
+  }
  },
  "No Other Choice (어쩔수가없다)": {
   "page": "No Other Choice",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/12/No_Other_Choice_film_poster.jpeg",
   "width": 264,
-  "height": 377
+  "height": 377,
+  "meta": {
+   "year": "2025",
+   "runtime": 139,
+   "directors": [
+    "Park Chan-wook"
+   ],
+   "genres": [
+    "black comedy film",
+    "drama film"
+   ]
+  }
  },
  "The Green Book": {
   "page": "Green Book (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5b/Green_Book_%282018_poster%29.png",
   "width": 250,
-  "height": 375
+  "height": 375,
+  "meta": {
+   "year": "2018",
+   "runtime": 130,
+   "directors": [
+    "Peter Farrelly"
+   ],
+   "genres": [
+    "comedy drama",
+    "comedy film"
+   ]
+  }
  },
  "Cube": {
   "page": "Cube (1997 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0c/Cube_The_Movie_Poster_Art.jpg",
   "width": 260,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "1997",
+   "runtime": 90,
+   "directors": [
+    "Vincenzo Natali"
+   ],
+   "genres": [
+    "horror film",
+    "science fiction film"
+   ]
+  }
  },
  "Memories of Murder": {
   "page": "Memories of Murder",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/01/Salinui-chueok-south-korean-movie-poster-md.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2003",
+   "runtime": 132,
+   "directors": [
+    "Bong Joon-ho"
+   ],
+   "genres": [
+    "crime thriller film",
+    "mystery film"
+   ]
+  }
  },
  "Old Boy": {
   "page": "Old Boy (manga)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/Oldboymanga.jpg",
   "width": 272,
-  "height": 367
+  "height": 367,
+  "meta": {
+   "genres": [
+    "action anime and manga",
+    "psychological anime and manga"
+   ]
+  }
  },
  "Pillion": {
   "page": "Pillion (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Pillion_poster.jpg",
   "width": 258,
-  "height": 388
+  "height": 388,
+  "meta": {
+   "year": "2025",
+   "runtime": 106,
+   "directors": [
+    "Harry Lighton"
+   ],
+   "genres": [
+    "drama film",
+    "LGBTQ-related film"
+   ]
+  }
  },
  "28 Years Later: The Bone Temple": {
   "page": "28 Years Later: The Bone Temple",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b8/28_Years_Later%2C_The_Bone_Temple_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 109,
+   "directors": [
+    "Nia DaCosta"
+   ],
+   "genres": [
+    "post-apocalyptic film",
+    "horror film"
+   ]
+  }
  },
  "If I Had Legs I'd Kick You": {
   "page": "If I Had Legs I'd Kick You",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/08/If_I_Had_Legs_I%27d_Kick_You_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2025",
+   "runtime": 113,
+   "directors": [
+    "Mary Bronstein"
+   ],
+   "genres": [
+    "comedy drama",
+    "drama film"
+   ]
+  }
  },
  "The Dreamers": {
   "page": "The Dreamers (2003 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b3/The_Dreamers_movie.jpg",
   "width": 250,
-  "height": 358
+  "height": 358,
+  "meta": {
+   "year": "2003",
+   "runtime": 115,
+   "directors": [
+    "Bernardo Bertolucci"
+   ],
+   "genres": [
+    "romance film",
+    "drama film"
+   ]
+  }
  },
  "The Secret Agent": {
   "page": "The Secret Agent (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/57/The_Secret_Agent.png",
   "width": 261,
-  "height": 382
+  "height": 382,
+  "meta": {
+   "year": "2025",
+   "runtime": 160,
+   "directors": [
+    "Kleber Mendonça Filho"
+   ],
+   "genres": [
+    "drama film",
+    "thriller film"
+   ]
+  }
  },
  "Train Dreams": {
   "page": "Train Dreams (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/58/Train_Dreams_poster.jpeg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 102,
+   "directors": [
+    "Clint Bentley"
+   ],
+   "genres": [
+    "drama film",
+    "period drama film"
+   ]
+  }
  },
  "Les Rendez-vous d'Anna": {
   "page": "Les Rendez-vous d'Anna",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b2/Les_Rendez-vous_d%27Anna_poster.png",
   "width": 250,
-  "height": 338
+  "height": 338,
+  "meta": {
+   "year": "1978",
+   "runtime": 127,
+   "directors": [
+    "Chantal Akerman"
+   ],
+   "genres": [
+    "LGBTQ-related film"
+   ]
+  }
  },
  "The Tree of Life": {
   "page": "The Tree of Life (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/4e/Thetreeoflifeposter.jpg",
   "width": 252,
-  "height": 395
+  "height": 395,
+  "meta": {
+   "year": "2011",
+   "runtime": 138,
+   "directors": [
+    "Terrence Malick"
+   ],
+   "genres": [
+    "science fiction film",
+    "fantasy film"
+   ]
+  }
  },
  "Dead Poets Society": {
   "page": "Dead Poets Society",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/86/Dead_poets_society.png",
   "width": 261,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "1989",
+   "runtime": 123,
+   "directors": [
+    "Peter Weir"
+   ],
+   "genres": [
+    "coming-of-age film",
+    "drama film"
+   ]
+  }
  },
  "Project Hail Mary": {
   "page": "Project Hail Mary (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/3b/Project_Hail_Mary_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 156,
+   "directors": [
+    "Phil Lord",
+    "Christopher Miller"
+   ],
+   "genres": [
+    "science fiction film",
+    "adventure film"
+   ]
+  }
  },
  "Retribution (叫)": {
   "page": "Retribution (2006 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/8f/Retribution-Poster.jpg",
   "width": 265,
-  "height": 374
+  "height": 374,
+  "meta": {
+   "year": "2006",
+   "runtime": 104,
+   "directors": [
+    "Kiyoshi Kurosawa"
+   ],
+   "genres": [
+    "mystery film",
+    "ghost film"
+   ]
+  }
  },
  "La Haine": {
   "page": "La Haine",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/01/La_Haine_%281995_movie_poster%29.jpg",
   "width": 220,
-  "height": 297
+  "height": 297,
+  "meta": {
+   "year": "1995",
+   "runtime": 96,
+   "directors": [
+    "Mathieu Kassovitz"
+   ],
+   "genres": [
+    "drama film",
+    "hood film"
+   ]
+  }
  },
  "Four Weddings and a Funeral": {
   "page": "Four Weddings and a Funeral",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/35/Four_weddings_poster.jpg",
   "width": 266,
-  "height": 374
+  "height": 374,
+  "meta": {
+   "year": "1994",
+   "runtime": 113,
+   "directors": [
+    "Mike Newell"
+   ],
+   "genres": [
+    "romantic comedy film",
+    "drama film"
+   ]
+  }
  },
  "The Drama": {
   "page": "The Drama (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/54/The_Drama_%28film%29_poster.jpg",
   "width": 253,
-  "height": 395
+  "height": 395,
+  "meta": {
+   "year": "2026",
+   "runtime": 105,
+   "directors": [
+    "Kristoffer Borgli"
+   ],
+   "genres": [
+    "drama film",
+    "romance film"
+   ]
+  }
  },
  "When Harry Met Sally": {
   "page": "When Harry Met Sally...",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/WhenHarryMetSallyPoster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "1989",
+   "runtime": 90,
+   "directors": [
+    "Rob Reiner"
+   ],
+   "genres": [
+    "romantic comedy",
+    "Christmas film"
+   ]
+  }
  },
  "Her": {
   "page": "Her (2013 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/4/44/Her2013Poster.jpg",
   "width": 220,
-  "height": 314
+  "height": 314,
+  "meta": {
+   "year": "2013",
+   "runtime": 126,
+   "directors": [
+    "Spike Jonze"
+   ],
+   "genres": [
+    "science fiction film",
+    "drama film"
+   ]
+  }
  },
  "Akira": {
   "page": "Akira (1988 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5d/AKIRA_%281988_poster%29.jpg",
   "width": 266,
-  "height": 376
+  "height": 376,
+  "meta": {
+   "year": "1988",
+   "runtime": 124,
+   "directors": [
+    "Katsuhiro Otomo"
+   ],
+   "genres": [
+    "science fiction film",
+    "cyberpunk"
+   ]
+  }
  },
  "Kung Fu Panda": {
   "page": "Kung Fu Panda (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/76/Kungfupanda.jpg",
   "width": 259,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2008",
+   "runtime": 92,
+   "directors": [
+    "John Stevenson",
+    "Mark Osborne"
+   ],
+   "genres": [
+    "flashback film",
+    "action film"
+   ]
+  }
  },
  "Quantum of Solace": {
   "page": "Quantum of Solace",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/2d/Quantum_of_Solace_-_UK_cinema_poster.jpg",
   "width": 369,
-  "height": 270
+  "height": 270,
+  "meta": {
+   "year": "2008",
+   "runtime": 106,
+   "directors": [
+    "Marc Forster"
+   ],
+   "genres": [
+    "spy film",
+    "adventure film"
+   ]
+  }
  },
  "No Time to Die": {
   "page": "No Time to Die",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg",
   "width": 368,
-  "height": 271
+  "height": 271,
+  "meta": {
+   "year": "2019",
+   "runtime": 163,
+   "directors": [
+    "Cary Joji Fukunaga",
+    "Sam Mendes"
+   ],
+   "genres": [
+    "action film",
+    "thriller film"
+   ]
+  }
  },
  "Hereditary": {
   "page": "Hereditary (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Hereditary.png",
   "width": 260,
-  "height": 373
+  "height": 373,
+  "meta": {
+   "year": "2018",
+   "runtime": 127,
+   "genres": [
+    "horror film",
+    "drama film"
+   ]
+  }
  },
  "The Devil Wears Prada": {
   "page": "The Devil Wears Prada (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e7/The_Devil_Wears_Prada_main_onesheet.jpg",
   "width": 250,
-  "height": 369
+  "height": 369,
+  "meta": {
+   "year": "2006",
+   "runtime": 109,
+   "directors": [
+    "David Frankel"
+   ],
+   "genres": [
+    "comedy drama",
+    "drama film"
+   ]
+  }
  },
  "Nirvanna The Band The Show The Movie": {
   "page": "Nirvanna the Band the Show the Movie",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/74/Nirvanna_the_Band_the_Show_the_Movie_poster.jpg",
   "width": 258,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2025",
+   "runtime": 95,
+   "directors": [
+    "Matt Johnson"
+   ],
+   "genres": [
+    "mockumentary",
+    "adventure film"
+   ]
+  }
  },
  "The Devil Wears Prada 2": {
   "page": "The Devil Wears Prada 2",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/97/The_Devil_Wears_Prada_2_%28film_poster%29.png",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 119,
+   "directors": [
+    "David Frankel"
+   ],
+   "genres": [
+    "comedy film",
+    "drama film"
+   ]
+  }
  },
  "Obsession": {
   "page": "Obsession (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/05/Obsession_theatrical_poster.jpeg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2025",
+   "runtime": 109,
+   "directors": [
+    "Curry Barker"
+   ],
+   "genres": [
+    "horror film",
+    "supernatural horror film"
+   ]
+  }
  },
  "Backrooms": {
   "page": "Backrooms (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/3d/Backrooms_%28film%29_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 110,
+   "directors": [
+    "Kane Parsons"
+   ],
+   "genres": [
+    "horror film",
+    "adventure film"
+   ]
+  }
  },
  "A Taxi Driver (택시운전사)": {
   "page": "A Taxi Driver",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/23/A_Taxi_Driver.jpg",
   "width": 220,
-  "height": 326
+  "height": 326,
+  "meta": {
+   "year": "2017",
+   "runtime": 137,
+   "directors": [
+    "Jang Hoon"
+   ],
+   "genres": [
+    "action film",
+    "drama film"
+   ]
+  }
  },
  "Y tu mamá también": {
   "page": "Y tu mamá también",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/63/Y_tu_mam%C3%A1_tambi%C3%A9n_poster.png",
   "width": 255,
-  "height": 388
+  "height": 388,
+  "meta": {
+   "year": "2001",
+   "runtime": 101,
+   "directors": [
+    "Alfonso Cuarón"
+   ],
+   "genres": [
+    "drama film",
+    "coming-of-age film"
+   ]
+  }
  },
  "Portrait de la jeune fille en feu": {
   "page": "Portrait of a Lady on Fire",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/cb/Portrait_of_a_Lady_on_Fire.jpg",
   "width": 250,
-  "height": 333
+  "height": 333,
+  "meta": {
+   "year": "2019",
+   "runtime": 121,
+   "directors": [
+    "Céline Sciamma"
+   ],
+   "genres": [
+    "historical film",
+    "drama film"
+   ]
+  }
  },
  "Disclosure Day": {
   "page": "Disclosure Day",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/c3/Disclosure_Day_poster.jpg",
   "width": 250,
-  "height": 396
+  "height": 396,
+  "meta": {
+   "year": "2026",
+   "runtime": 145,
+   "directors": [
+    "Steven Spielberg"
+   ],
+   "genres": [
+    "science fiction film",
+    "drama film"
+   ]
+  }
  },
  "Crime 101": {
   "page": "Crime 101 (2026 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/2/29/Crime_101_%282026_film%29_poster.jpg",
   "width": 260,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2026",
+   "runtime": 135,
+   "directors": [
+    "Bart Layton"
+   ],
+   "genres": [
+    "crime thriller film"
+   ]
+  }
  },
  "The Nice Guys": {
   "page": "The Nice Guys",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e9/The_Nice_Guys_poster.png",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2016",
+   "runtime": 116,
+   "directors": [
+    "Shane Black"
+   ],
+   "genres": [
+    "mystery film",
+    "buddy cop film"
+   ]
+  }
  },
  "The Age of Adeline": {
   "page": "The Age of Adaline",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/33/The_Age_of_Adaline_film_poster.png",
   "width": 259,
-  "height": 385
+  "height": 385,
+  "meta": {
+   "year": "2015",
+   "runtime": 112,
+   "directors": [
+    "Lee Toland Krieger"
+   ],
+   "genres": [
+    "romance film",
+    "fantasy film"
+   ]
+  }
  },
  "Now You See Me: Now You Don't": {
   "page": "Now You See Me: Now You Don't",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/0f/Now_You_See_Me_Now_You_Don%27t_poster.jpg",
   "width": 259,
-  "height": 384
+  "height": 384,
+  "meta": {
+   "year": "2025",
+   "runtime": 113,
+   "directors": [
+    "Ruben Fleischer"
+   ],
+   "genres": [
+    "thriller film",
+    "heist film"
+   ]
+  }
  },
  "Good Luck, Have Fun, Don't Die": {
   "page": "Good Luck, Have Fun, Don't Die",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b0/Good_Luck%2C_Have_Fun%2C_Don%27t_Die_poster.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2025",
+   "runtime": 134,
+   "directors": [
+    "Gore Verbinski"
+   ],
+   "genres": [
+    "science fiction comedy",
+    "action film"
+   ]
+  }
  },
  "L'Étranger": {
   "page": "The Stranger (2025 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b5/The_Stranger_2025_film_poster.jpg",
   "width": 270,
-  "height": 367
+  "height": 367,
+  "meta": {
+   "year": "2025",
+   "runtime": 122,
+   "directors": [
+    "François Ozon"
+   ],
+   "genres": [
+    "drama film",
+    "crime film"
+   ]
+  }
  },
  "Avatar Aang: The Last Airbender Movie": {
   "page": "Avatar Aang: The Last Airbender",
   "url": "https://upload.wikimedia.org/wikipedia/en/c/ca/Avatar_Aang_The_Last_Airbender_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2026",
+   "runtime": 99,
+   "directors": [
+    "Lauren Montgomery"
+   ],
+   "genres": [
+    "fantasy film",
+    "drama film"
+   ]
+  }
  },
  "Batman Begins": {
   "page": "Batman Begins",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg",
   "width": 261,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2005",
+   "runtime": 140,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "action film",
+    "neo-noir"
+   ]
+  }
  },
  "The Invite": {
   "page": "The Invite",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/f9/The_Invite_poster.jpg",
   "width": 253,
-  "height": 395
+  "height": 395,
+  "meta": {
+   "year": "2026",
+   "runtime": 107,
+   "directors": [
+    "Olivia Wilde"
+   ],
+   "genres": [
+    "comedy film"
+   ]
+  }
  },
  "The Odyssey": {
   "page": "The Odyssey (2026 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/90/The_Odyssey_%282026_film%29_poster.jpg",
   "width": 250,
-  "height": 370
+  "height": 370,
+  "meta": {
+   "year": "2026",
+   "runtime": 172,
+   "directors": [
+    "Christopher Nolan"
+   ],
+   "genres": [
+    "fantasy film",
+    "adventure film"
+   ]
+  }
  },
  "Spider-Man: Brand New Day": {
   "page": "Spider-Man: Brand New Day",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/Spider-Man_Brand_New_Day_poster.jpg",
   "width": 258,
-  "height": 387
+  "height": 387,
+  "meta": {
+   "year": "2026",
+   "runtime": 145,
+   "directors": [
+    "Destin Daniel Cretton"
+   ],
+   "genres": [
+    "adventure film",
+    "fantasy film"
+   ]
+  }
  },
  "The Worst Person In The World": {
   "page": "The Worst Person in the World",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/54/The_Worst_Person_in_the_World_%28film%29.jpg",
   "width": 265,
-  "height": 375
+  "height": 375,
+  "meta": {
+   "year": "2021",
+   "runtime": 121,
+   "directors": [
+    "Joachim Trier"
+   ],
+   "genres": [
+    "drama film",
+    "comedy film"
+   ]
+  }
  }
 }
