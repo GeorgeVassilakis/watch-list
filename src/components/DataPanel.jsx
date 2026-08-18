@@ -9,7 +9,7 @@ function Histogram({ title, rows, color }) {
       <div className="flex flex-col gap-2">
         {rows.map(r => (
           <div key={r.label} className="flex items-center gap-3">
-            <span className="w-20 shrink-0 text-right text-xs font-medium tabular-nums text-dim">
+            <span className="w-24 shrink-0 whitespace-pre text-right text-xs font-medium tabular-nums text-dim">
               {r.label}
             </span>
             <div className="h-6 flex-1 overflow-hidden bg-paper">
@@ -135,16 +135,25 @@ export default function DataPanel({ items, mode, onItemClick }) {
   const square = mode === 'music'
   const rated = items.filter(i => i.done && i.rating != null)
 
+  // letter grades: X+ covers .7–.9, X covers .3–.6, X- covers .0–.2
   const bands = [
-    { label: '9.0 +', test: r => r >= 9 },
-    { label: '8.0 – 8.9', test: r => r >= 8 && r < 9 },
-    { label: '7.0 – 7.9', test: r => r >= 7 && r < 8 },
-    { label: '6.0 – 6.9', test: r => r >= 6 && r < 7 },
-    { label: 'below 6', test: r => r < 6 },
-  ].map(b => ({
-    label: b.label,
-    count: rated.filter(i => b.test(i.rating)).length,
-    color: ratingColor(b.label === 'below 6' ? 5 : parseFloat(b.label)),
+    ['A+', 9.7, 10.1],
+    ['A', 9.3, 9.7],
+    ['A-', 9.0, 9.3],
+    ['B+', 8.7, 9.0],
+    ['B', 8.3, 8.7],
+    ['B-', 8.0, 8.3],
+    ['C+', 7.7, 8.0],
+    ['C', 7.3, 7.7],
+    ['C-', 7.0, 7.3],
+    ['D+', 6.7, 7.0],
+    ['D', 6.3, 6.7],
+    ['D-', 6.0, 6.3],
+    ['F', 0, 6.0],
+  ].map(([grade, lo, hi]) => ({
+    label: grade === 'F' ? 'F  below 6' : `${grade}  ${lo.toFixed(1)}–${hi === 10.1 ? '10' : (hi - 0.1).toFixed(1)}`,
+    count: rated.filter(i => i.rating >= lo && i.rating < hi).length,
+    color: ratingColor(grade === 'F' ? 5 : lo),
   }))
 
   const top = [...rated].sort((a, b) => b.rating - a.rating).slice(0, 10)

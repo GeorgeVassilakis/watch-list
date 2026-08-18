@@ -3046,24 +3046,6 @@
    ]
   }
  },
- "A Star is Born": {
-  "page": "A Star Is Born (1937 film)",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/A_Star_Is_Born_%281937_film_poster%29.jpg/960px-A_Star_Is_Born_%281937_film_poster%29.jpg",
-  "width": 640,
-  "height": 965,
-  "meta": {
-   "year": "1937",
-   "runtime": 111,
-   "directors": [
-    "William A. Wellman",
-    "Jack Conway"
-   ],
-   "genres": [
-    "drama film",
-    "romance film"
-   ]
-  }
- },
  "The Theory of Everything": {
   "page": "The Theory of Everything (2014 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/67/The_Theory_of_Everything_%282014%29.jpg",
@@ -4878,6 +4860,21 @@
    "genres": [
     "comedy horror",
     "romance film"
+   ]
+  }
+ },
+ "A Star is Born": {
+  "page": "A Star Is Born (2018 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/39/A_Star_is_Born.png",
+  "meta": {
+   "year": "2018",
+   "runtime": 135,
+   "directors": [
+    "Bradley Cooper"
+   ],
+   "genres": [
+    "musical film",
+    "romantic drama"
    ]
   }
  }

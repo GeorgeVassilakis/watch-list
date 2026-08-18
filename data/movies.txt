@@ -188,7 +188,7 @@
 - [x] Meet Joe Black - 7.4/10
 - [x] Les Intouchables - 8.8/10
 - [x] Grave of The Fireflies - 9.0/10
-- [ ] A Star is Born - 
+- [ ] A Star is Born (2018) - 
 - [x] The Theory of Everything - 9.0/10
 - [x] The Tomorrow War - 6.0/10
 - [x] Casino Royale - 8.2/10
