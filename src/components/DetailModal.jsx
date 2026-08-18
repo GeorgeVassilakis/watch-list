@@ -50,14 +50,25 @@ function metaRows(item) {
 
 export default function DetailModal({ item, onClose }) {
   const [zoomed, setZoomed] = useState(false)
+  // true while the artwork is flying back into its slot; the card must not
+  // clip it and it must render above everything until the spring settles
+  const [settling, setSettling] = useState(false)
 
-  useEffect(() => setZoomed(false), [item])
+  const closeZoom = () => {
+    setZoomed(false)
+    setSettling(true)
+  }
+
+  useEffect(() => {
+    setZoomed(false)
+    setSettling(false)
+  }, [item])
 
   useEffect(() => {
     if (!item) return
     const onKey = e => {
       if (e.key !== 'Escape') return
-      if (zoomed) setZoomed(false)
+      if (zoomed) closeZoom()
       else onClose()
     }
     document.addEventListener('keydown', onKey)
@@ -86,7 +97,9 @@ export default function DetailModal({ item, onClose }) {
             transition={{ type: 'spring', damping: 28, stiffness: 320 }}
             role="dialog"
             aria-modal="true"
-            className="max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-t-2xl border border-hairline bg-panel p-5 shadow-2xl shadow-black/60 sm:rounded-2xl"
+            className={`max-h-[88vh] w-full max-w-xl rounded-t-2xl border border-hairline bg-panel p-5 shadow-2xl shadow-black/60 sm:rounded-2xl ${
+              settling ? 'overflow-visible' : 'overflow-y-auto'
+            }`}
           >
             <div className="flex items-center gap-4">
               {item.cover ? (
@@ -96,6 +109,7 @@ export default function DetailModal({ item, onClose }) {
                   <motion.img
                     layoutId="detail-cover"
                     transition={SPRING}
+                    onLayoutAnimationComplete={() => setSettling(false)}
                     src={item.cover}
                     alt={`${item.title} artwork, tap to enlarge`}
                     role="button"
@@ -103,7 +117,8 @@ export default function DetailModal({ item, onClose }) {
                     onClick={() => setZoomed(true)}
                     onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setZoomed(true))}
                     whileHover={{ scale: 1.04 }}
-                    className="h-24 w-auto max-w-20 shrink-0 cursor-zoom-in rounded-lg object-cover shadow-lg shadow-black/50"
+                    style={settling ? { zIndex: 80 } : undefined}
+                    className="relative h-24 w-auto max-w-20 shrink-0 cursor-zoom-in rounded-lg object-cover shadow-lg shadow-black/50"
                   />
                 )
               ) : (
@@ -170,7 +185,7 @@ export default function DetailModal({ item, onClose }) {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.25 }}
-                  onClick={() => setZoomed(false)}
+                  onClick={closeZoom}
                   role="button"
                   aria-label="Close full artwork view"
                   className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-5 backdrop-blur-sm"
