@@ -340,7 +340,7 @@ function parseAlbums(text) {
     if (album.rating !== null) {
       const rating = document.createElement('span');
       rating.className = `rating ${ratingClass(album.rating)}`;
-      rating.textContent = `${formatRating(album.rating)}/10`;
+      rating.textContent = `${formatRating(album.rating)}`;
       header.appendChild(rating);
     }
 
@@ -523,7 +523,7 @@ function parseAlbums(text) {
     if (album.rating !== null) {
       const rating = document.createElement('span');
       rating.className = `rating ${ratingClass(album.rating)}`;
-      rating.textContent = `${formatRating(album.rating)}/10`;
+      rating.textContent = `${formatRating(album.rating)}`;
       main.appendChild(rating);
     }
 
@@ -573,7 +573,7 @@ function parseAlbums(text) {
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(movie.rating)}`;
-        rating.textContent = `${formatRating(movie.rating)}/10`;
+        rating.textContent = `${formatRating(movie.rating)}`;
         li.appendChild(rating);
       }
       
@@ -622,7 +622,7 @@ function parseAlbums(text) {
       if (book.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(book.rating)}`;
-        rating.textContent = `${formatRating(book.rating)}/10`;
+        rating.textContent = `${formatRating(book.rating)}`;
         li.appendChild(rating);
       }
 
@@ -669,7 +669,7 @@ function parseAlbums(text) {
       if (movie.watched && movie.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(movie.rating)}`;
-        rating.textContent = `${formatRating(movie.rating)}/10`;
+        rating.textContent = `${formatRating(movie.rating)}`;
         li.appendChild(rating);
       }
       ul.appendChild(li);
@@ -748,7 +748,7 @@ function parseAlbums(text) {
       if (book.rating !== null) {
         const rating = document.createElement('span');
         rating.className = `rating ${ratingClass(book.rating)}`;
-        rating.textContent = `${formatRating(book.rating)}/10`;
+        rating.textContent = `${formatRating(book.rating)}`;
         li.appendChild(rating);
       }
 
@@ -994,12 +994,14 @@ function parseAlbums(text) {
   // Map numeric rating to a color band class
   function ratingClass(value) {
     if (value == null) return '';
-    if (value >= 9.7) return 'rating-10';
-    if (value >= 9.0) return 'rating-9';
-    if (value >= 8.0) return 'rating-8';
-    if (value >= 7.0) return 'rating-7';
-    if (value >= 6.0) return 'rating-6';
-    return 'rating-lt6';
+    let band;
+    if (value >= 9.7) band = 'rating-10';
+    else if (value >= 9.0) band = 'rating-9';
+    else if (value >= 8.0) band = 'rating-8';
+    else if (value >= 7.0) band = 'rating-7';
+    else if (value >= 6.0) band = 'rating-6';
+    else band = 'rating-lt6';
+    return value >= 9.5 ? `${band} rating-top` : band;
   }
 
   function formatRating(value) {
