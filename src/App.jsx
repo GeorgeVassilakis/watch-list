@@ -178,6 +178,7 @@ export default function App() {
               {tab === 'ranked' && (
                 <Ranked
                   items={rated}
+                  square={mode === 'music'}
                   onItemClick={mode === 'music' ? setOpenReview : undefined}
                 />
               )}

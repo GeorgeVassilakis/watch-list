@@ -3,7 +3,7 @@ import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
 const MEDAL = ['#F6C453', '#C8CCD2', '#C89B72']
 
-export default function Ranked({ items, onItemClick }) {
+export default function Ranked({ items, square = false, onItemClick }) {
   return (
     <ol className="flex flex-col">
       {items.map((item, i) => {
@@ -25,7 +25,7 @@ export default function Ranked({ items, onItemClick }) {
             >
               {i + 1}
             </span>
-            <div className="h-14 w-10 shrink-0 overflow-hidden rounded bg-card shadow shadow-black/40">
+            <div className={`${square ? 'h-12 w-12' : 'h-14 w-10'} shrink-0 overflow-hidden rounded bg-card shadow shadow-black/40`}>
               {item.cover ? (
                 <img src={item.cover} alt="" loading="lazy" className="h-full w-full object-cover" />
               ) : (

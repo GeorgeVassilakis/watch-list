@@ -73,7 +73,7 @@ export default function DataPanel({ items, labels, extraChart }) {
 
       <section>
         <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-dim">
-          The top ten
+          Top ten
         </h3>
         <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2">
           {top.map((item, i) => (
