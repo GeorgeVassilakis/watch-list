@@ -4892,5 +4892,20 @@
     "drama film"
    ]
   }
+ },
+ "La Chimera": {
+  "page": "La chimera",
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/58/La_chimera_poster.jpg",
+  "meta": {
+   "year": "2023",
+   "runtime": 133,
+   "directors": [
+    "Alice Rohrwacher"
+   ],
+   "genres": [
+    "comedy drama",
+    "adventure film"
+   ]
+  }
  }
 }
