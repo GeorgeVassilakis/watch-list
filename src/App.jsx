@@ -236,11 +236,18 @@ export default function App() {
                 />
               )}
               {tab === 'ranked' && (
-                <Ranked
-                  items={rated}
-                  square={mode === 'music'}
-                  onItemClick={setOpenItem}
-                />
+                <>
+                  {mode === 'films' && (
+                    <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-dim">
+                      Scores are immediate post-watch vibes · never edited later
+                    </p>
+                  )}
+                  <Ranked
+                    items={rated}
+                    square={mode === 'music'}
+                    onItemClick={setOpenItem}
+                  />
+                </>
               )}
               {tab === 'queue' && (
                 <PosterWall
