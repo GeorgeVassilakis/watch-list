@@ -40,7 +40,7 @@ function Tiles({ tiles }) {
           <div className="mt-0.5 text-[11px] font-medium uppercase tracking-[0.14em] text-dim">
             {t.label}
           </div>
-          {t.detail && <div className="mt-0.5 truncate text-xs text-dim">{t.detail}</div>}
+          {t.detail && <div className="mt-0.5 text-xs leading-snug text-dim">{t.detail}</div>}
         </div>
       ))}
     </div>
@@ -96,7 +96,7 @@ function filmTiles(items) {
     const longest = timed.reduce((a, b) => (Number(b.meta.runtime) > Number(a.meta.runtime) ? b : a))
     const shortest = timed.reduce((a, b) => (Number(b.meta.runtime) < Number(a.meta.runtime) ? b : a))
     tiles.push(
-      { value: `${days}d ${hours}h`, label: 'In the dark' },
+      { value: `${days}d ${hours}h`, label: 'Total watch time' },
       { value: `${longest.meta.runtime} min`, label: 'Longest', detail: longest.title },
       { value: `${shortest.meta.runtime} min`, label: 'Shortest', detail: shortest.title },
     )
