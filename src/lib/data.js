@@ -86,11 +86,13 @@ async function fetchJson(path, fallback) {
 const normalize = s => (s || '').toLowerCase().replace(/\s+/g, ' ').trim()
 
 export async function loadAll() {
-  const [moviesTxt, booksTxt, albumsTxt, posters, reviews] = await Promise.all([
+  const [moviesTxt, booksTxt, albumsTxt, posters, albumArt, bookArt, reviews] = await Promise.all([
     fetchText('data/movies.txt'),
     fetchText('data/books.txt'),
     fetchText('data/albums.txt'),
     fetchJson('data/posters.json', {}),
+    fetchJson('data/album-art.json', {}),
+    fetchJson('data/book-art.json', {}),
     fetchJson('data/album-reviews.json', []),
   ])
 
@@ -105,6 +107,15 @@ export async function loadAll() {
 
   const bookSections = parseSections(booksTxt, l => parsePipedLine(l, 'covers'))
   const albumSections = parseSections(albumsTxt, l => parsePipedLine(l, 'albums'))
+
+  // fetched art wins; a local file: entry is the manual override/fallback
+  const artKey = i => `${normalize(i.title)}::${normalize(i.by)}`
+  for (const s of bookSections) {
+    for (const i of s.items) i.cover = bookArt[artKey(i)]?.url ?? i.cover
+  }
+  for (const s of albumSections) {
+    for (const i of s.items) i.cover = albumArt[artKey(i)]?.url ?? i.cover
+  }
 
   const reviewMap = new Map()
   for (const r of Array.isArray(reviews) ? reviews : []) {

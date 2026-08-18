@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -19,6 +19,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Fetch artwork for new entries
+        run: python3 scripts/fetch-art.py
+      - name: Commit refreshed artwork cache
+        run: |
+          if ! git diff --quiet -- data; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/posters.json data/album-art.json data/book-art.json
+            git commit -m "Update artwork cache"
+            git push
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: 22
