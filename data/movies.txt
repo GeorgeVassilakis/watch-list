@@ -10,7 +10,7 @@
 - [x] Bladerunner 2049 - 9.3/10
 - [x] Anchorman 2 - 7.2/10
 - [x] Forrest Gump - 9.1/10
-- [x] The Big Labowski - 8.2/10
+- [x] The Big Lebowski - 8.2/10
 - [x] Ocean's Eleven - 7.8/10
 - [ ] Beetlejuice 
 - [x] American Psycho - 8.9/10
@@ -100,12 +100,12 @@
 - [x] Edge of Tomorrow - 8.4/10
 - [x] Baby Driver - 8.3/10
 - [x] La La Land - 9.5/10
-- [x] Pride + Prejudice + Zombies 8.3/10 
+- [x] Pride and Prejudice and Zombies (2016) 8.3/10 
 - [ ] 1917 - 
 - [ ] 42 - 
-- [ ] The Wolf of Wall Street - 
+- [ ] The Wolf of Wall Street (2013) - 
 - [ ] The Big Short
-- [x] Inglorious Basterds - 9.0/10
+- [x] Inglourious Basterds - 9.0/10
 - [x] The Talented Mr. Ripley - 8.4/10
 - [ ] The 6th Sense - 
 - [ ] Rainman - 
@@ -180,7 +180,7 @@
 - [x] Fall Guy - 7.2/10
 - [ ] Death of a Unicorn - 
 - [x] The Only Living Boy in New York - 9.1/10
-- [x] Superman - 8.5/10
+- [x] Superman (2025) - 8.5/10
 - [ ] Nope - 
 - [x] The Fantastic Four: First Steps - 9.3/10
 - [x] The Intern - 8.0/10
@@ -228,7 +228,7 @@
 - [x] Manhunter - 9.0/10
 - [x] No Country for Old Men - 8.3/10
 - [x] C'mon C'mon - 9.1/10
-- [x] A Woman on the Verge of a Nervous Breakdown - 8.6/10
+- [x] Women on the Verge of a Nervous Breakdown (1988) - 8.6/10
 - [ ] The Favourite - 
 - [x] Primal Fear - 8.2/10
 - [x] Sexy Beast - 9.3/10
@@ -251,7 +251,7 @@
 - [x] The Green Book - 8.7/10
 - [ ] Cube - 
 - [ ] Memories of Murder - 
-- [ ] Old Boy - 
+- [ ] Oldboy (2003) - 
 - [x] Pillion - 7.9/10
 - [x] 28 Years Later: The Bone Temple - 8.3/10
 - [x] If I Had Legs I'd Kick You - 6.9/10

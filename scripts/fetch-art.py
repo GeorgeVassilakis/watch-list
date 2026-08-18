@@ -24,6 +24,9 @@ UA = {'User-Agent': 'watchlist-art-fetch/1.0 (georgevassilakis2@gmail.com)'}
 
 LINE_RE = re.compile(r'^- \[(?:x|0| )\] (.+)$', re.I)
 RATING_RE = re.compile(r'(?:\s*[-–—:])?\s*\d+(?:\.\d+)?/10$')
+# optional "(1995)" suffix disambiguates same-titled films; stripped from the
+# displayed title, used to pick the right Wikipedia page
+YEAR_HINT_RE = re.compile(r'\s*\((\d{4})\)$')
 
 
 def get(url):
@@ -44,8 +47,13 @@ def parse_movies():
             continue
         t = RATING_RE.sub('', m.group(1).strip()).strip()
         t = re.sub(r'\s*[-–—:]\s*$', '', t).strip()
-        if t and t not in out:
-            out.append(t)
+        year = None
+        h = YEAR_HINT_RE.search(t)
+        if h:
+            year = h.group(1)
+            t = YEAR_HINT_RE.sub('', t).strip()
+        if t and all(t != title for title, _ in out):
+            out.append((t, year))
     return out
 
 
@@ -65,15 +73,24 @@ def parse_piped(name):
     return out
 
 
-def film_art(title):
-    q = urllib.parse.quote(f'{title} film')
+def film_art(title, year=None):
+    q = urllib.parse.quote(f'{title} {year} film' if year else f'{title} film')
     url = ('https://en.wikipedia.org/w/api.php?action=query&generator=search'
-           f'&gsrsearch={q}&gsrlimit=1&prop=pageimages&piprop=thumbnail'
+           f'&gsrsearch={q}&gsrlimit=5&prop=pageimages&piprop=thumbnail'
            '&pilicense=any&pithumbsize=640&format=json')
-    for p in get(url).get('query', {}).get('pages', {}).values():
-        t = p.get('thumbnail') or {}
-        if t.get('source'):
-            return {'page': p.get('title'), 'url': t['source'].split('?')[0]}
+    pages = [p for p in get(url).get('query', {}).get('pages', {}).values()
+             if (p.get('thumbnail') or {}).get('source')]
+    pages.sort(key=lambda p: p.get('index', 99))
+    if year:
+        # prefer "(1988 film)"-style disambiguators, then "<title> (film)" pages,
+        # then a bare exact title match
+        base = lambda p: norm(re.sub(r'\s*\(.*\)$', '', p.get('title', '')))
+        tagged = [p for p in pages if f'({year}' in p.get('title', '')]
+        filmy_exact = [p for p in pages if 'film)' in p.get('title', '') and base(p) == norm(title)]
+        exact = [p for p in pages if base(p) == norm(title)]
+        pages = tagged or filmy_exact or exact or pages
+    for p in pages:
+        return {'page': p.get('title'), 'url': p['thumbnail']['source'].split('?')[0]}
     return None
 
 
@@ -233,7 +250,7 @@ def refresh(cache_file, entries, fetch, describe):
 
 
 def main():
-    refresh('posters.json', parse_movies(), film_art, lambda t: t)
+    refresh('posters.json', parse_movies(), lambda e: film_art(*e), lambda e: e[0])
     posters_path = DATA / 'posters.json'
     posters = json.loads(posters_path.read_text())
     if films_meta(posters):

@@ -119,12 +119,18 @@
   }
  },
  "Bladerunner: The Final Cut": {
-  "page": "Versions of Blade Runner",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Blade_Runner_Five-Disc_Ultimate_Collector%27s_Edition_02.jpg/960px-Blade_Runner_Five-Disc_Ultimate_Collector%27s_Edition_02.jpg",
-  "width": 640,
-  "height": 481,
+  "page": "Blade Runner",
+  "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Blade_Runner_%281982_poster%29.png",
   "meta": {
-   "year": "1982"
+   "year": "1982",
+   "runtime": 112,
+   "directors": [
+    "Ridley Scott"
+   ],
+   "genres": [
+    "tech noir",
+    "cyberpunk"
+   ]
   }
  },
  "Bladerunner 2049": {
@@ -175,18 +181,6 @@
    "genres": [
     "coming-of-age film",
     "flashback film"
-   ]
-  }
- },
- "The Big Labowski": {
-  "page": "Henry Rollins",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Henry_Rollins_-_Wacken_Open_Air_2016_02.jpg/960px-Henry_Rollins_-_Wacken_Open_Air_2016_02.jpg",
-  "width": 640,
-  "height": 755,
-  "meta": {
-   "genres": [
-    "hardcore punk",
-    "heavy metal music"
    ]
   }
  },
@@ -1383,33 +1377,31 @@
   }
  },
  "Men in Black": {
-  "page": "Men in Black (film series)",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Men_In_Black_%28film_franchise%29_logo.svg/960px-Men_In_Black_%28film_franchise%29_logo.svg.png",
-  "width": 640,
-  "height": 301,
+  "page": "Men in Black (1997 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Men_in_Black_Poster.jpg",
   "meta": {
    "year": "1997",
+   "runtime": 94,
    "directors": [
-    "Barry Sonnenfeld",
-    "F. Gary Gray"
+    "Barry Sonnenfeld"
    ],
    "genres": [
+    "action film",
     "science fiction film"
    ]
   }
  },
  "Men in Black II": {
-  "page": "Men in Black (film series)",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Men_In_Black_%28film_franchise%29_logo.svg/960px-Men_In_Black_%28film_franchise%29_logo.svg.png",
-  "width": 640,
-  "height": 301,
+  "page": "Men in Black II",
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/3d/Men_in_Black_II_Poster.jpg",
   "meta": {
-   "year": "1997",
+   "year": "2002",
+   "runtime": 84,
    "directors": [
-    "Barry Sonnenfeld",
-    "F. Gary Gray"
+    "Barry Sonnenfeld"
    ],
    "genres": [
+    "action film",
     "science fiction film"
    ]
   }
@@ -1670,19 +1662,6 @@
    ]
   }
  },
- "Pride + Prejudice + Zombies": {
-  "page": "Pride and Prejudice and Zombies",
-  "url": "https://upload.wikimedia.org/wikipedia/en/f/f0/PrideandPrejudiceandZombiesCover.jpg",
-  "width": 254,
-  "height": 393,
-  "meta": {
-   "year": "2009",
-   "genres": [
-    "comic novel",
-    "science fiction"
-   ]
-  }
- },
  "1917": {
   "page": "1917 (2019 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/1917_%282019%29_Film_Poster.jpeg",
@@ -1717,22 +1696,6 @@
    ]
   }
  },
- "The Wolf of Wall Street": {
-  "page": "The Wolf of Wall Street (1929 film)",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/The_Wolf_of_Wall_Street_%281929%29_three-sheet_poster.jpg/960px-The_Wolf_of_Wall_Street_%281929%29_three-sheet_poster.jpg",
-  "width": 640,
-  "height": 1251,
-  "meta": {
-   "year": "1929",
-   "runtime": 74,
-   "directors": [
-    "Rowland V. Lee"
-   ],
-   "genres": [
-    "drama film"
-   ]
-  }
- },
  "The Big Short": {
   "page": "The Big Short (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/1/16/The_Big_Short_%282015_film_poster%29.png",
@@ -1747,23 +1710,6 @@
    "genres": [
     "biographical film",
     "drama film"
-   ]
-  }
- },
- "Inglorious Basterds": {
-  "page": "The Inglorious Bastards",
-  "url": "https://upload.wikimedia.org/wikipedia/en/9/9d/Quel_maledetto_treno_blindato-new.jpg",
-  "width": 250,
-  "height": 361,
-  "meta": {
-   "year": "1978",
-   "runtime": 100,
-   "directors": [
-    "Enzo G. Castellari"
-   ],
-   "genres": [
-    "war film",
-    "thriller film"
    ]
   }
  },
@@ -2980,17 +2926,6 @@
    ]
   }
  },
- "Superman": {
-  "page": "Superman in film",
-  "url": "https://upload.wikimedia.org/wikipedia/en/0/04/Superman_actors.jpg",
-  "width": 245,
-  "height": 407,
-  "meta": {
-   "directors": [
-    "Richard Donner"
-   ]
-  }
- },
  "Nope": {
   "page": "Nope (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/e/e6/Nope_%28film%29_poster.jpg",
@@ -3666,23 +3601,6 @@
    ]
   }
  },
- "Heat": {
-  "page": "The Heat (film)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Heat_poster.jpg",
-  "width": 220,
-  "height": 326,
-  "meta": {
-   "year": "2013",
-   "runtime": 117,
-   "directors": [
-    "Paul Feig"
-   ],
-   "genres": [
-    "action film",
-    "comedy film"
-   ]
-  }
- },
  "Sunshine": {
   "page": "Sunshine (2007 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Sunshine_poster.jpg",
@@ -3714,23 +3632,6 @@
    "genres": [
     "romance film",
     "comedy film"
-   ]
-  }
- },
- "La Bête": {
-  "page": "La Bête (film)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/0/01/La_b%C3%AAte.jpg",
-  "width": 273,
-  "height": 365,
-  "meta": {
-   "year": "1975",
-   "runtime": 104,
-   "directors": [
-    "Walerian Borowczyk"
-   ],
-   "genres": [
-    "fantasy film",
-    "horror film"
    ]
   }
  },
@@ -3784,13 +3685,6 @@
     "drama film"
    ]
   }
- },
- "A Woman on the Verge of a Nervous Breakdown": {
-  "page": "Women on the Verge of a Nervous Breakdown (musical)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/4/4d/Women_on_the_Verge_of_a_Nervous_Breakdown_musical.jpg",
-  "width": 257,
-  "height": 400,
-  "meta": {}
  },
  "The Favourite": {
   "page": "The Favourite (2018 film)",
@@ -4138,18 +4032,6 @@
    "genres": [
     "crime thriller film",
     "mystery film"
-   ]
-  }
- },
- "Old Boy": {
-  "page": "Old Boy (manga)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/d/dc/Oldboymanga.jpg",
-  "width": 272,
-  "height": 367,
-  "meta": {
-   "genres": [
-    "action anime and manga",
-    "psychological anime and manga"
    ]
   }
  },
@@ -4861,6 +4743,141 @@
    "genres": [
     "drama film",
     "comedy film"
+   ]
+  }
+ },
+ "La Bête": {
+  "page": "The Beast (2023 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/74/La_B%C3%AAte_2023_film_poster.jpg",
+  "meta": {
+   "year": "2023",
+   "runtime": 145,
+   "directors": [
+    "Bertrand Bonello"
+   ],
+   "genres": [
+    "science fiction film",
+    "drama film"
+   ]
+  }
+ },
+ "The Big Lebowski": {
+  "page": "The Big Lebowski",
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/35/Biglebowskiposter.jpg",
+  "meta": {
+   "year": "1998",
+   "runtime": 117,
+   "directors": [
+    "Joel Coen",
+    "Ethan Coen"
+   ],
+   "genres": [
+    "comedy film",
+    "crime film"
+   ]
+  }
+ },
+ "Heat": {
+  "page": "Heat (1995 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/6c/Heatposter.jpg",
+  "meta": {
+   "year": "1995",
+   "runtime": 171,
+   "directors": [
+    "Michael Mann"
+   ],
+   "genres": [
+    "epic film",
+    "thriller film"
+   ]
+  }
+ },
+ "The Wolf of Wall Street": {
+  "page": "The Wolf of Wall Street (2013 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/d/d8/The_Wolf_of_Wall_Street_%282013%29.png",
+  "meta": {
+   "year": "2013",
+   "runtime": 180,
+   "directors": [
+    "Martin Scorsese"
+   ],
+   "genres": [
+    "black comedy film",
+    "biographical film"
+   ]
+  }
+ },
+ "Inglourious Basterds": {
+  "page": "Inglourious Basterds",
+  "url": "https://upload.wikimedia.org/wikipedia/en/c/c3/Inglourious_Basterds_poster.jpg",
+  "meta": {
+   "year": "2009",
+   "runtime": 153,
+   "directors": [
+    "Quentin Tarantino"
+   ],
+   "genres": [
+    "war film",
+    "alternate history film"
+   ]
+  }
+ },
+ "Oldboy": {
+  "page": "Oldboy (2003 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/67/Oldboykoreanposter.jpg",
+  "meta": {
+   "year": "2003",
+   "runtime": 116,
+   "directors": [
+    "Park Chan-wook"
+   ],
+   "genres": [
+    "drama film",
+    "thriller film"
+   ]
+  }
+ },
+ "Superman": {
+  "page": "Superman (2025 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/32/Superman_%282025_film%29_poster.jpg",
+  "meta": {
+   "year": "2025",
+   "runtime": 129,
+   "directors": [
+    "James Gunn"
+   ],
+   "genres": [
+    "fantasy film",
+    "adventure film"
+   ]
+  }
+ },
+ "Women on the Verge of a Nervous Breakdown": {
+  "page": "Women on the Verge of a Nervous Breakdown",
+  "url": "https://upload.wikimedia.org/wikipedia/en/b/bc/Women_on_the_Verge_of_a_Nervous_Breakdown.jpg",
+  "meta": {
+   "year": "1988",
+   "runtime": 90,
+   "directors": [
+    "Pedro Almodóvar"
+   ],
+   "genres": [
+    "black comedy film"
+   ]
+  }
+ },
+ "Pride and Prejudice and Zombies": {
+  "page": "Pride and Prejudice and Zombies (film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/0/07/Pride_and_Prejudice_and_Zombies_poster.jpg",
+  "meta": {
+   "year": "2016",
+   "runtime": 108,
+   "directors": [
+    "Burr Steers"
+   ],
+   "genres": [
+    "comedy horror",
+    "romance film"
    ]
   }
  }

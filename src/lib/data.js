@@ -18,6 +18,8 @@ function parseMovieLine(line) {
   } else {
     title = title.replace(/\s*[-–—:]\s*$/, '').trim()
   }
+  // "(1995)" suffix is only a disambiguation hint for the art fetcher
+  title = title.replace(/\s*\(\d{4}\)$/, '').trim()
   return {
     title,
     subtitle: '',
