@@ -113,6 +113,7 @@ export async function loadAll() {
   const movieSections = parseSections(moviesTxt, parseMovieLine)
   for (const s of movieSections) {
     for (const item of s.items) {
+      item.logged = s.year
       const p = posters[item.title]
       if (p && p.url) item.cover = p.url
       const meta = p?.meta ?? {}
@@ -132,6 +133,7 @@ export async function loadAll() {
   const apply = (sections, art) => {
     for (const s of sections) {
       for (const i of s.items) {
+        i.logged = s.year
         const a = art[artKey(i)]
         i.cover = a?.url ?? i.cover
         i.meta = a?.meta ?? {}

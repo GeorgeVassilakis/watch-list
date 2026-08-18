@@ -40,21 +40,6 @@ const STAT_LABELS = {
   music: { done: 'Reviewed', todo: 'In queue' },
 }
 
-function decadeChart(items) {
-  const counts = new Map()
-  for (const item of items.filter(i => i.done)) {
-    const m = String(item.year || '').match(/(\d{4})/)
-    if (!m) continue
-    const decade = Math.floor(Number(m[1]) / 10) * 10
-    const label = decade <= 1950 ? '1950s & earlier' : `${decade}s`
-    counts.set(label, (counts.get(label) || 0) + 1)
-  }
-  const rows = [...counts.entries()]
-    .sort((a, b) => b[0].localeCompare(a[0]))
-    .map(([label, count]) => ({ label, count }))
-  return rows.length ? { title: 'Decade distribution', rows } : null
-}
-
 export default function App() {
   const [data, setData] = useState(null)
   const [error, setError] = useState(null)
@@ -268,12 +253,7 @@ export default function App() {
                 />
               )}
               {tab === 'data' && (
-                <DataPanel
-                  items={items}
-                  extraChart={mode === 'music' ? decadeChart(items) : null}
-                  square={mode === 'music'}
-                  onItemClick={setOpenItem}
-                />
+                <DataPanel items={items} mode={mode} onItemClick={setOpenItem} />
               )}
             </div>
           </motion.main>
