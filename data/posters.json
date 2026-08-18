@@ -4877,5 +4877,20 @@
     "romantic drama"
    ]
   }
+ },
+ "Tony": {
+  "page": "Tony (2026 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/6/68/Tony_%282026_film%29_poster.jpg",
+  "meta": {
+   "year": "2026",
+   "runtime": 106,
+   "directors": [
+    "Matt Johnson"
+   ],
+   "genres": [
+    "biographical film",
+    "drama film"
+   ]
+  }
  }
 }
