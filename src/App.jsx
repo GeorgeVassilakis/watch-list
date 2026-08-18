@@ -5,7 +5,7 @@ import Hero from './components/Hero.jsx'
 import PosterWall from './components/PosterWall.jsx'
 import Ranked from './components/Ranked.jsx'
 import DataPanel from './components/DataPanel.jsx'
-import ReviewModal from './components/ReviewModal.jsx'
+import DetailModal from './components/DetailModal.jsx'
 
 const MODES = [
   { id: 'films', label: 'Films' },
@@ -60,7 +60,7 @@ export default function App() {
   const [error, setError] = useState(null)
   const [mode, setMode] = useState('films')
   const [tab, setTab] = useState('archive')
-  const [openReview, setOpenReview] = useState(null)
+  const [openItem, setOpenItem] = useState(null)
 
   useEffect(() => {
     loadAll().then(setData).catch(e => setError(String(e)))
@@ -172,14 +172,14 @@ export default function App() {
                   filter={mode === 'films' ? () => true : i => i.done}
                   ghostUndone={mode === 'films'}
                   square={mode === 'music'}
-                  onItemClick={mode === 'music' ? setOpenReview : undefined}
+                  onItemClick={setOpenItem}
                 />
               )}
               {tab === 'ranked' && (
                 <Ranked
                   items={rated}
                   square={mode === 'music'}
-                  onItemClick={mode === 'music' ? setOpenReview : undefined}
+                  onItemClick={setOpenItem}
                 />
               )}
               {tab === 'queue' && (
@@ -188,6 +188,7 @@ export default function App() {
                   filter={i => !i.done}
                   ghostUndone={false}
                   square={mode === 'music'}
+                  onItemClick={setOpenItem}
                 />
               )}
               {tab === 'data' && (
@@ -195,6 +196,7 @@ export default function App() {
                   items={items}
                   labels={STAT_LABELS[mode]}
                   extraChart={mode === 'music' ? decadeChart(items) : null}
+                  onItemClick={setOpenItem}
                 />
               )}
             </div>
@@ -202,7 +204,7 @@ export default function App() {
         </AnimatePresence>
       )}
 
-      <ReviewModal item={openReview} onClose={() => setOpenReview(null)} />
+      <DetailModal item={openItem} onClose={() => setOpenItem(null)} />
     </div>
   )
 }

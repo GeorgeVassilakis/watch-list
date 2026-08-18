@@ -11,6 +11,10 @@ export default function PosterCard({ item, index = 0, ghost = false, square = fa
       transition={{ duration: 0.4, delay: (index % 12) * 0.03, ease: 'easeOut' }}
       whileHover={{ y: -4 }}
       onClick={onClick}
+      role={clickable ? 'button' : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      aria-label={clickable ? item.title : undefined}
+      onKeyDown={clickable ? e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), onClick()) : undefined}
       className={`relative ${square ? 'aspect-square' : 'aspect-[2/3]'} overflow-hidden rounded-lg bg-card shadow-lg shadow-black/40
         ${ghost ? 'opacity-45 saturate-[0.4]' : ''}
         ${clickable ? 'cursor-pointer' : ''}`}

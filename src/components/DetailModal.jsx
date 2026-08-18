@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { ratingColor, formatRating } from '../lib/data.js'
+import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
 function labelize(key) {
   return key
@@ -10,24 +10,43 @@ function labelize(key) {
     .replace(/\b\w/g, c => c.toUpperCase())
 }
 
-function metaRows(item, review) {
-  const fetched = item.meta ?? {}
-  const meta = review.metadata && typeof review.metadata === 'object' ? { ...review.metadata } : {}
-  const rows = [
-    ['Genre', meta.genre ?? review.genre ?? fetched.genre],
-    ['Year', meta.releaseYear ?? meta.year ?? review.releaseYear ?? item.year],
-    ['Length', meta.length ?? review.length ?? fetched.length],
-    ['Tracks', fetched.tracks],
-    ['Label', fetched.label],
-  ]
-  for (const k of ['genre', 'releaseYear', 'year', 'length', 'label', 'sourceUrl']) delete meta[k]
-  for (const [k, v] of Object.entries(meta)) rows.push([labelize(k), v])
-  return rows
-    .map(([label, v]) => [label, Array.isArray(v) ? v.filter(Boolean).join(', ') : v == null ? '' : String(v).trim()])
-    .filter(([, v]) => v)
+function clean(value) {
+  if (Array.isArray(value)) return value.filter(Boolean).join(', ')
+  return value == null ? '' : String(value).trim()
 }
 
-export default function ReviewModal({ item, onClose }) {
+function metaRows(item) {
+  const fetched = item.meta ?? {}
+  const review = item.review
+  let rows
+  if (review) {
+    const extra = review.metadata && typeof review.metadata === 'object' ? { ...review.metadata } : {}
+    rows = [
+      ['Genre', extra.genre ?? review.genre ?? fetched.genre],
+      ['Year', extra.releaseYear ?? extra.year ?? review.releaseYear ?? item.year],
+      ['Length', extra.length ?? review.length ?? fetched.length],
+      ['Tracks', fetched.tracks],
+      ['Label', fetched.label],
+    ]
+    for (const k of ['genre', 'releaseYear', 'year', 'length', 'label', 'sourceUrl']) delete extra[k]
+    for (const [k, v] of Object.entries(extra)) rows.push([labelize(k), v])
+  } else {
+    rows = [
+      ['Year', fetched.year ?? item.year],
+      ['Director', fetched.directors],
+      ['Runtime', fetched.runtime && `${fetched.runtime} min`],
+      ['Genre', fetched.genres ?? fetched.genre],
+      ['Pages', fetched.pages],
+      ['Subjects', fetched.subjects],
+      ['Length', fetched.length],
+      ['Tracks', fetched.tracks],
+      ['Label', fetched.label],
+    ]
+  }
+  return rows.map(([label, v]) => [label, clean(v)]).filter(([, v]) => v)
+}
+
+export default function DetailModal({ item, onClose }) {
   useEffect(() => {
     if (!item) return
     const onKey = e => e.key === 'Escape' && onClose()
@@ -60,11 +79,16 @@ export default function ReviewModal({ item, onClose }) {
             className="max-h-[88vh] w-full max-w-xl overflow-y-auto rounded-t-2xl border border-hairline bg-panel p-5 shadow-2xl shadow-black/60 sm:rounded-2xl"
           >
             <div className="flex items-center gap-4">
-              {item.cover && (
+              {item.cover ? (
                 <img
                   src={item.cover}
                   alt=""
-                  className="h-20 w-20 shrink-0 rounded-lg object-cover shadow-lg shadow-black/50"
+                  className="h-24 w-auto max-w-20 shrink-0 rounded-lg object-cover shadow-lg shadow-black/50"
+                />
+              ) : (
+                <div
+                  className="h-24 w-16 shrink-0 rounded-lg shadow-lg shadow-black/50"
+                  style={{ background: `hsl(${titleHue(item.title)} 20% 18%)` }}
                 />
               )}
               <div className="min-w-0 flex-1">
@@ -78,11 +102,11 @@ export default function ReviewModal({ item, onClose }) {
               )}
             </div>
 
-            {item.review.summary && (
+            {item.review?.summary && (
               <p className="mt-4 text-[15px] leading-relaxed text-ink/90">{item.review.summary}</p>
             )}
 
-            {Array.isArray(item.review.topSongs) && item.review.topSongs.length > 0 && (
+            {Array.isArray(item.review?.topSongs) && item.review.topSongs.length > 0 && (
               <div className="mt-5">
                 <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-dim">
                   Top three songs
@@ -98,10 +122,10 @@ export default function ReviewModal({ item, onClose }) {
               </div>
             )}
 
-            {metaRows(item, item.review).length > 0 && (
+            {metaRows(item).length > 0 && (
               <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-hairline pt-4">
-                {metaRows(item, item.review).map(([label, value]) => (
-                  <div key={label}>
+                {metaRows(item).map(([label, value]) => (
+                  <div key={label} className={value.length > 60 ? 'col-span-2' : ''}>
                     <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-dim">
                       {label}
                     </div>

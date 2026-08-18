@@ -31,7 +31,7 @@ function Histogram({ title, rows, color }) {
   )
 }
 
-export default function DataPanel({ items, labels, extraChart }) {
+export default function DataPanel({ items, labels, extraChart, onItemClick }) {
   const done = items.filter(i => i.done)
   const rated = done.filter(i => i.rating != null)
   const avg = rated.length
@@ -77,7 +77,11 @@ export default function DataPanel({ items, labels, extraChart }) {
         </h3>
         <div className="-mx-5 flex snap-x gap-3 overflow-x-auto px-5 pb-2">
           {top.map((item, i) => (
-            <div key={item.title} className="w-28 shrink-0 snap-start">
+            <div
+              key={item.title}
+              className={`w-28 shrink-0 snap-start ${onItemClick ? 'cursor-pointer' : ''}`}
+              onClick={onItemClick ? () => onItemClick(item) : undefined}
+            >
               <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-card shadow-lg shadow-black/40">
                 {item.cover ? (
                   <img src={item.cover} alt={item.title} loading="lazy" className="h-full w-full object-cover" />

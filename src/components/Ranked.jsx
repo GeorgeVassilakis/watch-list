@@ -7,7 +7,7 @@ export default function Ranked({ items, square = false, onItemClick }) {
   return (
     <ol className="flex flex-col">
       {items.map((item, i) => {
-        const clickable = Boolean(onItemClick && item.review)
+        const clickable = Boolean(onItemClick)
         return (
           <motion.li
             key={`${item.title}-${i}`}
