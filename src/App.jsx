@@ -199,8 +199,15 @@ export default function App() {
                     </button>
                   ))}
                 </div>
-                {(tab === 'archive' || tab === 'queue') && (
-                  <div className="flex items-center gap-2.5">
+                <AnimatePresence>
+                  {(tab === 'archive' || tab === 'queue') && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="flex items-center gap-2.5"
+                    >
                     <button
                       onClick={() => setLayout('cards')}
                       aria-label="Card view"
@@ -225,9 +232,10 @@ export default function App() {
                         <rect x="0" y="5.75" width="14" height="2.5" fill="currentColor" />
                         <rect x="0" y="10.5" width="14" height="2.5" fill="currentColor" />
                       </svg>
-                    </button>
-                  </div>
-                )}
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
 
@@ -236,7 +244,7 @@ export default function App() {
                 <PosterWall
                   sections={view.sections}
                   filter={mode === 'films' ? () => true : i => i.done}
-                  ghostUndone={mode === 'films'}
+                  markSeen={mode === 'films'}
                   square={mode === 'music'}
                   layout={layout}
                   onItemClick={setOpenItem}
@@ -253,7 +261,7 @@ export default function App() {
                 <PosterWall
                   sections={view.sections}
                   filter={i => !i.done}
-                  ghostUndone={false}
+                  markSeen={false}
                   square={mode === 'music'}
                   layout={layout}
                   onItemClick={setOpenItem}

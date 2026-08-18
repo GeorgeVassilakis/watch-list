@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
-export default function PosterCard({ item, index = 0, ghost = false, square = false, onClick }) {
+export default function PosterCard({ item, index = 0, square = false, mark = null, onClick }) {
   const clickable = Boolean(onClick)
   return (
     <motion.div
@@ -15,9 +15,10 @@ export default function PosterCard({ item, index = 0, ghost = false, square = fa
       tabIndex={clickable ? 0 : undefined}
       aria-label={clickable ? item.title : undefined}
       onKeyDown={clickable ? e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), onClick()) : undefined}
-      className={`relative ${square ? 'aspect-square' : 'aspect-[2/3]'} overflow-hidden bg-paper shadow-print
-        ${ghost ? 'opacity-45 saturate-[0.4]' : ''}
-        ${clickable ? 'cursor-pointer' : ''}`}
+      className={clickable ? 'cursor-pointer' : ''}
+    >
+    <div
+      className={`relative ${square ? 'aspect-square' : 'aspect-[2/3]'} overflow-hidden bg-paper shadow-print`}
     >
       {item.cover ? (
         <img
@@ -53,6 +54,12 @@ export default function PosterCard({ item, index = 0, ghost = false, square = fa
           {formatRating(item.rating)}
         </span>
       )}
+    </div>
+
+      {/* seen-state rule: solid accent = watched, dashed = in the queue */}
+      {mark === 'done' && <div className="mt-1.5 h-[3px] bg-accent" />}
+      {mark === 'current' && <div className="mt-1.5 h-[3px] bg-accent-2" />}
+      {mark === 'queue' && <div className="mt-1.5 border-t-[3px] border-dashed border-dim/60" />}
     </motion.div>
   )
 }

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import PosterCard from './PosterCard.jsx'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
-function ListRow({ item, index, ghost, square, onClick }) {
+function ListRow({ item, index, mark, square, onClick }) {
   const clickable = Boolean(onClick)
   return (
     <motion.li
@@ -15,18 +15,22 @@ function ListRow({ item, index, ghost, square, onClick }) {
       tabIndex={clickable ? 0 : undefined}
       onKeyDown={clickable ? e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), onClick()) : undefined}
       className={`flex items-center gap-3.5 border-b border-line py-2.5
-        ${ghost ? 'opacity-45 saturate-[0.4]' : ''}
         ${clickable ? 'cursor-pointer hover:bg-paper' : ''}`}
     >
-      <div className={`${square ? 'h-12 w-12' : 'h-14 w-10'} shrink-0 overflow-hidden bg-paper shadow-print`}>
-        {item.cover ? (
-          <img src={item.cover} alt="" loading="lazy" className="h-full w-full object-cover" />
-        ) : (
-          <div
-            className="h-full w-full"
-            style={{ background: `hsl(${titleHue(item.title)} 30% 30%)` }}
-          />
-        )}
+      <div className="shrink-0">
+        <div className={`${square ? 'h-12 w-12' : 'h-14 w-10'} overflow-hidden bg-paper shadow-print`}>
+          {item.cover ? (
+            <img src={item.cover} alt="" loading="lazy" className="h-full w-full object-cover" />
+          ) : (
+            <div
+              className="h-full w-full"
+              style={{ background: `hsl(${titleHue(item.title)} 30% 30%)` }}
+            />
+          )}
+        </div>
+        {mark === 'done' && <div className="mt-1 h-[3px] bg-accent" />}
+        {mark === 'current' && <div className="mt-1 h-[3px] bg-accent-2" />}
+        {mark === 'queue' && <div className="mt-1 border-t-[3px] border-dashed border-dim/60" />}
       </div>
       <div className="min-w-0 flex-1">
         <div className="flex items-center gap-2">
@@ -51,7 +55,9 @@ function ListRow({ item, index, ghost, square, onClick }) {
 
 // Sections render newest year first; within a year, newest entries first
 // (bottom of the source file is the most recent).
-export default function PosterWall({ sections, filter = () => true, ghostUndone = true, square = false, layout = 'cards', onItemClick }) {
+export default function PosterWall({ sections, filter = () => true, markSeen = true, square = false, layout = 'cards', onItemClick }) {
+  const markOf = item =>
+    markSeen ? (item.current ? 'current' : item.done ? 'done' : 'queue') : null
   const groups = [...sections]
     .reverse()
     .map(s => ({ year: s.year, items: [...s.items].reverse().filter(filter) }))
@@ -76,7 +82,7 @@ export default function PosterWall({ sections, filter = () => true, ghostUndone 
                   item={item}
                   index={i}
                   square={square}
-                  ghost={ghostUndone && !item.done && !item.current}
+                  mark={markOf(item)}
                   onClick={onItemClick ? () => onItemClick(item) : undefined}
                 />
               ))}
@@ -89,7 +95,7 @@ export default function PosterWall({ sections, filter = () => true, ghostUndone 
                   item={item}
                   index={i}
                   square={square}
-                  ghost={ghostUndone && !item.done && !item.current}
+                  mark={markOf(item)}
                   onClick={onItemClick ? () => onItemClick(item) : undefined}
                 />
               ))}
