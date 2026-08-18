@@ -1,5 +1,7 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+
+const SPRING = { type: 'spring', damping: 30, stiffness: 320 }
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
 function labelize(key) {
@@ -47,16 +49,24 @@ function metaRows(item) {
 }
 
 export default function DetailModal({ item, onClose }) {
+  const [zoomed, setZoomed] = useState(false)
+
+  useEffect(() => setZoomed(false), [item])
+
   useEffect(() => {
     if (!item) return
-    const onKey = e => e.key === 'Escape' && onClose()
+    const onKey = e => {
+      if (e.key !== 'Escape') return
+      if (zoomed) setZoomed(false)
+      else onClose()
+    }
     document.addEventListener('keydown', onKey)
     document.body.style.overflow = 'hidden'
     return () => {
       document.removeEventListener('keydown', onKey)
       document.body.style.overflow = ''
     }
-  }, [item, onClose])
+  }, [item, zoomed, onClose])
 
   return (
     <AnimatePresence>
@@ -80,11 +90,22 @@ export default function DetailModal({ item, onClose }) {
           >
             <div className="flex items-center gap-4">
               {item.cover ? (
-                <img
-                  src={item.cover}
-                  alt=""
-                  className="h-24 w-auto max-w-20 shrink-0 rounded-lg object-cover shadow-lg shadow-black/50"
-                />
+                zoomed ? (
+                  <div className="h-24 w-16 shrink-0" />
+                ) : (
+                  <motion.img
+                    layoutId="detail-cover"
+                    transition={SPRING}
+                    src={item.cover}
+                    alt={`${item.title} artwork, tap to enlarge`}
+                    role="button"
+                    tabIndex={0}
+                    onClick={() => setZoomed(true)}
+                    onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setZoomed(true))}
+                    whileHover={{ scale: 1.04 }}
+                    className="h-24 w-auto max-w-20 shrink-0 cursor-zoom-in rounded-lg object-cover shadow-lg shadow-black/50"
+                  />
+                )
               ) : (
                 <div
                   className="h-24 w-16 shrink-0 rounded-lg shadow-lg shadow-black/50"
@@ -141,6 +162,29 @@ export default function DetailModal({ item, onClose }) {
             >
               Close
             </button>
+
+            <AnimatePresence>
+              {zoomed && item.cover && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.25 }}
+                  onClick={() => setZoomed(false)}
+                  role="button"
+                  aria-label="Close full artwork view"
+                  className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-5 backdrop-blur-sm"
+                >
+                  <motion.img
+                    layoutId="detail-cover"
+                    transition={SPRING}
+                    src={item.cover}
+                    alt={`${item.title} artwork`}
+                    className="max-h-[92vh] max-w-[94vw] rounded-xl object-contain shadow-2xl shadow-black"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </motion.div>
       )}
