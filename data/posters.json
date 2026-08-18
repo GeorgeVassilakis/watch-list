@@ -1,20 +1,4 @@
 {
- "The Witcher": {
-  "page": "The Witcher (TV series)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/0/05/The_Witcher_Logo.png",
-  "width": 510,
-  "height": 195,
-  "meta": {
-   "directors": [
-    "Tomasz Bagiński",
-    "Alik Sakharov"
-   ],
-   "genres": [
-    "fantasy television series",
-    "drama television series"
-   ]
-  }
- },
  "Godzilla vs Kong": {
   "page": "Godzilla vs. Kong",
   "url": "https://upload.wikimedia.org/wikipedia/en/6/63/Godzilla_vs._Kong.png",
@@ -63,70 +47,6 @@
    "genres": [
     "action film",
     "adventure film"
-   ]
-  }
- },
- "WandaVision": {
-  "page": "WandaVision",
-  "url": "https://upload.wikimedia.org/wikipedia/en/2/20/WandaVision_logo.png",
-  "width": 415,
-  "height": 239,
-  "meta": {
-   "runtime": 40,
-   "directors": [
-    "Matt Shakman"
-   ],
-   "genres": [
-    "fantasy television series",
-    "superhero television program"
-   ]
-  }
- },
- "Falcon and the Winter Soldier": {
-  "page": "The Falcon and the Winter Soldier",
-  "url": "https://upload.wikimedia.org/wikipedia/en/9/9a/The_Falcon_and_the_Winter_Soldier_logo.png",
-  "width": 421,
-  "height": 236,
-  "meta": {
-   "runtime": 54,
-   "directors": [
-    "Kari Skogland"
-   ],
-   "genres": [
-    "drama television series",
-    "superhero television program"
-   ]
-  }
- },
- "Loki": {
-  "page": "Loki (TV series)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/4/4e/Loki_%28TV_series%29_logo.png",
-  "width": 421,
-  "height": 236,
-  "meta": {
-   "runtime": 50,
-   "directors": [
-    "Kate Herron"
-   ],
-   "genres": [
-    "fantasy television series",
-    "adventure television series"
-   ]
-  }
- },
- "The Mandalorian": {
-  "page": "The Mandalorian and Grogu",
-  "url": "https://upload.wikimedia.org/wikipedia/en/4/4c/The_Mandalorian_and_Grogu_poster.jpg",
-  "width": 259,
-  "height": 384,
-  "meta": {
-   "year": "2026",
-   "runtime": 132,
-   "directors": [
-    "Jon Favreau"
-   ],
-   "genres": [
-    "space Western"
    ]
   }
  },
@@ -2014,21 +1934,6 @@
    ]
   }
  },
- "Normal People": {
-  "page": "Normal (2025 film)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Normal_poster.jpeg",
-  "width": 260,
-  "height": 385,
-  "meta": {
-   "year": "2025",
-   "directors": [
-    "Ben Wheatley"
-   ],
-   "genres": [
-    "crime film"
-   ]
-  }
- },
  "Fresh": {
   "page": "Fresh (2022 film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b0/Fresh_%282022%29_Poster.jpeg",
@@ -2227,18 +2132,6 @@
    ]
   }
  },
- "Three Body Problem": {
-  "page": "The Three-Body Problem (film)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/c/c4/The_Three-Body_Problem_%28film%29_poster.jpeg",
-  "width": 266,
-  "height": 390,
-  "meta": {
-   "year": "2018",
-   "genres": [
-    "science fiction film"
-   ]
-  }
- },
  "This is Where I Leave You": {
   "page": "This Is Where I Leave You",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/36/This_Is_Where_I_Leave_You_poster.jpg",
@@ -2338,17 +2231,6 @@
    "genres": [
     "comedy horror",
     "comedy film"
-   ]
-  }
- },
- "Fleabag": {
-  "page": "Fleabag",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Fleabag_titlecard.png",
-  "width": 934,
-  "height": 443,
-  "meta": {
-   "genres": [
-    "comedy drama"
    ]
   }
  },
@@ -3429,17 +3311,6 @@
    "genres": [
     "horror film",
     "psychological horror fiction"
-   ]
-  }
- },
- "True Detective": {
-  "page": "True Detective season 1",
-  "url": "https://upload.wikimedia.org/wikipedia/en/3/37/True_Detective_season_1.png",
-  "width": 292,
-  "height": 342,
-  "meta": {
-   "directors": [
-    "Cary Joji Fukunaga"
    ]
   }
  },

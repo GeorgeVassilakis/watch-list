@@ -1,12 +1,7 @@
 ## 2021
-- [x] The Witcher - 8.0/10
 - [x] Godzilla vs Kong - 7.4/10
 - [x] Justice League: Snyder Cut 8.9/10
 - [x] Mortal Kombat - 6.9/10
-- [x] WandaVision - 7.8/10
-- [x] Falcon and the Winter Soldier - 8.0/10
-- [x] Loki - 9.1/10
-- [x] The Mandalorian - 8.2/10
 - [x] Bohemian Rhapsody - 8.7/10
 - [x] Wonder Woman 1984 - 5.3/10
 - [x] Good Will Hunting - 9.9/10
@@ -122,7 +117,6 @@
 - [x] Dune - 8.7/10
 - [x] Lady Bird - 8.5/10
 - [x] Beautiful Boy - 8.8/10
-- [x] Normal People - 9.6/10
 - [x] Fresh - 8.2/10
 - [x] Poor Things - 8.9/10
 - [x] Argylle - 5.0/10
@@ -135,14 +129,12 @@
 - [ ] Blue Valentine - 
 - [x] Dune: Part Two - 9.4/10
 - [ ] The Tourist - 
-- [ ] Three Body Problem - 
 - [ ] This is Where I Leave You - 
 - [x] The Grand Budapest Hotel - 9.4/10
 - [x] Challengers - 8.2/10
 - [ ] Three Billboards outside ebbing Missouri - 
 - [x] Deadpool & Wolverine - 9.4/10
 - [ ] So I Married an Axe Murderer - 
-- [x] Fleabag - 9.0/10
 - [x] Peabody & Sherman - 8.5/10
 - [x] Big Hero 6 - 8.8/10
 - [ ] The Prince of Egypt - 
@@ -208,7 +200,6 @@
 - [ ] Zodiac - 
 - [ ] A Real Pain - 
 - [ ] Cure - 
-- [ ] True Detective -
 - [ ] Boyhood - 
 - [ ] Manchester By Sea - 
 - [ ] The Town - 
