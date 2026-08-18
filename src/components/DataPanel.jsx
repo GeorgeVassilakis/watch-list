@@ -79,7 +79,12 @@ function directorBoard(items) {
   }
   return [...by.entries()]
     .filter(([, e]) => e.films >= 2)
-    .map(([name, e]) => ({ name, films: e.films, avg: e.rated ? e.sum / e.rated : null }))
+    .map(([name, e]) => ({
+      name,
+      films: e.films,
+      // round once so the color band always matches the displayed value
+      avg: e.rated ? Number((e.sum / e.rated).toFixed(1)) : null,
+    }))
     .sort((a, b) => b.films - a.films || (b.avg ?? 0) - (a.avg ?? 0))
     .slice(0, 8)
 }
