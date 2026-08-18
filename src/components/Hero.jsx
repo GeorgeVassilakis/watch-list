@@ -60,7 +60,7 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
             <h1 className="mt-1.5 break-words text-2xl font-extrabold leading-[1.05] tracking-tight text-ground sm:text-4xl sm:leading-[1.02]">
               {latest.title}
             </h1>
-            <div className="mt-2.5 flex items-center gap-2.5 text-sm text-ground/80">
+            <div className="mt-2.5 flex items-baseline gap-2.5 text-sm text-ground/80">
               {latest.rating != null && (
                 <span
                   className="px-2 py-0.5 text-sm font-bold text-ground"
@@ -69,7 +69,7 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
                   {formatRating(latest.rating)}
                 </span>
               )}
-              {latest.subtitle && <span className="truncate">{latest.subtitle}</span>}
+              {latest.subtitle && <span>{latest.subtitle}</span>}
             </div>
           </motion.div>
         </div>
