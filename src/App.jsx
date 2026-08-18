@@ -61,6 +61,7 @@ export default function App() {
   const [mode, setMode] = useState('films')
   const [tab, setTab] = useState('archive')
   const [openItem, setOpenItem] = useState(null)
+  const [layout, setLayout] = useState('cards')
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
 
   useEffect(() => {
@@ -178,24 +179,55 @@ export default function App() {
             <Hero mode={mode} latest={hero.item} isCurrent={hero.isCurrent} stats={stats} />
 
             <div className="sticky top-[54px] z-30 border-b border-line bg-ground">
-              <div className="mx-auto flex max-w-3xl gap-6 px-5">
-                {TABS[mode].map(t => (
-                  <button
-                    key={t.id}
-                    onClick={() => setTab(t.id)}
-                    className={`relative py-3 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors ${
-                      tab === t.id ? 'text-ink' : 'text-dim hover:text-ink'
-                    }`}
-                  >
-                    {t.label}
-                    {tab === t.id && (
-                      <motion.div
-                        layoutId={`tab-${mode}`}
-                        className="absolute inset-x-0 -bottom-px h-[3px] bg-ink"
-                      />
-                    )}
-                  </button>
-                ))}
+              <div className="mx-auto flex max-w-3xl items-center justify-between px-5">
+                <div className="flex gap-6">
+                  {TABS[mode].map(t => (
+                    <button
+                      key={t.id}
+                      onClick={() => setTab(t.id)}
+                      className={`relative py-3 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors ${
+                        tab === t.id ? 'text-ink' : 'text-dim hover:text-ink'
+                      }`}
+                    >
+                      {t.label}
+                      {tab === t.id && (
+                        <motion.div
+                          layoutId={`tab-${mode}`}
+                          className="absolute inset-x-0 -bottom-px h-[3px] bg-ink"
+                        />
+                      )}
+                    </button>
+                  ))}
+                </div>
+                {(tab === 'archive' || tab === 'queue') && (
+                  <div className="flex items-center gap-2.5">
+                    <button
+                      onClick={() => setLayout('cards')}
+                      aria-label="Card view"
+                      aria-pressed={layout === 'cards'}
+                      className={`transition-colors ${layout === 'cards' ? 'text-ink' : 'text-dim hover:text-ink'}`}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                        <rect x="0" y="0" width="6" height="6" fill="currentColor" />
+                        <rect x="8" y="0" width="6" height="6" fill="currentColor" />
+                        <rect x="0" y="8" width="6" height="6" fill="currentColor" />
+                        <rect x="8" y="8" width="6" height="6" fill="currentColor" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => setLayout('list')}
+                      aria-label="List view"
+                      aria-pressed={layout === 'list'}
+                      className={`transition-colors ${layout === 'list' ? 'text-ink' : 'text-dim hover:text-ink'}`}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                        <rect x="0" y="1" width="14" height="2.5" fill="currentColor" />
+                        <rect x="0" y="5.75" width="14" height="2.5" fill="currentColor" />
+                        <rect x="0" y="10.5" width="14" height="2.5" fill="currentColor" />
+                      </svg>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
 
@@ -206,6 +238,7 @@ export default function App() {
                   filter={mode === 'films' ? () => true : i => i.done}
                   ghostUndone={mode === 'films'}
                   square={mode === 'music'}
+                  layout={layout}
                   onItemClick={setOpenItem}
                 />
               )}
@@ -222,6 +255,7 @@ export default function App() {
                   filter={i => !i.done}
                   ghostUndone={false}
                   square={mode === 'music'}
+                  layout={layout}
                   onItemClick={setOpenItem}
                 />
               )}
