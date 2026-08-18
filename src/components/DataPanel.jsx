@@ -31,18 +31,8 @@ function Histogram({ title, rows, color }) {
   )
 }
 
-export default function DataPanel({ items, labels, extraChart, square = false, onItemClick }) {
-  const done = items.filter(i => i.done)
-  const rated = done.filter(i => i.rating != null)
-  const avg = rated.length
-    ? (rated.reduce((s, i) => s + i.rating, 0) / rated.length).toFixed(2)
-    : '0'
-
-  const tiles = [
-    { label: labels.done, value: done.length },
-    { label: labels.todo, value: items.length - done.length },
-    { label: 'Average', value: avg },
-  ]
+export default function DataPanel({ items, extraChart, square = false, onItemClick }) {
+  const rated = items.filter(i => i.done && i.rating != null)
 
   const bands = [
     { label: '9.0 +', test: r => r >= 9 },
@@ -60,22 +50,20 @@ export default function DataPanel({ items, labels, extraChart, square = false, o
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="grid grid-cols-3 gap-3">
-        {tiles.map(t => (
-          <div key={t.label} className="border-t-[3px] border-ink pt-2">
-            <div className="text-3xl font-extrabold tracking-tight">{t.value}</div>
-            <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-dim">
-              {t.label}
-            </div>
-          </div>
-        ))}
-      </div>
-
       <section>
         <h3 className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-dim">
           Top ten
         </h3>
-        <div className="-mx-5 flex snap-x scroll-px-5 gap-3 overflow-x-auto px-5 pb-2 after:block after:w-2 after:shrink-0 after:content-['']">
+        {/* posters slide out under a fade at each edge instead of hard-clipping */}
+        <div
+          className="-mx-5 flex snap-x scroll-px-5 gap-3 overflow-x-auto px-5 pb-2 after:block after:w-2 after:shrink-0 after:content-['']"
+          style={{
+            maskImage:
+              'linear-gradient(90deg, transparent, black 20px, black calc(100% - 20px), transparent)',
+            WebkitMaskImage:
+              'linear-gradient(90deg, transparent, black 20px, black calc(100% - 20px), transparent)',
+          }}
+        >
           {top.map((item, i) => (
             <div
               key={item.title}

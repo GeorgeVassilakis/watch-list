@@ -270,7 +270,6 @@ export default function App() {
               {tab === 'data' && (
                 <DataPanel
                   items={items}
-                  labels={STAT_LABELS[mode]}
                   extraChart={mode === 'music' ? decadeChart(items) : null}
                   square={mode === 'music'}
                   onItemClick={setOpenItem}
