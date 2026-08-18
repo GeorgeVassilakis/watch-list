@@ -196,6 +196,9 @@ export default function DataPanel({ items, mode, onItemClick }) {
 
       {tiles.length > 0 && <Tiles tiles={tiles} />}
 
+      <Histogram title="Rating distribution" rows={bands} />
+      {decades && <Histogram title="Decade distribution" rows={decades} color="var(--mc-dim)" />}
+
       {directors.length > 0 && (
         <section>
           <h3 className="mb-1 text-xs font-semibold uppercase tracking-[0.16em] text-dim">
@@ -223,9 +226,6 @@ export default function DataPanel({ items, mode, onItemClick }) {
           </ol>
         </section>
       )}
-
-      <Histogram title="Rating distribution" rows={bands} />
-      {decades && <Histogram title="Decade distribution" rows={decades} color="var(--mc-dim)" />}
     </div>
   )
 }
