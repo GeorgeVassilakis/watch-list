@@ -239,7 +239,7 @@ export default function App() {
                 <>
                   {mode === 'films' && (
                     <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-dim">
-                      Scores are immediate post-watch vibes · never edited later
+                      Scores are immediate post-watch ratings · cannot change without a rewatch
                     </p>
                   )}
                   <Ranked
