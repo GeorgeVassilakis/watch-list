@@ -12,16 +12,16 @@ function Histogram({ title, rows, color }) {
             <span className="w-20 shrink-0 text-right text-xs font-medium tabular-nums text-dim">
               {r.label}
             </span>
-            <div className="h-6 flex-1 overflow-hidden rounded bg-white/[0.05]">
+            <div className="h-6 flex-1 overflow-hidden bg-paper">
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: `${(r.count / max) * 100}%` }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, ease: 'easeOut' }}
-                className="flex h-full min-w-7 items-center justify-end rounded px-2"
+                className="flex h-full min-w-7 items-center justify-end px-2"
                 style={{ background: r.color ?? color }}
               >
-                <span className="text-[11px] font-bold text-black/70">{r.count}</span>
+                <span className="text-[11px] font-bold text-ground">{r.count}</span>
               </motion.div>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function DataPanel({ items, labels, extraChart, onItemClick }) {
     <div className="flex flex-col gap-10">
       <div className="grid grid-cols-3 gap-3">
         {tiles.map(t => (
-          <div key={t.label} className="rounded-xl border border-hairline bg-panel p-4">
+          <div key={t.label} className="border-t-[3px] border-ink pt-2">
             <div className="text-3xl font-extrabold tracking-tight">{t.value}</div>
             <div className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-dim">
               {t.label}
@@ -82,18 +82,18 @@ export default function DataPanel({ items, labels, extraChart, onItemClick }) {
               className={`w-28 shrink-0 snap-start ${onItemClick ? 'cursor-pointer' : ''}`}
               onClick={onItemClick ? () => onItemClick(item) : undefined}
             >
-              <div className="relative aspect-[2/3] overflow-hidden rounded-lg bg-card shadow-lg shadow-black/40">
+              <div className="relative aspect-[2/3] overflow-hidden bg-paper shadow-print">
                 {item.cover ? (
                   <img src={item.cover} alt={item.title} loading="lazy" className="h-full w-full object-cover" />
                 ) : (
                   <div
                     className="flex h-full items-end p-2"
-                    style={{ background: `hsl(${titleHue(item.title)} 20% 18%)` }}
+                    style={{ background: `hsl(${titleHue(item.title)} 30% 30%)` }}
                   >
-                    <span className="text-xs font-semibold text-ink/90">{item.title}</span>
+                    <span className="text-xs font-semibold text-[#F2ECDF]">{item.title}</span>
                   </div>
                 )}
-                <span className="absolute left-1.5 top-1.5 flex h-6 w-6 items-center justify-center rounded-md bg-black/75 text-xs font-extrabold backdrop-blur-sm">
+                <span className="absolute left-0 top-0 flex h-6 w-6 items-center justify-center bg-accent text-xs font-extrabold text-ground">
                   {i + 1}
                 </span>
               </div>
@@ -107,7 +107,7 @@ export default function DataPanel({ items, labels, extraChart, onItemClick }) {
       </section>
 
       <Histogram title="Rating distribution" rows={bands} />
-      {extraChart && <Histogram title={extraChart.title} rows={extraChart.rows} color="#8E9095" />}
+      {extraChart && <Histogram title={extraChart.title} rows={extraChart.rows} color="var(--mc-dim)" />}
     </div>
   )
 }

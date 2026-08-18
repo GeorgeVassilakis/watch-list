@@ -165,14 +165,15 @@ export function allItems(sections) {
   return sections.flatMap(s => s.items)
 }
 
+// theme-aware print inks, defined per data-theme in index.css
 export function ratingColor(r) {
-  if (r == null) return '#8E9095'
-  if (r >= 9.5) return '#F6C453'
-  if (r >= 9.0) return '#E9A13B'
-  if (r >= 8.0) return '#97C97C'
-  if (r >= 7.0) return '#6FA8DC'
-  if (r >= 6.0) return '#9AA0A6'
-  return '#C4756B'
+  if (r == null) return 'var(--mc-r-null)'
+  if (r >= 9.5) return 'var(--mc-r-95)'
+  if (r >= 9.0) return 'var(--mc-r-9)'
+  if (r >= 8.0) return 'var(--mc-r-8)'
+  if (r >= 7.0) return 'var(--mc-r-7)'
+  if (r >= 6.0) return 'var(--mc-r-6)'
+  return 'var(--mc-r-low)'
 }
 
 export function formatRating(r) {

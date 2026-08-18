@@ -1,28 +1,135 @@
 @import "tailwindcss";
 
+/*
+  Mid-century flat palette, theme x mode.
+  The accent family shifts per mode (films warm orange, books green, music red);
+  each has a warm-dark and a paper-light rendition. Dark is the default;
+  data-theme='light' on <html> switches, data-mode picks the family.
+*/
+
+/* films, dark (default) */
+:root {
+  --mc-ground: #1B1914;
+  --mc-paper: #221E17;
+  --mc-ink: #F0E9DD;
+  --mc-dim: #A79F91;
+  --mc-line: #3A3328;
+  --mc-accent: #C7522A;
+  --mc-accent-2: #C98A48;
+  --mc-accent-3: #5D6D4D;
+  --mc-shadow: rgb(0 0 0 / 0.4);
+  /* rating inks, bright enough to read on the dark ground */
+  --mc-r-null: #A8A093;
+  --mc-r-95: #F0C05A;
+  --mc-r-9: #DE9A3C;
+  --mc-r-8: #92A972;
+  --mc-r-7: #7BA3B0;
+  --mc-r-6: #A8A093;
+  --mc-r-low: #CE6B4E;
+}
+
+[data-mode='books'] {
+  --mc-ground: #141A15;
+  --mc-paper: #182119;
+  --mc-ink: #E5EFE6;
+  --mc-dim: #9DAC9F;
+  --mc-line: #2C372F;
+  --mc-accent: #4E7B5C;
+  --mc-accent-2: #7CA37A;
+  --mc-accent-3: #C98A48;
+}
+
+[data-mode='music'] {
+  --mc-ground: #160D0C;
+  --mc-paper: #211313;
+  --mc-ink: #F6E1DE;
+  --mc-dim: #C0A29D;
+  --mc-line: #351F1D;
+  --mc-accent: #C72E29;
+  --mc-accent-2: #8A1C17;
+  --mc-accent-3: #C98A48;
+}
+
+/* light: warm paper, print inks */
+[data-theme='light'] {
+  --mc-ground: #F2ECDF;
+  --mc-paper: #FBF7EE;
+  --mc-ink: #2A2118;
+  --mc-dim: #6B6154;
+  --mc-line: #D8D0BE;
+  --mc-accent: #C7522A;
+  --mc-accent-2: #C98A48;
+  --mc-accent-3: #5D6D4D;
+  --mc-shadow: rgb(42 33 24 / 0.16);
+  --mc-r-null: #6B6154;
+  --mc-r-95: #8A5E0E;
+  --mc-r-9: #B06A1C;
+  --mc-r-8: #5D6D4D;
+  --mc-r-7: #3F6A75;
+  --mc-r-6: #6B6154;
+  --mc-r-low: #A03D2A;
+}
+
+[data-theme='light'][data-mode='books'] {
+  --mc-ground: #EAEFE6;
+  --mc-paper: #F5F8F2;
+  --mc-ink: #1F2D22;
+  --mc-dim: #5F6F63;
+  --mc-line: #C7D2C3;
+  --mc-accent: #2E5B3D;
+  --mc-accent-2: #7B9B74;
+  --mc-accent-3: #C98A48;
+}
+
+[data-theme='light'][data-mode='music'] {
+  --mc-ground: #F6E3DE;
+  --mc-paper: #FDEFEB;
+  --mc-ink: #2A1716;
+  --mc-dim: #6E4F4B;
+  --mc-line: #DEB6B1;
+  --mc-accent: #8C1D18;
+  --mc-accent-2: #D3342E;
+  --mc-accent-3: #C98A48;
+}
+
 @theme {
-  --font-sans: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --color-ground: #0A0B0D;
-  --color-panel: #121418;
-  --color-card: #17191E;
-  --color-ink: #F2F1EC;
-  --color-dim: #8E9095;
-  --color-hairline: rgba(242, 241, 236, 0.09);
+  --font-sans: "Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  --color-ground: var(--mc-ground);
+  --color-paper: var(--mc-paper);
+  --color-ink: var(--mc-ink);
+  --color-dim: var(--mc-dim);
+  --color-line: var(--mc-line);
+  --color-accent: var(--mc-accent);
+  --color-accent-2: var(--mc-accent-2);
+  --color-accent-3: var(--mc-accent-3);
+  /* hard print offsets, no blur */
+  --shadow-print: 3px 3px 0 var(--mc-shadow);
+  --shadow-print-lg: 6px 6px 0 var(--mc-shadow);
 }
 
 html {
-  background: var(--color-ground);
-  scrollbar-color: #2A2D33 var(--color-ground);
+  background: var(--mc-ground);
+  scrollbar-color: var(--mc-line) var(--mc-ground);
+  transition: background-color 0.3s ease;
 }
 
 body {
   font-family: var(--font-sans);
-  background: var(--color-ground);
-  color: var(--color-ink);
+  background: transparent;
+  color: var(--mc-ink);
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "tnum";
 }
 
 ::selection {
-  background: rgba(232, 185, 90, 0.35);
+  background: color-mix(in srgb, var(--mc-accent-2) 45%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

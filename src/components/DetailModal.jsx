@@ -88,7 +88,7 @@ export default function DetailModal({ item, onClose }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
           onClick={e => e.target === e.currentTarget && onClose()}
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/70 backdrop-blur-sm sm:items-center sm:p-6"
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 sm:items-center sm:p-6"
         >
           <motion.div
             initial={{ y: 60, opacity: 0 }}
@@ -97,7 +97,7 @@ export default function DetailModal({ item, onClose }) {
             transition={{ type: 'spring', damping: 28, stiffness: 320 }}
             role="dialog"
             aria-modal="true"
-            className={`max-h-[88vh] w-full max-w-xl rounded-t-2xl border border-hairline bg-panel p-5 shadow-2xl shadow-black/60 sm:rounded-2xl ${
+            className={`max-h-[88vh] w-full max-w-xl border-t-[3px] border-ink bg-paper p-5 shadow-print-lg sm:border-[3px] ${
               settling ? 'overflow-visible' : 'overflow-y-auto'
             }`}
           >
@@ -118,13 +118,13 @@ export default function DetailModal({ item, onClose }) {
                     onKeyDown={e => (e.key === 'Enter' || e.key === ' ') && (e.preventDefault(), setZoomed(true))}
                     whileHover={{ scale: 1.04 }}
                     style={settling ? { zIndex: 80 } : undefined}
-                    className="relative h-24 w-auto max-w-20 shrink-0 cursor-zoom-in rounded-lg object-cover shadow-lg shadow-black/50"
+                    className="relative h-24 w-auto max-w-20 shrink-0 cursor-zoom-in object-cover shadow-print"
                   />
                 )
               ) : (
                 <div
-                  className="h-24 w-16 shrink-0 rounded-lg shadow-lg shadow-black/50"
-                  style={{ background: `hsl(${titleHue(item.title)} 20% 18%)` }}
+                  className="h-24 w-16 shrink-0 shadow-print"
+                  style={{ background: `hsl(${titleHue(item.title)} 30% 30%)` }}
                 />
               )}
               <div className="min-w-0 flex-1">
@@ -150,7 +150,7 @@ export default function DetailModal({ item, onClose }) {
                 <ol className="mt-2 flex flex-col gap-1.5">
                   {item.review.topSongs.slice(0, 3).map((song, i) => (
                     <li key={song} className="flex items-center gap-2.5 text-sm">
-                      <span className="w-4 text-right font-extrabold text-ink/40">{i + 1}</span>
+                      <span className="w-4 text-right font-extrabold text-accent">{i + 1}</span>
                       <span className="font-medium">{song}</span>
                     </li>
                   ))}
@@ -159,7 +159,7 @@ export default function DetailModal({ item, onClose }) {
             )}
 
             {metaRows(item).length > 0 && (
-              <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-hairline pt-4">
+              <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 border-t border-line pt-4">
                 {metaRows(item).map(([label, value]) => (
                   <div key={label} className={value.length > 60 ? 'col-span-2' : ''}>
                     <div className="text-[10px] font-semibold uppercase tracking-[0.16em] text-dim">
@@ -173,7 +173,7 @@ export default function DetailModal({ item, onClose }) {
 
             <button
               onClick={onClose}
-              className="mt-6 w-full rounded-xl bg-white/[0.06] py-2.5 text-sm font-semibold text-dim hover:bg-white/[0.1] hover:text-ink"
+              className="mt-6 w-full border-2 border-ink py-2.5 text-sm font-semibold uppercase tracking-[0.1em] text-ink transition-colors hover:bg-ink hover:text-paper"
             >
               Close
             </button>
@@ -188,14 +188,14 @@ export default function DetailModal({ item, onClose }) {
                   onClick={closeZoom}
                   role="button"
                   aria-label="Close full artwork view"
-                  className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-5 backdrop-blur-sm"
+                  className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-5"
                 >
                   <motion.img
                     layoutId="detail-cover"
                     transition={SPRING}
                     src={item.cover}
                     alt={`${item.title} artwork`}
-                    className="max-h-[92vh] max-w-[94vw] rounded-xl object-contain shadow-2xl shadow-black"
+                    className="max-h-[92vh] max-w-[94vw] object-contain"
                   />
                 </motion.div>
               )}

@@ -1,11 +1,9 @@
 import { motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 
-const MEDAL = ['#F6C453', '#C8CCD2', '#C89B72']
-
 export default function Ranked({ items, square = false, onItemClick }) {
   return (
-    <ol className="flex flex-col">
+    <ol className="flex flex-col border-t-[3px] border-ink">
       {items.map((item, i) => {
         const clickable = Boolean(onItemClick)
         return (
@@ -16,22 +14,23 @@ export default function Ranked({ items, square = false, onItemClick }) {
             viewport={{ once: true, margin: '-20px' }}
             transition={{ duration: 0.35, delay: (i % 10) * 0.02 }}
             onClick={clickable ? () => onItemClick(item) : undefined}
-            className={`flex items-center gap-3.5 border-b border-hairline py-2.5
-              ${clickable ? 'cursor-pointer hover:bg-white/[0.03]' : ''}`}
+            className={`flex items-center gap-3.5 border-b border-line py-2.5
+              ${clickable ? 'cursor-pointer hover:bg-paper' : ''}`}
           >
             <span
-              className="w-9 shrink-0 text-right text-lg font-extrabold tabular-nums tracking-tight"
-              style={{ color: i < 3 ? MEDAL[i] : 'rgba(242,241,236,0.28)' }}
+              className={`w-9 shrink-0 text-right text-lg font-extrabold tabular-nums tracking-tight ${
+                i < 3 ? 'text-accent' : 'text-dim/60'
+              }`}
             >
               {i + 1}
             </span>
-            <div className={`${square ? 'h-12 w-12' : 'h-14 w-10'} shrink-0 overflow-hidden rounded bg-card shadow shadow-black/40`}>
+            <div className={`${square ? 'h-12 w-12' : 'h-14 w-10'} shrink-0 overflow-hidden bg-paper shadow-print`}>
               {item.cover ? (
                 <img src={item.cover} alt="" loading="lazy" className="h-full w-full object-cover" />
               ) : (
                 <div
                   className="h-full w-full"
-                  style={{ background: `hsl(${titleHue(item.title)} 20% 18%)` }}
+                  style={{ background: `hsl(${titleHue(item.title)} 30% 30%)` }}
                 />
               )}
             </div>

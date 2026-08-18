@@ -17,45 +17,27 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
   if (!latest) return null
   const aspect = mode === 'music' ? 'aspect-square' : 'aspect-[2/3]'
   return (
-    <div className="relative overflow-hidden">
-      {/* backdrop: the artwork itself, blown up and blurred */}
-      <div className="absolute inset-0">
-        {latest.cover ? (
-          <img
-            src={latest.cover}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full scale-125 object-cover opacity-50 blur-2xl saturate-150"
-          />
-        ) : (
-          <div
-            className="h-full w-full"
-            style={{ background: `hsl(${titleHue(latest.title)} 25% 14%)` }}
-          />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-b from-ground/60 via-ground/30 to-ground" />
-      </div>
+    <div className="relative overflow-hidden pt-[54px]">
+      {/* Bass-style color field: a flat angled block the artwork is mounted on,
+          anchored to the bottom so the cover always breaks its lower edge */}
+      <div className="absolute inset-x-0 -top-10 bottom-32 origin-top-left -skew-y-2 bg-accent" />
 
-      <div className="relative mx-auto max-w-3xl px-5 pb-6 pt-20">
+      <div className="relative mx-auto max-w-3xl px-5 pb-6 pt-10">
         <div className="flex items-end gap-5">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="w-28 shrink-0 overflow-hidden rounded-lg shadow-2xl shadow-black/60 sm:w-36"
+            className="w-32 shrink-0 shadow-print-lg sm:w-40"
           >
             {latest.cover ? (
               <img src={latest.cover} alt={latest.title} className={`${aspect} w-full object-cover`} />
             ) : (
               <div
                 className={`flex ${aspect} w-full items-end p-2.5`}
-                style={{
-                  background: `linear-gradient(160deg,
-                    hsl(${titleHue(latest.title)} 18% 24%),
-                    hsl(${titleHue(latest.title)} 22% 12%))`,
-                }}
+                style={{ background: `hsl(${titleHue(latest.title)} 30% 30%)` }}
               >
-                <span className="text-sm font-semibold text-ink/90">{latest.title}</span>
+                <span className="text-sm font-semibold text-[#F2ECDF]">{latest.title}</span>
               </div>
             )}
           </motion.div>
@@ -64,25 +46,25 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12, ease: 'easeOut' }}
-            className="min-w-0 pb-1"
+            className="min-w-0 pb-10"
           >
-            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-dim">
+            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ground/80">
               {isCurrent && (
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#97C97C] opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#97C97C]" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ground opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-ground" />
                 </span>
               )}
               {isCurrent ? EYEBROW_CURRENT[mode] : EYEBROW[mode]}
             </p>
-            <h1 className="mt-1.5 text-3xl font-extrabold leading-[1.02] tracking-tight sm:text-4xl">
+            <h1 className="mt-1.5 break-words text-2xl font-extrabold leading-[1.05] tracking-tight text-ground sm:text-4xl sm:leading-[1.02]">
               {latest.title}
             </h1>
-            <div className="mt-2.5 flex items-center gap-2.5 text-sm text-dim">
+            <div className="mt-2.5 flex items-center gap-2.5 text-sm text-ground/80">
               {latest.rating != null && (
                 <span
-                  className="rounded-md bg-black/50 px-2 py-0.5 text-sm font-bold backdrop-blur-sm"
-                  style={{ color: ratingColor(latest.rating) }}
+                  className="px-2 py-0.5 text-sm font-bold text-ground"
+                  style={{ background: 'var(--mc-ink)' }}
                 >
                   {formatRating(latest.rating)}
                 </span>
@@ -96,10 +78,10 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.28 }}
-          className="mt-7 grid grid-cols-3 gap-3 border-t border-hairline pt-4"
+          className="mt-10 grid grid-cols-3 gap-3"
         >
           {stats.map(s => (
-            <div key={s.label}>
+            <div key={s.label} className="border-t-[3px] border-ink pt-2">
               <div className="text-xl font-extrabold tracking-tight sm:text-2xl">{s.value}</div>
               <div className="mt-0.5 text-[11px] font-medium uppercase tracking-[0.14em] text-dim">
                 {s.label}

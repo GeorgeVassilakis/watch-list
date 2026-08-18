@@ -14,9 +14,9 @@ export default function PosterWall({ sections, filter = () => true, ghostUndone 
         <section key={s.year ?? `s${gi}`}>
           {s.year && (
             <div className="mb-3 flex items-baseline gap-3">
-              <h2 className="text-2xl font-extrabold tracking-tight text-ink/30">{s.year}</h2>
+              <h2 className="text-2xl font-extrabold tracking-tight text-accent">{s.year}</h2>
               <span className="text-xs font-medium text-dim">{s.items.length}</span>
-              <div className="h-px flex-1 self-center bg-hairline" />
+              <div className="h-[3px] flex-1 self-center bg-ink" />
             </div>
           )}
           <div className="grid grid-cols-3 gap-2.5 sm:grid-cols-4 md:grid-cols-6">

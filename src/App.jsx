@@ -61,10 +61,20 @@ export default function App() {
   const [mode, setMode] = useState('films')
   const [tab, setTab] = useState('archive')
   const [openItem, setOpenItem] = useState(null)
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
 
   useEffect(() => {
     loadAll().then(setData).catch(e => setError(String(e)))
   }, [])
+
+  useEffect(() => {
+    document.documentElement.dataset.mode = mode
+  }, [mode])
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
   const view = data?.[mode]
   const items = useMemo(() => (view ? allItems(view.sections) : []), [view])
@@ -109,23 +119,45 @@ export default function App() {
 
   return (
     <div className="min-h-screen pb-24">
-      <header className="fixed inset-x-0 top-0 z-40 border-b border-hairline bg-ground/70 backdrop-blur-xl">
+      {/* flat three-block accent stripe, the masthead's print mark */}
+      <div
+        className="fixed inset-x-0 top-0 z-50 h-1.5"
+        style={{
+          background:
+            'linear-gradient(90deg, var(--mc-accent) 0 44%, var(--mc-accent-2) 44% 76%, var(--mc-accent-3) 76% 100%)',
+        }}
+      />
+      <header className="fixed inset-x-0 top-1.5 z-40 border-b-2 border-ink bg-ground">
         <div className="mx-auto flex h-12 max-w-3xl items-center justify-between px-5">
-          <span className="text-sm font-extrabold tracking-tight">
-            GV<span className="text-dim">/</span>ARCHIVE
+          <span className="text-sm font-extrabold uppercase tracking-[0.08em]">
+            GV<span className="text-accent">/</span>Archive
           </span>
-          <nav className="flex gap-1">
+          <nav className="flex items-center gap-5">
             {MODES.map(m => (
               <button
                 key={m.id}
                 onClick={() => switchMode(m.id)}
-                className={`rounded-full px-3 py-1 text-[13px] font-semibold transition-colors ${
-                  mode === m.id ? 'bg-ink text-ground' : 'text-dim hover:text-ink'
+                className={`relative py-1 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors ${
+                  mode === m.id ? 'text-accent' : 'text-dim hover:text-ink'
                 }`}
               >
                 {m.label}
+                {mode === m.id && (
+                  <motion.div layoutId="mode-mark" className="absolute inset-x-0 bottom-0 h-0.5 bg-accent" />
+                )}
               </button>
             ))}
+            <button
+              onClick={() => setTheme(t => (t === 'dark' ? 'light' : 'dark'))}
+              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
+              className="text-dim transition-colors hover:text-ink"
+            >
+              {/* half-filled disc, the print mark for the theme toggle */}
+              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+                <circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor" />
+              </svg>
+            </button>
           </nav>
         </div>
       </header>
@@ -145,13 +177,13 @@ export default function App() {
           >
             <Hero mode={mode} latest={hero.item} isCurrent={hero.isCurrent} stats={stats} />
 
-            <div className="sticky top-12 z-30 border-b border-hairline bg-ground/80 backdrop-blur-xl">
+            <div className="sticky top-[54px] z-30 border-b border-line bg-ground">
               <div className="mx-auto flex max-w-3xl gap-6 px-5">
                 {TABS[mode].map(t => (
                   <button
                     key={t.id}
                     onClick={() => setTab(t.id)}
-                    className={`relative py-3 text-[13px] font-semibold transition-colors ${
+                    className={`relative py-3 text-[13px] font-semibold uppercase tracking-[0.1em] transition-colors ${
                       tab === t.id ? 'text-ink' : 'text-dim hover:text-ink'
                     }`}
                   >
@@ -159,7 +191,7 @@ export default function App() {
                     {tab === t.id && (
                       <motion.div
                         layoutId={`tab-${mode}`}
-                        className="absolute inset-x-0 -bottom-px h-0.5 bg-ink"
+                        className="absolute inset-x-0 -bottom-px h-[3px] bg-ink"
                       />
                     )}
                   </button>
