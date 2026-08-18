@@ -238,7 +238,7 @@ export default function App() {
               {tab === 'ranked' && (
                 <>
                   {mode === 'films' && (
-                    <p className="mb-4 text-xs font-medium uppercase tracking-[0.14em] text-dim">
+                    <p className="mb-4 text-center text-xs font-medium uppercase tracking-[0.14em] text-dim">
                       Scores are immediate post-watch ratings. Cannot change without a rewatch.
                     </p>
                   )}
