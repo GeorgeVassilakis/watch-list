@@ -42,6 +42,13 @@ export default function PosterCard({ item, index = 0, ghost = false, square = fa
         </div>
       )}
 
+      {item.current && (
+        <span className="absolute right-1.5 top-1.5 flex h-2.5 w-2.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#97C97C] opacity-60" />
+          <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#97C97C]" />
+        </span>
+      )}
+
       {item.rating != null && (
         <span
           className="absolute bottom-1.5 left-1.5 rounded-md bg-black/75 px-1.5 py-0.5 text-[11px] font-bold backdrop-blur-sm"

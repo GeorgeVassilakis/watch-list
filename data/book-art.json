@@ -16,7 +16,7 @@
    "pages": 64
   }
  },
- "slaughterhousefive::kurt vonnegut": {
+ "slaughterhouse five::kurt vonnegut": {
   "source": "openlibrary: Slaughterhouse-Five",
   "url": "https://covers.openlibrary.org/b/id/12727001-L.jpg",
   "meta": {
@@ -34,7 +34,7 @@
    "subjects": "Fiction, Literature, Continental european fiction (fictional works by one author)"
   }
  },
- "the ending of time::jiddu krishnamurti  david bohm": {
+ "the ending of time::jiddu krishnamurti david bohm": {
   "source": "openlibrary: The ending of time",
   "url": "https://covers.openlibrary.org/b/id/32260-L.jpg",
   "meta": {
@@ -50,6 +50,15 @@
    "year": 2020,
    "pages": 240,
    "subjects": "Physics"
+  }
+ },
+ "project hail mary::andy weir": {
+  "source": "openlibrary: Project Hail Mary",
+  "url": "https://covers.openlibrary.org/b/id/11200092-L.jpg",
+  "meta": {
+   "year": 2021,
+   "pages": 496,
+   "subjects": "hard science-fiction, science-fiction, sci-fi"
   }
  }
 }

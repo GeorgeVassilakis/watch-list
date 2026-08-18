@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
 UA = {'User-Agent': 'watchlist-art-fetch/1.0 (georgevassilakis2@gmail.com)'}
 
-LINE_RE = re.compile(r'^- \[(?:x| )\] (.+)$', re.I)
+LINE_RE = re.compile(r'^- \[(?:x|0| )\] (.+)$', re.I)
 RATING_RE = re.compile(r'(?:\s*[-–—:])?\s*\d+(?:\.\d+)?/10$')
 
 
@@ -32,7 +32,8 @@ def get(url):
 
 
 def norm(s):
-    return ''.join(c for c in s.lower() if c.isalnum() or c == ' ').strip()
+    # keep in sync with normalize() in src/lib/data.js
+    return ' '.join(re.sub(r'[^a-z0-9]+', ' ', s.lower()).split())
 
 
 def parse_movies():

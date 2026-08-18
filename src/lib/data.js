@@ -2,7 +2,8 @@
 // sections: [{ year, items }] in file order (oldest section first, newest last)
 // item: { title, subtitle, rating, done, cover, review }
 
-const LINE_RE = /^- \[(x| )\] (.+)$/i
+// [x] done, [ ] queued, [0] currently in progress
+const LINE_RE = /^- \[(x|0| )\] (.+)$/i
 const RATING_RE = /(?:\s*[-–—:])?\s*(\d+(?:\.\d+)?)\/10$/
 
 function parseMovieLine(line) {
@@ -17,7 +18,14 @@ function parseMovieLine(line) {
   } else {
     title = title.replace(/\s*[-–—:]\s*$/, '').trim()
   }
-  return { title, subtitle: '', rating, done: m[1].toLowerCase() === 'x', cover: null }
+  return {
+    title,
+    subtitle: '',
+    rating,
+    done: m[1].toLowerCase() === 'x',
+    current: m[1] === '0',
+    cover: null,
+  }
 }
 
 function parsePipedLine(line, coverDir) {
@@ -41,6 +49,7 @@ function parsePipedLine(line, coverDir) {
     subtitle: [by, year].filter(Boolean).join(' · '),
     rating,
     done: m[1].toLowerCase() === 'x',
+    current: m[1] === '0',
     cover,
   }
 }
@@ -68,14 +77,14 @@ function parseSections(text, parseLine) {
 }
 
 async function fetchText(path) {
-  const res = await fetch(path)
+  const res = await fetch(path, { cache: 'no-cache' })
   if (!res.ok) throw new Error(`${path}: ${res.status}`)
   return res.text()
 }
 
 async function fetchJson(path, fallback) {
   try {
-    const res = await fetch(path)
+    const res = await fetch(path, { cache: 'no-cache' })
     if (!res.ok) return fallback
     return await res.json()
   } catch {
@@ -83,7 +92,12 @@ async function fetchJson(path, fallback) {
   }
 }
 
-const normalize = s => (s || '').toLowerCase().replace(/\s+/g, ' ').trim()
+// keep in sync with norm() in scripts/fetch-art.py
+const normalize = s =>
+  (s || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
 
 export async function loadAll() {
   const [moviesTxt, booksTxt, albumsTxt, posters, albumArt, bookArt, reviews] = await Promise.all([

@@ -1,7 +1,8 @@
 ## 2026
-- [x] The Sirens of Titan | Kurt Vonnegut | 1959 | 9.0/10
+- [x] The Sirens of Titan | Kurt Vonnegut | 1959 | 7.4/10
 - [ ] Le Tour du monde en 80 jours | Jules Verne | 1872
-- [ ] Slaughterhouse-Five | Kurt Vonnegut | 1969
+- [0] Slaughterhouse-Five | Kurt Vonnegut | 1969
 - [ ] The Metamorphosis | Franz Kafka | 1915
 - [ ] The Ending of Time | Jiddu Krishnamurti & David Bohm | 1985
 - [ ] Stephen Hawking | Leonard Mlodinow | 2020
+- [x] Project Hail Mary | Andy Weir | 9.2/10

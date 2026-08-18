@@ -26,7 +26,7 @@ export default function PosterWall({ sections, filter = () => true, ghostUndone 
                 item={item}
                 index={i}
                 square={square}
-                ghost={ghostUndone && !item.done}
+                ghost={ghostUndone && !item.done && !item.current}
                 onClick={onItemClick ? () => onItemClick(item) : undefined}
               />
             ))}

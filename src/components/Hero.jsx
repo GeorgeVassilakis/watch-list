@@ -7,7 +7,13 @@ const EYEBROW = {
   music: 'Latest review',
 }
 
-export default function Hero({ mode, latest, stats }) {
+const EYEBROW_CURRENT = {
+  films: 'Now watching',
+  books: 'Currently reading',
+  music: 'Now listening',
+}
+
+export default function Hero({ mode, latest, isCurrent = false, stats }) {
   if (!latest) return null
   const aspect = mode === 'music' ? 'aspect-square' : 'aspect-[2/3]'
   return (
@@ -60,8 +66,14 @@ export default function Hero({ mode, latest, stats }) {
             transition={{ duration: 0.6, delay: 0.12, ease: 'easeOut' }}
             className="min-w-0 pb-1"
           >
-            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-dim">
-              {EYEBROW[mode]}
+            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-dim">
+              {isCurrent && (
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#97C97C] opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#97C97C]" />
+                </span>
+              )}
+              {isCurrent ? EYEBROW_CURRENT[mode] : EYEBROW[mode]}
             </p>
             <h1 className="mt-1.5 text-3xl font-extrabold leading-[1.02] tracking-tight sm:text-4xl">
               {latest.title}

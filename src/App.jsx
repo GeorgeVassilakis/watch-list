@@ -69,9 +69,11 @@ export default function App() {
   const view = data?.[mode]
   const items = useMemo(() => (view ? allItems(view.sections) : []), [view])
 
-  const latest = useMemo(() => {
+  const hero = useMemo(() => {
+    const current = items.find(i => i.current)
+    if (current) return { item: current, isCurrent: true }
     const done = items.filter(i => i.done)
-    return done[done.length - 1] ?? null
+    return { item: done[done.length - 1] ?? null, isCurrent: false }
   }, [items])
 
   const rated = useMemo(
@@ -141,7 +143,7 @@ export default function App() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            <Hero mode={mode} latest={latest} stats={stats} />
+            <Hero mode={mode} latest={hero.item} isCurrent={hero.isCurrent} stats={stats} />
 
             <div className="sticky top-12 z-30 border-b border-hairline bg-ground/80 backdrop-blur-xl">
               <div className="mx-auto flex max-w-3xl gap-6 px-5">
