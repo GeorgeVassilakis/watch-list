@@ -4907,5 +4907,20 @@
     "adventure film"
    ]
   }
+ },
+ "Cinema Paradiso": {
+  "page": "Cinema Paradiso",
+  "url": "https://upload.wikimedia.org/wikipedia/en/8/86/CinemaParadiso.jpg",
+  "meta": {
+   "year": "1988",
+   "runtime": 155,
+   "directors": [
+    "Giuseppe Tornatore"
+   ],
+   "genres": [
+    "coming-of-age film",
+    "drama film"
+   ]
+  }
  }
 }
