@@ -4922,5 +4922,20 @@
     "drama film"
    ]
   }
+ },
+ "The Lord of the Rings: The Fellowship of the Ring": {
+  "page": "The Lord of the Rings: The Fellowship of the Ring",
+  "url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg",
+  "meta": {
+   "year": "2001",
+   "runtime": 178,
+   "directors": [
+    "Peter Jackson"
+   ],
+   "genres": [
+    "fantasy film",
+    "adventure film"
+   ]
+  }
  }
 }
