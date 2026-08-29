@@ -298,4 +298,4 @@
 - [ ] La Chimera - 
 - [x] The Lord of the Rings: The Fellowship of the Ring - 7.8/10
 - [ ] Cinema Paradiso - 
-- [ ] The Wolf of Wall Street (2013) - 8.4/10
+- [x] The Wolf of Wall Street (2013) - 8.4/10
