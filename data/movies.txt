@@ -159,7 +159,7 @@
 - [x] Mickey 17 - 8.8/10
 - [x] Thunderbolts - 8.2/10
 - [x] Me Before You - 7.8/10
-- [x] The Gorge - 8.4/10
+- [x] The Gorge - 7.2/10
 - [x] The Phoenician Scheme - 8.6/10
 - [x] Wolfs - 7.5/10
 - [ ] Parasite - 
@@ -193,7 +193,7 @@
 - [x] Casino Royale - 8.2/10
 - [x] The Martian - 8.5/10
 - [x] Before Sunrise - 8.7/10
-- [x] Before Sunset - 9.2/10
+- [x] Before Sunset - 9.4/10
 - [x] Before Midnight - 8.4/10
 - [x] Little Women - 7.8/10
 - [ ] Zodiac - 
