@@ -4937,5 +4937,20 @@
     "adventure film"
    ]
   }
+ },
+ "Coyote vs. Acme": {
+  "page": "Coyote vs. Acme",
+  "url": "https://upload.wikimedia.org/wikipedia/en/c/c0/Coyote_vs._Acme_poster.jpg",
+  "meta": {
+   "year": "2026",
+   "runtime": 103,
+   "directors": [
+    "Dave Green"
+   ],
+   "genres": [
+    "comedy film",
+    "adventure film"
+   ]
+  }
  }
 }
