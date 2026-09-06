@@ -293,9 +293,10 @@
 - [x] The Invite - 8.9/10
 - [x] The Odyssey - 9.1/10
 - [x] Spider-Man: Brand New Day - 8.5/10
-- [ ] The Worst Person In The World - 
 - [x] Tony (2026) - 8.8/10
 - [ ] La Chimera - 
 - [x] The Lord of the Rings: The Fellowship of the Ring - 7.8/10
 - [ ] Cinema Paradiso - 
 - [x] The Wolf of Wall Street (2013) - 8.4/10
+- [x] Coyote vs. Acme - 7.2/10
+- [x] The Worst Person In The World - 8.7/10
