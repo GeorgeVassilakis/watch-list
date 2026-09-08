@@ -1,6 +1,6 @@
 ## 2026
 - [x] The Sirens of Titan | Kurt Vonnegut | 1959 | 7.4/10
-- [ ] Le Tour du monde en 80 jours | Jules Verne | 1872
+- [ ] Le Tour du monde en quatre-vingts jours | Jules Verne | 1872
 - [0] Slaughterhouse-Five | Kurt Vonnegut | 1969
 - [ ] The Metamorphosis | Franz Kafka | 1915
 - [ ] The Ending of Time | Jiddu Krishnamurti & David Bohm | 1985
