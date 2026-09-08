@@ -60,5 +60,14 @@
    "pages": 496,
    "subjects": "hard science-fiction, science-fiction, sci-fi"
   }
+ },
+ "le tour du monde en quatre vingts jours::jules verne": {
+  "source": "openlibrary: Le Tour du Monde en Quatre-Vingts Jours",
+  "url": "https://covers.openlibrary.org/b/id/6976035-L.jpg",
+  "meta": {
+   "year": 1872,
+   "pages": 225,
+   "subjects": "Viajes alrededor del mundo, Translations into Gujarati, Fiction"
+  }
  }
 }
