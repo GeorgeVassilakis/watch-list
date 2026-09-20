@@ -300,3 +300,4 @@
 - [x] The Wolf of Wall Street (2013) - 8.4/10
 - [x] Coyote vs. Acme - 7.2/10
 - [x] The Worst Person In The World - 8.7/10
+- [x] Bad Lieutenant - 6.8/10
