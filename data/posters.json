@@ -4952,5 +4952,20 @@
     "adventure film"
    ]
   }
+ },
+ "Bad Lieutenant": {
+  "page": "Bad Lieutenant",
+  "url": "https://upload.wikimedia.org/wikipedia/en/9/97/Bad_Lieutenant_.jpg",
+  "meta": {
+   "year": "1992",
+   "runtime": 96,
+   "directors": [
+    "Abel Ferrara"
+   ],
+   "genres": [
+    "crime film",
+    "drama film"
+   ]
+  }
  }
 }
