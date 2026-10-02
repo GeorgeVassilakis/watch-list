@@ -6,13 +6,13 @@
 - [x] Wonder Woman 1984 - 5.3/10
 - [x] Good Will Hunting - 9.9/10
 - [x] Ready Player One - 8.1/10
-- [x] Bladerunner: The Final Cut - 7.4/10
-- [x] Bladerunner 2049 - 9.3/10
+- [x] Blade Runner: The Final Cut - 7.4/10
+- [x] Blade Runner 2049 - 9.3/10
 - [x] Anchorman 2 - 7.2/10
 - [x] Forrest Gump - 9.1/10
 - [x] The Big Lebowski - 8.2/10
 - [x] Ocean's Eleven - 7.8/10
-- [ ] Beetlejuice 
+- [ ] Beetlejuice (1988)
 - [x] American Psycho - 8.9/10
 - [x] Inception - 8.6/10
 - [x] Knives Out - 8.9/10
@@ -32,14 +32,13 @@
 - [x] Call Me By Your Name - 9.1/10
 - [x] House of Gucci - 7.6/10
 - [x] Black Widow - 8.3/10
-- [x] Skyfall - 8.1/10
-- [x] Spiderman: No Way Home - 9.7/10
+- [x] Spider-Man: No Way Home - 9.7/10
 - [ ] The Matrix Resurrections
 - [x] The King's Man - 7.8/10
 - [ ] The Princess Bride
 - [x] Don't Look Up - 8.6/10
 ## 2022
-- [x] Spiderman: Into the Spiderverse - 8.8/10
+- [x] Spider-Man: Into the Spider-Verse (2018) - 8.8/10
 - [x] Uncharted - 5.7/10
 - [x] The Batman - 9.2/10
 - [x] Midnight in Paris - 8.8/10
@@ -49,10 +48,9 @@
 - [x] Bullet Train - 8.3/10
 - [x] Top Gun: Maverick - 9.6/10
 - [x] Superbad - 8.5/10
-- [x] James Bond: No Time To Die - 8.8/10
 - [x] Arrival - 8.6/10
 - [x] The Unbearable Weight of Massive Talent - 8.3/10
-- [x] Nonstop - 7.8/10
+- [x] Non-Stop - 7.8/10
 - [x] Minions: The Rise of Gru - 7.7/10
 - [x] The Matrix - 8.4/10
 - [x] Thor: Love and Thunder - 8.5/10
@@ -75,10 +73,10 @@
 - [x] Glass Onion: A Knives Out Mystery - 8.6/10
 ## 2023
 - [ ] Scarface
-- [x] Antman and the Wasp: Quantumania - 7.2/10
+- [x] Ant-Man and the Wasp: Quantumania - 7.2/10
 - [x] Everything Everywhere All At Once - 9.6/10
 - [x] The Adam Project - 8.4/10
-- [x] The Mario Movie - 9.2/10
+- [x] The Super Mario Bros. Movie (2023) - 9.2/10
 - [x] Dungeons and Dragons - 7.8/10
 - [x] Guardians of the Galaxy Vol. 3 - 9.1/10
 - [ ] The Joker
@@ -87,7 +85,7 @@
 - [x] Men in Black II - 7.3/10
 - [x] Men in Black III - 8.1/10
 - [x] Mamma Mia - 8.3/10
-- [x] Spiderman: Across the Spiderverse - 9.3/10
+- [x] Spider-Man: Across the Spider-Verse (2023) - 9.3/10
 - [x] Tenet - 8.6/10
 - [ ] The Place Beyond the Pines - 
 - [ ] The Godfather I -
@@ -106,8 +104,8 @@
 - [ ] The Big Short
 - [x] Inglourious Basterds - 9.0/10
 - [x] The Talented Mr. Ripley - 8.4/10
-- [ ] The 6th Sense - 
-- [ ] Rainman - 
+- [ ] The Sixth Sense -
+- [ ] Rain Man -
 - [x] Saltburn - 4.0/10
 ## 2024
 - [x] The Wonderful Story of Henry Sugar - 8.8/10
@@ -122,7 +120,7 @@
 - [ ] Dazed and Confused - 
 - [x] Monty Python and the Holy Grail - 8.0/10
 - [ ] Waves - 
-- [ ] The Cousin Vinne - 
+- [ ] My Cousin Vinny -
 - [x] Mrs. Doubtfire - 9.3/10
 - [x] Jojo Rabbit - 9.0/10
 - [ ] Blue Valentine - 
@@ -134,7 +132,7 @@
 - [ ] Three Billboards outside ebbing Missouri - 
 - [x] Deadpool & Wolverine - 9.4/10
 - [ ] So I Married an Axe Murderer - 
-- [x] Peabody & Sherman - 8.5/10
+- [x] Mr. Peabody & Sherman - 8.5/10
 - [x] Big Hero 6 - 8.8/10
 - [ ] The Prince of Egypt - 
 - [x] About Time - 9.7/10
@@ -167,7 +165,7 @@
 - [x] Fountain of Youth - 6.5/10
 - [ ] Sunset Boulevard - 
 - [ ] Caveat - 
-- [ ] Beau Travaille - 
+- [ ] Beau Travail -
 - [ ] Rebel Without A Cause - 
 - [ ] Of Miracles and Men -
 - [x] F1 - 8.8/10
@@ -200,7 +198,7 @@
 - [ ] A Real Pain - 
 - [ ] Cure - 
 - [ ] Boyhood - 
-- [ ] Manchester By Sea - 
+- [ ] Manchester by the Sea -
 - [ ] The Town - 
 - [x] Dunkirk - 8.8/10
 - [x] One Battle After Another - 9.4/10
@@ -284,7 +282,7 @@
 - [x] Disclosure Day - 7.7/10
 - [x] Crime 101 - 5.9/10
 - [x] The Nice Guys - 8.4/10
-- [x] The Age of Adeline - 8.5/10
+- [x] The Age of Adaline - 8.5/10
 - [x] Now You See Me: Now You Don't - 4.9/10
 - [ ] Good Luck, Have Fun, Don't Die -
 - [x] L'Étranger - 8.2/10

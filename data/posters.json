@@ -118,7 +118,7 @@
    ]
   }
  },
- "Bladerunner: The Final Cut": {
+ "Blade Runner: The Final Cut": {
   "page": "Blade Runner",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Blade_Runner_%281982_poster%29.png",
   "meta": {
@@ -133,7 +133,7 @@
    ]
   }
  },
- "Bladerunner 2049": {
+ "Blade Runner 2049": {
   "page": "Blade Runner 2049",
   "url": "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png",
   "width": 220,
@@ -198,23 +198,6 @@
    "genres": [
     "heist film",
     "comedy film"
-   ]
-  }
- },
- "Beetlejuice": {
-  "page": "Beetlejuice Beetlejuice",
-  "url": "https://upload.wikimedia.org/wikipedia/en/b/ba/Beetlejuice_Beetlejuice_poster.jpg",
-  "width": 259,
-  "height": 383,
-  "meta": {
-   "year": "2024",
-   "runtime": 104,
-   "directors": [
-    "Tim Burton"
-   ],
-   "genres": [
-    "drama film",
-    "fantasy film"
    ]
   }
  },
@@ -558,7 +541,7 @@
    ]
   }
  },
- "Spiderman: No Way Home": {
+ "Spider-Man: No Way Home": {
   "page": "Spider-Man: No Way Home",
   "url": "https://upload.wikimedia.org/wikipedia/en/0/00/Spider-Man_No_Way_Home_poster.jpg",
   "width": 258,
@@ -643,7 +626,7 @@
    ]
   }
  },
- "Spiderman: Into the Spiderverse": {
+ "Spider-Man: Into the Spider-Verse": {
   "page": "Spider-Man: Into the Spider-Verse",
   "url": "https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png",
   "width": 260,
@@ -814,24 +797,6 @@
    ]
   }
  },
- "James Bond: No Time To Die": {
-  "page": "No Time to Die",
-  "url": "https://upload.wikimedia.org/wikipedia/en/f/fe/No_Time_to_Die_poster.jpg",
-  "width": 368,
-  "height": 271,
-  "meta": {
-   "year": "2019",
-   "runtime": 163,
-   "directors": [
-    "Cary Joji Fukunaga",
-    "Sam Mendes"
-   ],
-   "genres": [
-    "action film",
-    "thriller film"
-   ]
-  }
- },
  "Arrival": {
   "page": "Arrival (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/df/Arrival%2C_Movie_Poster.jpg",
@@ -865,7 +830,7 @@
    ]
   }
  },
- "Nonstop": {
+ "Non-Stop": {
   "page": "Non-Stop (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/8/87/Non-Stop2014Poster.jpg",
   "width": 257,
@@ -1237,7 +1202,7 @@
    ]
   }
  },
- "Antman and the Wasp: Quantumania": {
+ "Ant-Man and the Wasp: Quantumania": {
   "page": "Ant-Man and the Wasp: Quantumania",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/30/Ant-Man_and_the_Wasp_Quantumania_poster.jpg",
   "width": 260,
@@ -1286,24 +1251,6 @@
    "genres": [
     "science fiction film",
     "action film"
-   ]
-  }
- },
- "The Mario Movie": {
-  "page": "The Super Mario Galaxy Movie",
-  "url": "https://upload.wikimedia.org/wikipedia/en/b/bf/The_Super_Mario_Galaxy_Movie_poster.jpeg",
-  "width": 260,
-  "height": 385,
-  "meta": {
-   "year": "2026",
-   "runtime": 98,
-   "directors": [
-    "Aaron Horvath",
-    "Michael Jelenic"
-   ],
-   "genres": [
-    "adventure film",
-    "comedy film"
    ]
   }
  },
@@ -1440,7 +1387,7 @@
    ]
   }
  },
- "Spiderman: Across the Spiderverse": {
+ "Spider-Man: Across the Spider-Verse": {
   "page": "Spider-Man: Across the Spider-Verse",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b4/Spider-Man-_Across_the_Spider-Verse_poster.jpg",
   "width": 259,
@@ -1730,7 +1677,7 @@
    ]
   }
  },
- "The 6th Sense": {
+ "The Sixth Sense": {
   "page": "The Sixth Sense",
   "url": "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png",
   "width": 220,
@@ -1747,7 +1694,7 @@
    ]
   }
  },
- "Rainman": {
+ "Rain Man": {
   "page": "Rain Man",
   "url": "https://upload.wikimedia.org/wikipedia/en/b/b2/Rain_Man_poster.jpg",
   "width": 220,
@@ -1981,18 +1928,6 @@
    ]
   }
  },
- "The Cousin Vinne": {
-  "page": "Statue of Liberty",
-  "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Front_view_of_Statue_of_Liberty_%28cropped%29.jpg/960px-Front_view_of_Statue_of_Liberty_%28cropped%29.jpg",
-  "width": 640,
-  "height": 981,
-  "meta": {
-   "genres": [
-    "allegorical sculpture",
-    "monumental sculpture"
-   ]
-  }
- },
  "Mrs. Doubtfire": {
   "page": "Mrs. Doubtfire",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/5a/Mrs_Doubtfire.jpg",
@@ -2180,7 +2115,7 @@
    ]
   }
  },
- "Peabody & Sherman": {
+ "Mr. Peabody & Sherman": {
   "page": "Mr. Peabody & Sherman",
   "url": "https://upload.wikimedia.org/wikipedia/en/5/58/Mr_Peabody_%26_Sherman_Poster.JPG",
   "width": 259,
@@ -2724,7 +2659,7 @@
    ]
   }
  },
- "Beau Travaille": {
+ "Beau Travail": {
   "page": "Beau Travail",
   "url": "https://upload.wikimedia.org/wikipedia/en/7/73/Beau_Travail_poster.jpg",
   "width": 272,
@@ -2758,23 +2693,7 @@
    ]
   }
  },
- "Of Miracles and Men": {
-  "page": "Miracles (1989 film)",
-  "url": "https://upload.wikimedia.org/wikipedia/en/7/73/MiraclesFilmPoster.jpg",
-  "width": 252,
-  "height": 387,
-  "meta": {
-   "year": "1989",
-   "runtime": 122,
-   "directors": [
-    "Jackie Chan"
-   ],
-   "genres": [
-    "action film",
-    "martial arts film"
-   ]
-  }
- },
+ "Of Miracles and Men": null,
  "F1": {
   "page": "F1 (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/38/F1_%282025_film%29.png",
@@ -3248,7 +3167,7 @@
    ]
   }
  },
- "Manchester By Sea": {
+ "Manchester by the Sea": {
   "page": "Manchester by the Sea (film)",
   "url": "https://upload.wikimedia.org/wikipedia/en/d/de/Manchester_by_the_Sea.jpg",
   "width": 220,
@@ -4559,7 +4478,7 @@
    ]
   }
  },
- "The Age of Adeline": {
+ "The Age of Adaline": {
   "page": "The Age of Adaline",
   "url": "https://upload.wikimedia.org/wikipedia/en/3/33/The_Age_of_Adaline_film_poster.png",
   "width": 259,
@@ -4980,6 +4899,52 @@
    "genres": [
     "docudrama",
     "comedy film"
+   ]
+  }
+ },
+ "Beetlejuice": {
+  "page": "Beetlejuice",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/76/Beetlejuice_%281988_film_poster%29.png",
+  "meta": {
+   "year": "1988",
+   "runtime": 92,
+   "directors": [
+    "Tim Burton"
+   ],
+   "genres": [
+    "comedy horror",
+    "fantasy film"
+   ]
+  }
+ },
+ "The Super Mario Bros. Movie": {
+  "page": "The Super Mario Bros. Movie",
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/44/The_Super_Mario_Bros._Movie_poster.jpg",
+  "meta": {
+   "year": "2023",
+   "runtime": 92,
+   "directors": [
+    "Aaron Horvath",
+    "Michael Jelenic"
+   ],
+   "genres": [
+    "comedy film",
+    "adventure film"
+   ]
+  }
+ },
+ "My Cousin Vinny": {
+  "page": "My Cousin Vinny",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/76/My-Cousin-Vinny-Poster.jpg",
+  "meta": {
+   "year": "1992",
+   "runtime": 120,
+   "directors": [
+    "Jonathan Lynn"
+   ],
+   "genres": [
+    "comedy film",
+    "trial film"
    ]
   }
  }
