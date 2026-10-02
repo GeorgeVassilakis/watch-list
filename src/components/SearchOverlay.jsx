@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 import { buildIndex, search, highlight } from '../lib/search.js'
 import useScrollLock from '../lib/useScrollLock.js'
+import useScrollingDown from '../lib/useScrollingDown.js'
 
 const NOUNS = { films: 'films', books: 'books', music: 'albums' }
 
@@ -18,6 +19,25 @@ export function SearchIcon({ size = 16, className = '' }) {
       <circle cx="6.75" cy="6.75" r="5.25" fill="none" stroke="currentColor" strokeWidth="1.5" />
       <path d="M10.5 10.5 L14.5 14.5" stroke="currentColor" strokeWidth="1.75" />
     </svg>
+  )
+}
+
+// phones: the header is full, and the thumb lives at the bottom; it ducks out
+// of the way while scrolling down, back on any scroll up
+export function SearchFab({ onClick }) {
+  const hidden = useScrollingDown()
+  return (
+    <motion.button
+      initial={{ opacity: 0, y: 12 }}
+      animate={hidden ? { opacity: 0, y: 24 } : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
+      inert={hidden}
+      onClick={onClick}
+      aria-label="Search"
+      className="fixed bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] right-5 z-30 flex h-13 w-13 items-center justify-center bg-accent text-ground shadow-print-lg active:translate-0.5 active:shadow-print sm:hidden"
+    >
+      <SearchIcon size={20} />
+    </motion.button>
   )
 }
 

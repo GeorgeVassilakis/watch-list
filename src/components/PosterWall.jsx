@@ -1,6 +1,88 @@
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import PosterCard from './PosterCard.jsx'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
+import { scrollPosition } from '../lib/useScrollingDown.js'
+
+// flush under the fixed header (54px) and the sticky tab bar (45px)
+const PIN_TOP = 99
+// scroll distance over which a pinned header goes from full size to slim
+const COLLAPSE_RANGE = 60
+
+// Text boxes are trimmed to the cap height and baseline, so the padding is
+// exactly the visible gap above and below the digits in every browser
+// (Safari and Chrome place the same font differently inside a line box).
+const TRIM = '[text-box:trim-both_cap_alphabetic]'
+
+// every size is interpolated by --collapse (0 full, 1 slim), which is set
+// straight on the element as you scroll, so the band tracks the finger
+const lerp = (full, slim) => `calc(${full}px + ${slim - full}px * var(--collapse, 0))`
+
+function YearBand({ year, count, pinned = false }) {
+  return (
+    <div
+      className={`flex items-baseline gap-3 bg-ground px-5 transition-shadow duration-150 ${
+        pinned ? 'shadow-[0_1px_0_var(--mc-line)]' : ''
+      }`}
+      style={{ paddingBlock: lerp(20, 10) }}
+    >
+      <h2
+        className={`font-extrabold leading-[1.333] tracking-tight text-accent ${TRIM}`}
+        style={{ fontSize: lerp(24, 14) }}
+      >
+        {year}
+      </h2>
+      <span className={`font-medium leading-[1.333] text-dim ${TRIM}`} style={{ fontSize: lerp(12, 10) }}>
+        {count}
+      </span>
+      <div className="flex-1 self-center bg-ink" style={{ height: lerp(3, 1) }} />
+    </div>
+  )
+}
+
+// Pins under the tab bar while its year is on screen. Once pinned it shrinks
+// in step with the scroll, like Safari's toolbar: fully slim after
+// COLLAPSE_RANGE px down, fully grown again after the same distance up. An
+// invisible full-size copy holds the slot open, so the wall never moves.
+function YearHeader({ year, count }) {
+  const slotRef = useRef(null)
+  const bandRef = useRef(null)
+  const [pinned, setPinned] = useState(false)
+
+  useEffect(() => {
+    let last = scrollPosition()
+    let collapse = 0
+    const update = () => {
+      const y = scrollPosition()
+      const isPinned = slotRef.current.getBoundingClientRect().top <= PIN_TOP + 0.5
+      const next = isPinned ? Math.min(1, Math.max(0, collapse + (y - last) / COLLAPSE_RANGE)) : 0
+      last = y
+      if (next !== collapse) {
+        collapse = next
+        bandRef.current.style.setProperty('--collapse', collapse)
+      }
+      setPinned(isPinned)
+    }
+    update()
+    window.addEventListener('scroll', update, { passive: true })
+    window.addEventListener('resize', update)
+    return () => {
+      window.removeEventListener('scroll', update)
+      window.removeEventListener('resize', update)
+    }
+  }, [])
+
+  return (
+    <div ref={slotRef} className="pointer-events-none sticky top-[99px] z-20 -mx-5 grid">
+      <div aria-hidden="true" className="invisible col-start-1 row-start-1">
+        <YearBand year={year} count={count} />
+      </div>
+      <div ref={bandRef} className="pointer-events-auto col-start-1 row-start-1 self-start">
+        <YearBand year={year} count={count} pinned={pinned} />
+      </div>
+    </div>
+  )
+}
 
 function ListRow({ item, index, mark, square, onClick }) {
   const clickable = Boolean(onClick)
@@ -67,13 +149,7 @@ export default function PosterWall({ sections, filter = () => true, markSeen = t
     <div className="flex flex-col gap-8">
       {groups.map((s, gi) => (
         <section key={s.year ?? `s${gi}`}>
-          {s.year && (
-            <div className="mb-3 flex items-baseline gap-3">
-              <h2 className="text-2xl font-extrabold tracking-tight text-accent">{s.year}</h2>
-              <span className="text-xs font-medium text-dim">{s.items.length}</span>
-              <div className="h-[3px] flex-1 self-center bg-ink" />
-            </div>
-          )}
+          {s.year && <YearHeader year={s.year} count={s.items.length} />}
           {layout === 'list' ? (
             <ol className="flex flex-col">
               {s.items.map((item, i) => (
