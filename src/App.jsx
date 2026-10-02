@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { flushSync } from 'react-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { loadAll, allItems } from './lib/data.js'
 import Hero from './components/Hero.jsx'
@@ -6,6 +7,7 @@ import PosterWall from './components/PosterWall.jsx'
 import Ranked from './components/Ranked.jsx'
 import DataPanel from './components/DataPanel.jsx'
 import DetailModal from './components/DetailModal.jsx'
+import SearchOverlay, { SearchIcon } from './components/SearchOverlay.jsx'
 
 const MODES = [
   { id: 'films', label: 'Films' },
@@ -48,6 +50,8 @@ export default function App() {
   const [openItem, setOpenItem] = useState(null)
   const [layout, setLayout] = useState('cards')
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+  const [searchOpen, setSearchOpen] = useState(false)
+  const searchInput = useRef(null)
 
   useEffect(() => {
     loadAll().then(setData).catch(e => setError(String(e)))
@@ -61,6 +65,25 @@ export default function App() {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('theme', theme)
   }, [theme])
+
+  // render the overlay synchronously so its input takes focus inside the tap
+  // itself; iOS Safari only raises the keyboard for focus within a gesture
+  const openSearch = () => {
+    flushSync(() => setSearchOpen(true))
+    searchInput.current?.focus({ preventScroll: true })
+  }
+
+  useEffect(() => {
+    if (!data || searchOpen || openItem) return
+    const onKey = e => {
+      if (e.key === '/' || (e.key.toLowerCase() === 'k' && (e.metaKey || e.ctrlKey))) {
+        e.preventDefault()
+        openSearch()
+      }
+    }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [data, searchOpen, openItem])
 
   const view = data?.[mode]
   const items = useMemo(() => (view ? allItems(view.sections) : []), [view])
@@ -143,6 +166,15 @@ export default function App() {
                 <circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
                 <path d="M8 1.5 A6.5 6.5 0 0 1 8 14.5 Z" fill="currentColor" />
               </svg>
+            </button>
+            <button
+              onClick={openSearch}
+              disabled={!data}
+              aria-label="Search"
+              title="Search (/)"
+              className="-m-2 hidden p-2 text-dim transition-colors hover:text-ink sm:block"
+            >
+              <SearchIcon />
             </button>
           </nav>
         </div>
@@ -267,6 +299,30 @@ export default function App() {
         </AnimatePresence>
       )}
 
+      {/* phones: the header is full, and the thumb lives at the bottom */}
+      {data && (
+        <motion.button
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.3, ease: 'easeOut' }}
+          onClick={openSearch}
+          aria-label="Search"
+          className="fixed bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] right-5 z-30 flex h-13 w-13 items-center justify-center bg-accent text-ground shadow-print-lg active:translate-0.5 active:shadow-print sm:hidden"
+        >
+          <SearchIcon size={20} />
+        </motion.button>
+      )}
+      {data && (
+        <SearchOverlay
+          open={searchOpen}
+          data={data}
+          modes={MODES}
+          inputRef={searchInput}
+          paused={openItem != null}
+          onClose={() => setSearchOpen(false)}
+          onPick={setOpenItem}
+        />
+      )}
       <DetailModal item={openItem} onClose={() => setOpenItem(null)} />
     </div>
   )

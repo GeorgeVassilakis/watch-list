@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const SPRING = { type: 'spring', damping: 30, stiffness: 320 }
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
+import useScrollLock from '../lib/useScrollLock.js'
 
 function labelize(key) {
   return key
@@ -72,12 +73,10 @@ export default function DetailModal({ item, onClose }) {
       else onClose()
     }
     document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
-    return () => {
-      document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
-    }
+    return () => document.removeEventListener('keydown', onKey)
   }, [item, zoomed, onClose])
+
+  useScrollLock(Boolean(item))
 
   return (
     <AnimatePresence>
