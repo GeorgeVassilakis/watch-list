@@ -4967,5 +4967,20 @@
     "drama film"
    ]
   }
+ },
+ "Kneecap": {
+  "page": "Kneecap (film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/4f/Kneecap_poster.jpg",
+  "meta": {
+   "year": "2024",
+   "runtime": 105,
+   "directors": [
+    "Rich Peppiatt"
+   ],
+   "genres": [
+    "docudrama",
+    "comedy film"
+   ]
+  }
  }
 }
