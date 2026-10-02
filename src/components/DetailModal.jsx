@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const SPRING = { type: 'spring', damping: 30, stiffness: 320 }
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 import useScrollLock from '../lib/useScrollLock.js'
+import Byline from './Byline.jsx'
 
 function labelize(key) {
   return key
@@ -128,7 +129,11 @@ export default function DetailModal({ item, onClose }) {
               )}
               <div className="min-w-0 flex-1">
                 <h2 className="text-lg font-extrabold leading-tight tracking-tight">{item.title}</h2>
-                {item.subtitle && <p className="mt-0.5 text-sm text-dim">{item.subtitle}</p>}
+                {item.subtitle && (
+                  <p className="mt-0.5 text-sm text-dim">
+                    <Byline parts={item.subtitleParts} />
+                  </p>
+                )}
               </div>
               {item.rating != null && (
                 <span className="text-xl font-extrabold" style={{ color: ratingColor(item.rating) }}>

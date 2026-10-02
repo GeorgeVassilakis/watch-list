@@ -8,6 +8,7 @@ import Ranked from './components/Ranked.jsx'
 import DataPanel from './components/DataPanel.jsx'
 import DetailModal from './components/DetailModal.jsx'
 import SearchOverlay, { SearchIcon } from './components/SearchOverlay.jsx'
+import useHideOnScroll from './lib/useHideOnScroll.js'
 
 const MODES = [
   { id: 'films', label: 'Films' },
@@ -52,6 +53,7 @@ export default function App() {
   const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
   const [searchOpen, setSearchOpen] = useState(false)
   const searchInput = useRef(null)
+  const fabHidden = useHideOnScroll()
 
   useEffect(() => {
     loadAll().then(setData).catch(e => setError(String(e)))
@@ -65,6 +67,12 @@ export default function App() {
     document.documentElement.dataset.theme = theme
     localStorage.setItem('theme', theme)
   }, [theme])
+
+  // browser chrome (status bar, address bar tint) matches the page ground
+  useEffect(() => {
+    const ground = getComputedStyle(document.documentElement).getPropertyValue('--mc-ground').trim()
+    document.querySelector('meta[name="theme-color"]').content = ground
+  }, [mode, theme])
 
   // render the overlay synchronously so its input takes focus inside the tap
   // itself; iOS Safari only raises the keyboard for focus within a gesture
@@ -299,12 +307,14 @@ export default function App() {
         </AnimatePresence>
       )}
 
-      {/* phones: the header is full, and the thumb lives at the bottom */}
+      {/* phones: the header is full, and the thumb lives at the bottom; it
+          ducks out of the way while scrolling down, back on any scroll up */}
       {data && (
         <motion.button
           initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.3, ease: 'easeOut' }}
+          animate={fabHidden ? { opacity: 0, y: 24 } : { opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+          inert={fabHidden}
           onClick={openSearch}
           aria-label="Search"
           className="fixed bottom-[calc(env(safe-area-inset-bottom)+1.25rem)] right-5 z-30 flex h-13 w-13 items-center justify-center bg-accent text-ground shadow-print-lg active:translate-0.5 active:shadow-print sm:hidden"

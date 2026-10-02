@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
+import Byline from './Byline.jsx'
 
 const EYEBROW = {
   films: 'Latest screening',
@@ -69,7 +70,11 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
                   {formatRating(latest.rating)}
                 </span>
               )}
-              {latest.subtitle && <span>{latest.subtitle}</span>}
+              {latest.subtitle && (
+                <span>
+                  <Byline parts={latest.subtitleParts} />
+                </span>
+              )}
             </div>
           </motion.div>
         </div>

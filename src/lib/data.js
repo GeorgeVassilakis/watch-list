@@ -1,6 +1,6 @@
 // Parse the plaintext lists (data/*.txt) into one unified shape per mode:
 // sections: [{ year, items }] in file order (oldest section first, newest last)
-// item: { title, subtitle, rating, done, cover, review }
+// item: { title, subtitle, subtitleParts, rating, done, cover, review }
 
 // [x] done, [ ] queued, [0] currently in progress
 const LINE_RE = /^- \[(x|0| )\] (.+)$/i
@@ -120,10 +120,9 @@ export async function loadAll() {
       if (p && p.url) item.cover = p.url
       const meta = p?.meta ?? {}
       item.meta = meta
-      item.subtitle =
-        [meta.year, meta.directors?.[0], meta.runtime && `${meta.runtime} min`]
-          .filter(Boolean)
-          .join(' · ') || (s.year ? `Logged ${s.year}` : '')
+      const facts = [meta.year, meta.directors?.[0], meta.runtime && `${meta.runtime} min`].filter(Boolean)
+      item.subtitleParts = facts.length ? facts : s.year ? [`Logged ${s.year}`] : []
+      item.subtitle = item.subtitleParts.join(' · ')
     }
   }
 
@@ -140,7 +139,8 @@ export async function loadAll() {
         i.cover = a?.url ?? i.cover
         i.meta = a?.meta ?? {}
         i.year = i.year || i.meta.year || ''
-        i.subtitle = [i.by, i.year].filter(Boolean).join(' · ')
+        i.subtitleParts = [i.by, i.year].filter(Boolean)
+        i.subtitle = i.subtitleParts.join(' · ')
       }
     }
   }
