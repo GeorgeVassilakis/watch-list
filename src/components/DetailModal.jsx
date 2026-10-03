@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 const SPRING = { type: 'spring', damping: 30, stiffness: 320 }
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 import useScrollLock from '../lib/useScrollLock.js'
+import useMediaQuery from '../lib/useMediaQuery.js'
 import Byline from './Byline.jsx'
 
 function labelize(key) {
@@ -78,6 +79,7 @@ export default function DetailModal({ item, onClose }) {
   }, [item, zoomed, onClose])
 
   useScrollLock(Boolean(item))
+  const wide = useMediaQuery('(min-width: 40rem)')
 
   return (
     <AnimatePresence>
@@ -88,16 +90,23 @@ export default function DetailModal({ item, onClose }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
           onClick={e => e.target === e.currentTarget && onClose()}
-          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 sm:items-center sm:p-6"
+          className="fixed inset-0 z-50 sm:flex sm:items-center sm:justify-center sm:bg-black/60 sm:p-6"
         >
+          {/* On phones the card is the whole screen. iOS Safari paints its
+              status bar and toolbar from the fixed element at each screen
+              edge, but skips one that is invisible when it appears and keeps
+              the old colour for anything exactly screen-sized, taking that
+              for an overlay. So the card is opaque from its first frame (the
+              wrapper fades, the card does not move) and runs off the left
+              edge, which makes Safari read its background as the page's. */}
           <motion.div
-            initial={{ y: 60, opacity: 0 }}
+            initial={wide ? { y: 60, opacity: 0 } : false}
             animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 60, opacity: 0 }}
+            exit={wide ? { y: 60, opacity: 0 } : undefined}
             transition={{ type: 'spring', damping: 28, stiffness: 320 }}
             role="dialog"
             aria-modal="true"
-            className={`max-h-[88vh] w-full max-w-xl border-t-[3px] border-ink bg-paper p-5 shadow-print-lg sm:border-[3px] ${
+            className={`fixed inset-y-0 right-0 -left-[10vw] bg-paper pt-5 pr-5 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] pl-[calc(10vw+1.25rem)] sm:static sm:max-h-[88vh] sm:w-full sm:max-w-xl sm:border-[3px] sm:border-ink sm:p-5 sm:shadow-print-lg ${
               settling ? 'overflow-visible' : 'overflow-y-auto'
             }`}
           >
@@ -192,7 +201,7 @@ export default function DetailModal({ item, onClose }) {
                   onClick={closeZoom}
                   role="button"
                   aria-label="Close full artwork view"
-                  className="fixed inset-0 z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 p-5"
+                  className="fixed inset-y-0 right-0 -left-[10vw] z-[70] flex cursor-zoom-out items-center justify-center bg-black/90 py-5 pr-5 pl-[calc(10vw+1.25rem)]"
                 >
                   <motion.img
                     layoutId="detail-cover"
