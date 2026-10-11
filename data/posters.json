@@ -4947,5 +4947,20 @@
     "trial film"
    ]
   }
+ },
+ "Digger": {
+  "page": "Digger (2026 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/7b/Digger_%282026_film%29_poster.jpg",
+  "meta": {
+   "year": "2026",
+   "runtime": 128,
+   "directors": [
+    "Alejandro González Iñárritu"
+   ],
+   "genres": [
+    "drama film",
+    "comedy film"
+   ]
+  }
  }
 }
