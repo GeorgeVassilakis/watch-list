@@ -4962,5 +4962,20 @@
     "comedy film"
    ]
   }
+ },
+ "The Social Reckoning": {
+  "page": "The Social Reckoning",
+  "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/The_Social_Reckoning_poster.jpeg",
+  "meta": {
+   "year": "2026",
+   "runtime": 112,
+   "directors": [
+    "Aaron Sorkin"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
  }
 }
