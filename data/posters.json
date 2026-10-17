@@ -4977,5 +4977,19 @@
     "biographical film"
    ]
   }
+ },
+ "The Naked Gun: From the Files of Police Squad!": {
+  "page": "The Naked Gun: From the Files of Police Squad!",
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/5f/The_Naked_Gun_Poster.jpg",
+  "meta": {
+   "year": "1988",
+   "runtime": 85,
+   "directors": [
+    "David Zucker"
+   ],
+   "genres": [
+    "comedy film"
+   ]
+  }
  }
 }
