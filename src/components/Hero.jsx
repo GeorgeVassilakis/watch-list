@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
+import { TRIM } from '../lib/textTrim.js'
 import Byline from './Byline.jsx'
 import DitherField from './DitherField.jsx'
 
@@ -65,29 +66,32 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
             transition={{ duration: 0.6, delay: 0.12, ease: 'easeOut' }}
             className="min-w-0 pb-10"
           >
-            <p className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-ground/80">
+            {/* the small type sits on solid print pieces mounted on the dither
+                like the poster: a tab for the eyebrow, then a ticket stub of
+                rating and byline */}
+            <p className="flex w-fit items-center gap-1.5 bg-ground px-2 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-ink shadow-print">
               {isCurrent && (
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ground opacity-60" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-ground" />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-current opacity-60" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-current" />
                 </span>
               )}
-              {isCurrent ? EYEBROW_CURRENT[mode] : EYEBROW[mode]}
+              <span className={TRIM}>{isCurrent ? EYEBROW_CURRENT[mode] : EYEBROW[mode]}</span>
             </p>
-            <h1 className="mt-1.5 break-words text-2xl font-extrabold leading-[1.05] tracking-tight text-ground sm:text-4xl sm:leading-[1.02]">
+            <h1 className="mt-2 break-words text-2xl font-extrabold leading-[1.05] tracking-tight text-ground sm:text-4xl sm:leading-[1.02]">
               {latest.title}
             </h1>
-            <div className="mt-2.5 flex items-baseline gap-2.5 text-sm text-ground/80">
+            <div className="mt-3 flex w-fit text-sm shadow-print">
               {latest.rating != null && (
                 <span
-                  className="px-2 py-0.5 text-sm font-bold text-ground"
+                  className="flex items-center px-2 py-2 font-bold text-ground"
                   style={{ background: 'var(--mc-ink)' }}
                 >
-                  {formatRating(latest.rating)}
+                  <span className={TRIM}>{formatRating(latest.rating)}</span>
                 </span>
               )}
               {latest.subtitle && (
-                <span>
+                <span className={`min-w-0 bg-ground px-2.5 py-2 text-ink/80 ${TRIM}`}>
                   <Byline parts={latest.subtitleParts} />
                 </span>
               )}

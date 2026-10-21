@@ -3,16 +3,12 @@ import { motion } from 'framer-motion'
 import PosterCard from './PosterCard.jsx'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 import { scrollPosition } from '../lib/useScrollingDown.js'
+import { TRIM } from '../lib/textTrim.js'
 
 // flush under the fixed header (54px) and the sticky tab bar (45px)
 const PIN_TOP = 99
 // scroll distance over which a pinned header goes from full size to slim
 const COLLAPSE_RANGE = 60
-
-// Text boxes are trimmed to the cap height and baseline, so the padding is
-// exactly the visible gap above and below the digits in every browser
-// (Safari and Chrome place the same font differently inside a line box).
-const TRIM = '[text-box:trim-both_cap_alphabetic]'
 
 // every size is interpolated by --collapse (0 full, 1 slim), which is set
 // straight on the element as you scroll, so the band tracks the finger
