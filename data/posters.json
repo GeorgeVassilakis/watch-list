@@ -4947,5 +4947,49 @@
     "trial film"
    ]
   }
+ },
+ "Digger": {
+  "page": "Digger (2026 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/7b/Digger_%282026_film%29_poster.jpg",
+  "meta": {
+   "year": "2026",
+   "runtime": 128,
+   "directors": [
+    "Alejandro González Iñárritu"
+   ],
+   "genres": [
+    "drama film",
+    "comedy film"
+   ]
+  }
+ },
+ "The Social Reckoning": {
+  "page": "The Social Reckoning",
+  "url": "https://upload.wikimedia.org/wikipedia/en/a/a1/The_Social_Reckoning_poster.jpeg",
+  "meta": {
+   "year": "2026",
+   "runtime": 112,
+   "directors": [
+    "Aaron Sorkin"
+   ],
+   "genres": [
+    "drama film",
+    "biographical film"
+   ]
+  }
+ },
+ "The Naked Gun: From the Files of Police Squad!": {
+  "page": "The Naked Gun: From the Files of Police Squad!",
+  "url": "https://upload.wikimedia.org/wikipedia/en/5/5f/The_Naked_Gun_Poster.jpg",
+  "meta": {
+   "year": "1988",
+   "runtime": 85,
+   "directors": [
+    "David Zucker"
+   ],
+   "genres": [
+    "comedy film"
+   ]
+  }
  }
 }

@@ -191,7 +191,7 @@
 - [x] Casino Royale - 8.2/10
 - [x] The Martian - 8.5/10
 - [x] Before Sunrise - 8.7/10
-- [x] Before Sunset - 9.4/10
+- [x] Before Sunset - 9.5/10
 - [x] Before Midnight - 8.4/10
 - [x] Little Women - 7.8/10
 - [ ] Zodiac - 
@@ -284,7 +284,6 @@
 - [x] The Nice Guys - 8.4/10
 - [x] The Age of Adaline - 8.5/10
 - [x] Now You See Me: Now You Don't - 4.9/10
-- [ ] Good Luck, Have Fun, Don't Die -
 - [x] L'Étranger - 8.2/10
 - [x] Avatar Aang: The Last Airbender Movie - 8.1/10
 - [x] Batman Begins - 8.3/10
@@ -300,3 +299,7 @@
 - [x] The Worst Person In The World - 8.7/10
 - [x] Bad Lieutenant - 6.8/10
 - [ ] Kneecap -
+- [x] Digger - 8.9/10
+- [x] The Social Reckoning - 6.6/10
+- [x] The Naked Gun: From the Files of Police Squad! - 8.4/10
+- [x] Good Luck, Have Fun, Don't Die - 7.0/10
