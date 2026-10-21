@@ -1,6 +1,8 @@
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ratingColor, formatRating, titleHue } from '../lib/data.js'
 import Byline from './Byline.jsx'
+import DitherField from './DitherField.jsx'
 
 const EYEBROW = {
   films: 'Latest screening',
@@ -14,18 +16,31 @@ const EYEBROW_CURRENT = {
   music: 'Now listening',
 }
 
+// the field's lower edge climbs 2deg to the right; cut with a clip rather
+// than a skew, since any transform would resample the dither cells
+const FIELD_EDGE = 'polygon(0 0, 100% 0, 100% calc(100% - tan(2deg) * 100cqw), 0 100%)'
+
 export default function Hero({ mode, latest, isCurrent = false, stats }) {
+  const coverRef = useRef(null)
+  const textRef = useRef(null)
   if (!latest) return null
   const aspect = mode === 'music' ? 'aspect-square' : 'aspect-[2/3]'
   return (
-    <div className="relative overflow-hidden pt-[54px]">
-      {/* Bass-style color field: a flat angled block the artwork is mounted on,
-          anchored to the bottom so the cover always breaks its lower edge */}
-      <div className="absolute inset-x-0 -top-10 bottom-32 origin-top-left -skew-y-2 bg-accent" />
+    <div className="@container relative overflow-hidden pt-[54px]">
+      {/* Bass-style color field: an angled block the artwork is mounted on,
+          anchored to the bottom so the cover always breaks its lower edge.
+          Its face is a live dither with its own motion for each mode. */}
+      <div
+        className="absolute inset-x-0 -top-10 bottom-32 overflow-hidden bg-accent"
+        style={{ clipPath: FIELD_EDGE }}
+      >
+        <DitherField pattern={mode} anchorRef={coverRef} quietRef={textRef} />
+      </div>
 
       <div className="relative mx-auto max-w-3xl px-5 pb-6 pt-10">
         <div className="flex items-end gap-5">
           <motion.div
+            ref={coverRef}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -44,6 +59,7 @@ export default function Hero({ mode, latest, isCurrent = false, stats }) {
           </motion.div>
 
           <motion.div
+            ref={textRef}
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.12, ease: 'easeOut' }}

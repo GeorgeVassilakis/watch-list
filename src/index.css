@@ -17,6 +17,9 @@
   --mc-accent: #C7522A;
   --mc-accent-2: #C98A48;
   --mc-accent-3: #5D6D4D;
+  /* the hero field's second dither ink, pushed away from the headline
+     colour: lighter than the accent on dark, darker on light */
+  --mc-field-ink: #E0995A;
   --mc-shadow: rgb(0 0 0 / 0.4);
   /* rating inks, bright enough to read on the dark ground */
   --mc-r-null: #A8A093;
@@ -37,6 +40,7 @@
   --mc-accent: #4E7B5C;
   --mc-accent-2: #7CA37A;
   --mc-accent-3: #C98A48;
+  --mc-field-ink: #86AE84;
 }
 
 [data-mode='music'] {
@@ -48,6 +52,7 @@
   --mc-accent: #C72E29;
   --mc-accent-2: #8A1C17;
   --mc-accent-3: #C98A48;
+  --mc-field-ink: #F0806A;
 }
 
 /* light: warm paper, print inks */
@@ -60,6 +65,7 @@
   --mc-accent: #C7522A;
   --mc-accent-2: #C98A48;
   --mc-accent-3: #5D6D4D;
+  --mc-field-ink: #93371A;
   --mc-shadow: rgb(42 33 24 / 0.16);
   --mc-r-null: #6B6154;
   --mc-r-95: #8A5E0E;
@@ -79,6 +85,7 @@
   --mc-accent: #2E5B3D;
   --mc-accent-2: #7B9B74;
   --mc-accent-3: #C98A48;
+  --mc-field-ink: #1D3E28;
 }
 
 [data-theme='light'][data-mode='music'] {
@@ -90,6 +97,7 @@
   --mc-accent: #8C1D18;
   --mc-accent-2: #D3342E;
   --mc-accent-3: #C98A48;
+  --mc-field-ink: #5C0F0C;
 }
 
 @theme {
