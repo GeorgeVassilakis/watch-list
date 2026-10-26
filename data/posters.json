@@ -4991,5 +4991,20 @@
     "comedy film"
    ]
   }
+ },
+ "I, Robot": {
+  "page": "I, Robot (film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/3/3b/Movie_poster_i_robot.jpg",
+  "meta": {
+   "year": "2004",
+   "runtime": 115,
+   "directors": [
+    "Alex Proyas"
+   ],
+   "genres": [
+    "science fiction film",
+    "action film"
+   ]
+  }
  }
 }
