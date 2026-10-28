@@ -92,5 +92,65 @@
       "length": "51:52"
     },
     "updatedAt": "2026-02-08T19:55:24.303262+00:00"
+  },
+  {
+    "title": "Gumbo Unplugged",
+    "artist": "PJ Morton",
+    "summary": "Who knew this stud was sitting like a sleeping beauty in Maroon 5? Excellent album, and Yebba is insane too.",
+    "topSongs": [
+      "How Deep Is Your Love (feat. Yebba) [Live]",
+      "First Began (Live)",
+      "Alright (Live)"
+    ],
+    "rating": 8.9,
+    "updatedAt": "2026-10-28T13:57:20Z"
+  },
+  {
+    "title": "The Art of Loving",
+    "artist": "Olivia Dean",
+    "summary": "Bringing back pop and even some smooth old jazz is fun. She's got a great voice, and I'm excited to see something more R&B from her in the future.",
+    "topSongs": [
+      "I've Seen It",
+      "A Couple Minutes",
+      "Let Alone The One You Love"
+    ],
+    "rating": 8.4,
+    "updatedAt": "2026-10-28T13:57:20Z"
+  },
+  {
+    "title": "Do That Again",
+    "artist": "Malcolm Todd",
+    "summary": "This is the first album where Malcolm Todd actually stepped into his own, and hell yeah for it. Really corny and also really horny? Overall best album yet!",
+    "topSongs": [
+      "Gun To My Head",
+      "Obsessica",
+      "I Saw Your Face"
+    ],
+    "rating": 8.7,
+    "updatedAt": "2026-10-28T13:57:20Z"
+  },
+  {
+    "title": "Norman F*****g Rockwell!",
+    "artist": "Lana Del Rey",
+    "summary": "For some reason this album became the erg song of last spring, every morning at 7:00 AM. Great album, the only album I really like from her, though?",
+    "topSongs": [
+      "Mariners Apartment Complex",
+      "Doin' Time",
+      "California"
+    ],
+    "rating": 8.6,
+    "updatedAt": "2026-10-28T13:57:20Z"
+  },
+  {
+    "title": "WHO CARES?",
+    "artist": "Rex Orange County",
+    "summary": "Uncancellable king (?) made a nice album here, quite chill and bouncy. Reminds me of substitute teaching when I was 19 (?)",
+    "topSongs": [
+      "OPEN A WINDOW (feat. Tyler, The Creator)",
+      "ONE IN A MILLION",
+      "THE SHADE"
+    ],
+    "rating": 8.4,
+    "updatedAt": "2026-10-28T13:57:20Z"
   }
 ]

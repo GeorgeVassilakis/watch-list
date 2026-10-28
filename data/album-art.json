@@ -86,5 +86,49 @@
    "tracks": 11,
    "label": "Columbia/Legacy"
   }
+ },
+ "the art of loving::olivia dean": {
+  "source": "deezer: The Art of Loving",
+  "url": "https://cdn-images.dzcdn.net/images/cover/b7aaad0f696b5dbfe7f1ebf2c72346a5/1000x1000-000000-80-0-0.jpg",
+  "meta": {
+   "year": "2025",
+   "genre": "Pop",
+   "length": "34:23",
+   "tracks": 12,
+   "label": "PLG - Capitol"
+  }
+ },
+ "do that again::malcolm todd": {
+  "source": "deezer: Do That Again",
+  "url": "https://cdn-images.dzcdn.net/images/cover/60ddd8f216fb18ebd0975c7a4e05156a/1000x1000-000000-80-0-0.jpg",
+  "meta": {
+   "year": "2026",
+   "genre": "Alternative",
+   "length": "35:45",
+   "tracks": 13,
+   "label": "Columbia"
+  }
+ },
+ "norman f g rockwell::lana del rey": {
+  "source": "deezer: Norman Fucking Rockwell!",
+  "url": "https://cdn-images.dzcdn.net/images/cover/c0f4f022fa51f13e877aae2e758e241d/1000x1000-000000-80-0-0.jpg",
+  "meta": {
+   "year": "2019",
+   "genre": "Alternative",
+   "length": "67:40",
+   "tracks": 14,
+   "label": "Polydor Records"
+  }
+ },
+ "who cares::rex orange county": {
+  "source": "deezer: WHO CARES?",
+  "url": "https://cdn-images.dzcdn.net/images/cover/ba1e7f3702a82b91615689daff474622/1000x1000-000000-80-0-0.jpg",
+  "meta": {
+   "year": "2022",
+   "genre": "Alternative",
+   "length": "34:51",
+   "tracks": 11,
+   "label": "Rex Orange County"
+  }
  }
 }
