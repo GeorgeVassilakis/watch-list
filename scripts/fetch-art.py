@@ -94,21 +94,31 @@ def film_art(title, year=None):
     return None
 
 
+def norm_starred(s):
+    # norm() that keeps the * of censored words like "F*****g"
+    return ' '.join(re.sub(r'[^a-z0-9*]+', ' ', s.lower()).split())
+
+
 def pick_album(results, title, artist, name_key, artist_key):
-    nt, na = norm(title), norm(artist)
+    # each * in a censored title stands for one letter (or a * in a listing
+    # that is censored too)
+    nt = re.compile(re.escape(norm_starred(title)).replace(r'\*', '[a-z*]'))
+    na = norm(artist)
     candidates = [r for r in results if norm(artist_key(r)) == na]
     for r in candidates:
-        if norm(name_key(r)) == nt:
+        if nt.fullmatch(norm_starred(name_key(r))):
             return r
     for r in candidates:
-        n = norm(name_key(r))
-        if n.startswith(nt) and 'single' not in n and 'karaoke' not in n:
+        n = norm_starred(name_key(r))
+        if nt.match(n) and 'single' not in n and 'karaoke' not in n:
             return r
     return None
 
 
 def album_art(title, artist):
-    q = urllib.parse.quote(f'{artist} {title}')
+    # Deezer and iTunes return nothing for a query with a starred word in it
+    plain = ' '.join(w for w in title.split() if '*' not in w)
+    q = urllib.parse.quote(f'{artist} {plain}')
     r = pick_album(
         get(f'https://api.deezer.com/search/album?q={q}&limit=25').get('data', []),
         title, artist, lambda x: x['title'], lambda x: x['artist']['name'])
