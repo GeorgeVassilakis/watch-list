@@ -304,3 +304,5 @@
 - [x] The Naked Gun: From the Files of Police Squad! - 8.4/10
 - [x] Good Luck, Have Fun, Don't Die - 7.0/10
 - [x] I, Robot - 8.5/10
+- [x] The Debut - 8.3/10
+- [x] Primetime - 8.4/10
