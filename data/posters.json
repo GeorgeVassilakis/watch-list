@@ -5006,5 +5006,34 @@
     "action film"
    ]
   }
+ },
+ "The Debut": {
+  "page": "The Debut (2026 film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/7/73/The_Debut_poster.jpeg",
+  "meta": {
+   "year": "2026",
+   "runtime": 105,
+   "directors": [
+    "Jesse Eisenberg"
+   ],
+   "genres": [
+    "musical film"
+   ]
+  }
+ },
+ "Primetime": {
+  "page": "Primetime (film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/f/f2/Primetime_poster.jpeg",
+  "meta": {
+   "year": "2026",
+   "runtime": 110,
+   "directors": [
+    "Lance Oppenheim"
+   ],
+   "genres": [
+    "crime drama film",
+    "biographical film"
+   ]
+  }
  }
 }
