@@ -218,7 +218,6 @@
 - [x] Brokeback Mountain - 8.6/10
 - [x] Synecdoche, New York - 1.7/10
 - [x] Dog Day Afternoon - 8.8/10
-- [ ] Heat - 
 - [x] Sunshine - 8.2/10
 - [x] Jerry Maguire - 8.1/10
 - [x] La Bête - 9.2/10
@@ -308,3 +307,4 @@
 - [x] Primetime - 8.4/10
 - [x] Spaceballs - 7.5/10
 - [x] Wild Horse Nine - 9.3/10
+- [x] Heat - 9.5/10
