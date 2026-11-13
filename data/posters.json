@@ -5035,5 +5035,35 @@
     "biographical film"
    ]
   }
+ },
+ "Spaceballs": {
+  "page": "Spaceballs",
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/45/Spaceballs.jpg",
+  "meta": {
+   "year": "1987",
+   "runtime": 96,
+   "directors": [
+    "Mel Brooks"
+   ],
+   "genres": [
+    "science fiction comedy",
+    "adventure film"
+   ]
+  }
+ },
+ "Wild Horse Nine": {
+  "page": "Wild Horse Nine",
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/44/Wild_Horse_Nine_poster.jpeg",
+  "meta": {
+   "year": "2026",
+   "runtime": 117,
+   "directors": [
+    "Martin McDonagh"
+   ],
+   "genres": [
+    "black comedy film",
+    "drama film"
+   ]
+  }
  }
 }
