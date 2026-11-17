@@ -5065,5 +5065,17 @@
     "drama film"
    ]
   }
+ },
+ "Collateral": {
+  "page": "Collateral (film)",
+  "url": "https://upload.wikimedia.org/wikipedia/en/4/45/Collateral_%28Movie%29.jpg",
+  "meta": {
+   "year": "2004",
+   "runtime": 120,
+   "genres": [
+    "neo-noir",
+    "thriller film"
+   ]
+  }
  }
 }
